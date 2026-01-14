@@ -1,10 +1,11 @@
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, BarChart3, Bot, BrainCircuit, Check, Globe, Sparkles, Target, TrendingUp, Video, Zap } from "lucide-react";
+import { ArrowRight, BarChart3, Bot, BrainCircuit, Check, Globe, Sparkles, Target, TrendingUp, Video, Zap, Smartphone, Share2, MessageSquare } from "lucide-react";
 import { Link } from "wouter";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SEO from "@/components/SEO";
+import { LogoCarousel } from "@/components/LogoCarousel";
 
 export default function Home() {
   const { t, language } = useLanguage();
@@ -93,6 +94,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Logo Carousel */}
+      <LogoCarousel />
+
       {/* Core Pillars - Editorial Grid */}
       <section className="py-20 bg-secondary/20 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-[0.03]" />
@@ -148,57 +152,110 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Pain Points vs Solution - Editorial Comparison */}
+      {/* How It Works - New Section */}
       <section className="py-20 container">
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
-          <div className="space-y-8">
-            <h2 className="text-3xl md:text-5xl font-heading font-medium leading-tight">
-              {t('home.pain.title')} <br />
-              <span className="text-muted-foreground line-through decoration-destructive/30 decoration-2 italic">{t('home.pain.subtitle')}</span>
-            </h2>
-            <div className="space-y-4">
-              {[
-                t('home.pain.1'),
-                t('home.pain.2'),
-                t('home.pain.3')
-              ].map((point, i) => (
-                <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-secondary/10 border border-border/50 hover:bg-secondary/20 transition-colors">
-                  <div className="w-6 h-6 rounded-full bg-red-50 flex items-center justify-center shrink-0 mt-0.5 border border-red-100">
-                    <span className="text-red-600 font-bold text-xs">✕</span>
-                  </div>
-                  <p className="text-base text-muted-foreground font-light">{point}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-3xl md:text-5xl font-heading font-medium mb-4 text-foreground">
+            {t('home.how.title')}
+          </h2>
+          <p className="text-base text-muted-foreground font-light max-w-xl mx-auto">
+            {t('home.how.desc')}
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto relative">
+          {/* Connecting Line */}
+          <div className="hidden md:block absolute top-12 left-[16%] right-[16%] h-0.5 bg-gradient-to-r from-transparent via-border to-transparent -z-10" />
           
-          <div className="relative pl-4 md:pl-10">
-            <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-accent/20 rounded-[2rem] blur-3xl -z-10" />
-            <Card className="bg-white/90 backdrop-blur border-white/60 shadow-2xl rounded-[2rem] overflow-hidden relative z-10">
-              <CardHeader className="p-8 border-b border-border/30 bg-gradient-to-r from-primary/5 to-transparent">
-                <CardTitle className="text-xl font-heading font-medium text-primary flex items-center gap-3">
-                  <Zap className="w-5 h-5 fill-primary/20" />
-                  {t('home.solution.title')}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-8 space-y-6">
+          {[
+            {
+              icon: Share2,
+              title: t('home.how.1.title'),
+              desc: t('home.how.1.desc'),
+              step: "01"
+            },
+            {
+              icon: BrainCircuit,
+              title: t('home.how.2.title'),
+              desc: t('home.how.2.desc'),
+              step: "02"
+            },
+            {
+              icon: Smartphone,
+              title: t('home.how.3.title'),
+              desc: t('home.how.3.desc'),
+              step: "03"
+            }
+          ].map((item, i) => (
+            <div key={i} className="flex flex-col items-center text-center group">
+              <div className="w-24 h-24 rounded-full bg-white border-4 border-secondary/20 flex items-center justify-center mb-6 relative z-10 group-hover:border-primary/20 transition-colors duration-500 shadow-lg">
+                <item.icon className="w-10 h-10 text-primary/80" />
+                <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-accent text-primary-foreground flex items-center justify-center text-xs font-bold shadow-md">
+                  {item.step}
+                </div>
+              </div>
+              <h3 className="text-xl font-heading font-medium mb-3">{item.title}</h3>
+              <p className="text-sm text-muted-foreground font-light max-w-xs leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Pain Points vs Solution - Editorial Comparison */}
+      <section className="py-20 bg-secondary/10">
+        <div className="container">
+          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
+            <div className="space-y-8">
+              <h2 className="text-3xl md:text-5xl font-heading font-medium leading-tight">
+                {t('home.pain.title')} <br />
+                <span className="text-muted-foreground line-through decoration-destructive/30 decoration-2 italic">{t('home.pain.subtitle')}</span>
+              </h2>
+              <div className="space-y-4">
                 {[
-                  { title: t('home.solution.1.title'), desc: t('home.solution.1.desc') },
-                  { title: t('home.solution.2.title'), desc: t('home.solution.2.desc') },
-                  { title: t('home.solution.3.title'), desc: t('home.solution.3.desc') }
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-4 group">
-                    <div className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center shrink-0 group-hover:bg-primary/10 transition-colors">
-                      <Check className="w-5 h-5 text-primary" />
+                  t('home.pain.1'),
+                  t('home.pain.2'),
+                  t('home.pain.3')
+                ].map((point, i) => (
+                  <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-white/50 border border-border/50 hover:bg-white transition-colors">
+                    <div className="w-6 h-6 rounded-full bg-red-50 flex items-center justify-center shrink-0 mt-0.5 border border-red-100">
+                      <span className="text-red-600 font-bold text-xs">✕</span>
                     </div>
-                    <div>
-                      <div className="text-lg font-heading font-medium text-foreground">{item.title}</div>
-                      <div className="text-sm text-muted-foreground font-light">{item.desc}</div>
-                    </div>
+                    <p className="text-base text-muted-foreground font-light">{point}</p>
                   </div>
                 ))}
-              </CardContent>
-            </Card>
+              </div>
+            </div>
+            
+            <div className="relative pl-4 md:pl-10">
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-accent/20 rounded-[2rem] blur-3xl -z-10" />
+              <Card className="bg-white/90 backdrop-blur border-white/60 shadow-2xl rounded-[2rem] overflow-hidden relative z-10">
+                <CardHeader className="p-8 border-b border-border/30 bg-gradient-to-r from-primary/5 to-transparent">
+                  <CardTitle className="text-xl font-heading font-medium text-primary flex items-center gap-3">
+                    <Zap className="w-5 h-5 fill-primary/20" />
+                    {t('home.solution.title')}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-8 space-y-6">
+                  {[
+                    { title: t('home.solution.1.title'), desc: t('home.solution.1.desc') },
+                    { title: t('home.solution.2.title'), desc: t('home.solution.2.desc') },
+                    { title: t('home.solution.3.title'), desc: t('home.solution.3.desc') }
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-4 group">
+                      <div className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center shrink-0 group-hover:bg-primary/10 transition-colors">
+                        <Check className="w-5 h-5 text-primary" />
+                      </div>
+                      <div>
+                        <div className="text-lg font-heading font-medium text-foreground">{item.title}</div>
+                        <div className="text-sm text-muted-foreground font-light">{item.desc}</div>
+                      </div>
+                    </div>
+                  ))}
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
