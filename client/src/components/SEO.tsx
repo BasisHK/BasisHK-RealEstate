@@ -11,7 +11,7 @@ interface SEOProps {
 export default function SEO({ 
   title, 
   description, 
-  image = "/images/hero-city-night.jpg", 
+  image = "/og-image.png", 
   url 
 }: SEOProps) {
   const { language } = useLanguage();
