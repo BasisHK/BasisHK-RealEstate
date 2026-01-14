@@ -35,8 +35,8 @@ export default function Contact() {
         description={t('contact.desc')}
         url="/contact"
       />
-      <div className="min-h-screen bg-background flex items-center justify-center py-20 px-4">
-        <div className="w-full max-w-6xl grid md:grid-cols-2 gap-16 items-start">
+      <div className="min-h-screen bg-background flex flex-col md:justify-center py-20 px-4">
+        <div className="w-full max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
           
           {/* Text Content */}
           <div className="space-y-8 sticky top-24">
