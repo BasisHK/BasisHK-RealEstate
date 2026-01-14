@@ -219,6 +219,79 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Case Studies Section */}
+      <section className="py-20 bg-secondary/10">
+        <div className="container">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-5xl font-heading font-medium mb-4 text-foreground">
+              {t('home.cases.title')}
+            </h2>
+            <p className="text-base text-muted-foreground font-light max-w-xl mx-auto">
+              {t('home.cases.subtitle')}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                title: t('home.cases.midlevels.title'),
+                desc: t('home.cases.midlevels.desc'),
+                image: "/images/case-study-midlevels.jpg",
+                stats: [
+                  { value: t('home.cases.midlevels.stat1'), label: t('home.cases.midlevels.label1') },
+                  { value: t('home.cases.midlevels.stat2'), label: t('home.cases.midlevels.label2') }
+                ]
+              },
+              {
+                title: t('home.cases.kaitak.title'),
+                desc: t('home.cases.kaitak.desc'),
+                image: "/images/case-study-kaitak.jpg",
+                stats: [
+                  { value: t('home.cases.kaitak.stat1'), label: t('home.cases.kaitak.label1') },
+                  { value: t('home.cases.kaitak.stat2'), label: t('home.cases.kaitak.label2') }
+                ]
+              },
+              {
+                title: t('home.cases.saikung.title'),
+                desc: t('home.cases.saikung.desc'),
+                image: "/images/case-study-saikung.jpg",
+                stats: [
+                  { value: t('home.cases.saikung.stat1'), label: t('home.cases.saikung.label1') },
+                  { value: t('home.cases.saikung.stat2'), label: t('home.cases.saikung.label2') }
+                ]
+              }
+            ].map((study, i) => (
+              <Card key={i} className="bg-white border-none shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group rounded-2xl">
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={study.image} 
+                    alt={study.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60" />
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <h3 className="text-lg font-heading font-bold">{study.title}</h3>
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+                    {study.desc}
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-border/50">
+                    {study.stats.map((stat, j) => (
+                      <div key={j}>
+                        <div className="text-xl font-bold text-primary">{stat.value}</div>
+                        <div className="text-xs text-muted-foreground uppercase tracking-wider font-medium">{stat.label}</div>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Video Gallery - Masonry Collage */}
       <section className="py-20 container overflow-hidden">
         <div className="text-center max-w-3xl mx-auto mb-16">
