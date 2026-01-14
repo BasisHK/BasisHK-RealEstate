@@ -98,6 +98,16 @@ export const translations: Record<Language, Record<string, string>> = {
     'services.feature.weekly': 'Weekly',
     'services.select': 'Select Plan',
     'services.popular': 'Most Popular',
+    'services.faq.title': 'Frequently Asked Questions',
+    'services.faq.subtitle': 'Everything you need to know about our services and billing.',
+    'services.faq.q1': 'What does "Unlimited Revisions" mean?',
+    'services.faq.a1': 'We want you to be 100% satisfied with your content. You can request as many changes as needed to the video edits, captions, or ad copy until it perfectly matches your vision.',
+    'services.faq.q2': 'Is there a minimum contract period?',
+    'services.faq.a2': 'No, all our plans are month-to-month. You can cancel or upgrade at any time. However, choosing quarterly billing saves you 20%.',
+    'services.faq.q3': 'How quickly can I get my first video?',
+    'services.faq.a3': 'Once you upload your property photos, our AI generates the initial draft within minutes. After your review, the final polished version is typically ready within 24 hours.',
+    'services.faq.q4': 'Do you handle the ad spend budget?',
+    'services.faq.a4': 'The ad spend is paid directly to the platforms (Facebook/Instagram) by you. Our fee covers the management, optimization, and creative production.',
 
     // About
     'about.title': 'Built by Agents, For Agents',
@@ -225,6 +235,16 @@ export const translations: Record<Language, Record<string, string>> = {
     'services.feature.weekly': '每週',
     'services.select': '選擇計劃',
     'services.popular': '最受歡迎',
+    'services.faq.title': '常見問題',
+    'services.faq.subtitle': '關於我們服務和收費的詳細解答。',
+    'services.faq.q1': '「無限次修改」是什麼意思？',
+    'services.faq.a1': '我們希望您對內容百分百滿意。您可以對影片剪輯、字幕或廣告文案提出任意次數的修改要求，直到完全符合您的願景。',
+    'services.faq.q2': '是否有最短合約期？',
+    'services.faq.a2': '沒有，我們所有計劃都是按月收費。您可以隨時取消或升級。不過，選擇按季繳付可節省 20%。',
+    'services.faq.q3': '多久可以收到第一條影片？',
+    'services.faq.a3': '當您上載樓盤照片後，我們的 AI 會在幾分鐘內生成初稿。經您審閱後，最終潤飾版本通常在 24 小時內完成。',
+    'services.faq.q4': '你們會處理廣告預算嗎？',
+    'services.faq.a4': '廣告費用由您直接支付給平台（Facebook/Instagram）。我們的費用涵蓋管理、優化和創意製作。',
 
     // About
     'about.title': '由代理建立，為代理而設',

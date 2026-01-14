@@ -2,6 +2,7 @@ import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge, Bot, BrainCircuit, Check, Sparkles, Video, Zap, X } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from "wouter";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -223,6 +224,53 @@ export default function Services() {
                 </CardFooter>
               </Card>
             ))}
+          </div>
+
+          {/* FAQ Section */}
+          <div className="max-w-3xl mx-auto mt-24">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-heading font-bold mb-4 text-foreground">
+                {t('services.faq.title')}
+              </h2>
+              <p className="text-base text-muted-foreground">
+                {t('services.faq.subtitle')}
+              </p>
+            </div>
+            
+            <Accordion type="single" collapsible className="w-full bg-white rounded-2xl shadow-sm border border-border/50 px-6 py-2">
+              <AccordionItem value="item-1">
+                <AccordionTrigger className="text-left font-heading font-semibold text-foreground/90 hover:text-primary hover:no-underline">
+                  {t('services.faq.q1')}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  {t('services.faq.a1')}
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                <AccordionTrigger className="text-left font-heading font-semibold text-foreground/90 hover:text-primary hover:no-underline">
+                  {t('services.faq.q2')}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  {t('services.faq.a2')}
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-3">
+                <AccordionTrigger className="text-left font-heading font-semibold text-foreground/90 hover:text-primary hover:no-underline">
+                  {t('services.faq.q3')}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  {t('services.faq.a3')}
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-4" className="border-b-0">
+                <AccordionTrigger className="text-left font-heading font-semibold text-foreground/90 hover:text-primary hover:no-underline">
+                  {t('services.faq.q4')}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  {t('services.faq.a4')}
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </section>
