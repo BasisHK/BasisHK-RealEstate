@@ -46,51 +46,51 @@
 }
 
 :root {
-  /* Professional Corporate Palette */
-  --primary: oklch(0.45 0.12 260); /* Professional Blue */
-  --primary-foreground: oklch(0.98 0.01 260); /* White */
-  --sidebar-primary: oklch(0.45 0.12 260);
-  --sidebar-primary-foreground: oklch(0.98 0.01 260);
+  /* Reference Design Palette (Purple/Indigo Gradient Theme) */
+  --primary: oklch(0.55 0.2 280); /* Vibrant Purple */
+  --primary-foreground: oklch(1 0 0); /* White */
+  --sidebar-primary: oklch(0.55 0.2 280);
+  --sidebar-primary-foreground: oklch(1 0 0);
   
-  --background: oklch(0.99 0 0); /* Clean White */
-  --foreground: oklch(0.20 0.02 260); /* Dark Slate */
+  --background: oklch(0.99 0.01 280); /* Very Light Purple Tint */
+  --foreground: oklch(0.20 0.02 280); /* Dark Purple/Slate */
   
   --card: oklch(1 0 0); /* White */
-  --card-foreground: oklch(0.20 0.02 260);
+  --card-foreground: oklch(0.20 0.02 280);
   
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.20 0.02 260);
+  --popover-foreground: oklch(0.20 0.02 280);
   
-  --secondary: oklch(0.96 0.01 260); /* Light Gray Blue */
-  --secondary-foreground: oklch(0.20 0.02 260);
+  --secondary: oklch(0.96 0.02 280); /* Light Lavender */
+  --secondary-foreground: oklch(0.35 0.1 280); /* Deep Purple */
   
-  --muted: oklch(0.96 0.01 260);
-  --muted-foreground: oklch(0.50 0.02 260); /* Medium Gray */
+  --muted: oklch(0.96 0.01 280);
+  --muted-foreground: oklch(0.55 0.05 280); /* Muted Purple Gray */
   
-  --accent: oklch(0.96 0.01 260);
-  --accent-foreground: oklch(0.20 0.02 260);
+  --accent: oklch(0.94 0.03 280);
+  --accent-foreground: oklch(0.35 0.1 280);
   
   --destructive: oklch(0.6 0.15 20);
   --destructive-foreground: oklch(0.98 0 0);
   
-  --border: oklch(0.90 0.01 260);
-  --input: oklch(0.90 0.01 260);
-  --ring: oklch(0.45 0.12 260); /* Blue Ring */
+  --border: oklch(0.92 0.02 280);
+  --input: oklch(0.92 0.02 280);
+  --ring: oklch(0.55 0.2 280); /* Purple Ring */
   
-  --radius: 0.375rem; /* Standard professional radius (6px) */
+  --radius: 0.75rem; /* Softer, more modern radius (12px) */
   
-  --chart-1: oklch(0.45 0.12 260); /* Blue */
-  --chart-2: oklch(0.55 0.10 220); /* Teal */
-  --chart-3: oklch(0.65 0.08 260); /* Light Blue */
-  --chart-4: oklch(0.35 0.12 260); /* Dark Blue */
-  --chart-5: oklch(0.50 0.05 260); /* Gray Blue */
+  --chart-1: oklch(0.55 0.2 280); /* Purple */
+  --chart-2: oklch(0.65 0.15 300); /* Magenta */
+  --chart-3: oklch(0.75 0.1 260); /* Indigo */
+  --chart-4: oklch(0.45 0.15 280); /* Deep Purple */
+  --chart-5: oklch(0.85 0.05 280); /* Lavender */
   
-  --sidebar: oklch(0.99 0 0);
-  --sidebar-foreground: oklch(0.20 0.02 260);
-  --sidebar-accent: oklch(0.96 0.01 260);
-  --sidebar-accent-foreground: oklch(0.20 0.02 260);
-  --sidebar-border: oklch(0.90 0.01 260);
-  --sidebar-ring: oklch(0.45 0.12 260);
+  --sidebar: oklch(0.99 0.01 280);
+  --sidebar-foreground: oklch(0.20 0.02 280);
+  --sidebar-accent: oklch(0.96 0.02 280);
+  --sidebar-accent-foreground: oklch(0.35 0.1 280);
+  --sidebar-border: oklch(0.92 0.02 280);
+  --sidebar-ring: oklch(0.55 0.2 280);
 }
 
 .dark {
