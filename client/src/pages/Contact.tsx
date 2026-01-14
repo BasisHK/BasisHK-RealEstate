@@ -19,8 +19,8 @@ export default function Contact() {
     setTimeout(() => {
       setIsSubmitting(false);
       toast({
-        title: "Sequence Initiated",
-        description: "Our strategists will intercept your signal shortly.",
+        title: "Message Sent",
+        description: "We'll be in touch shortly to start the conversation.",
       });
     }, 1500);
   };
@@ -32,50 +32,48 @@ export default function Contact() {
           
           {/* Text Content */}
           <div className="space-y-8">
-            <h1 className="text-5xl md:text-7xl font-heading font-bold tracking-tighter leading-none">
-              READY TO <br />
-              <span className="text-primary">ASCEND?</span>
+            <h1 className="text-5xl md:text-7xl font-heading font-bold tracking-tight leading-none text-foreground">
+              Let's Start <br />
+              <span className="text-primary italic">Something New.</span>
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-md">
-              Access is limited. We only partner with agents ready to handle the volume. If you're ready to dominate your market, initiate the sequence below.
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-md font-light">
+              We're excited to hear your story. Whether you're looking to refresh your brand or find new leads, we're here to help you grow.
             </p>
             
-            <div className="space-y-4 pt-8 border-t border-border/30">
+            <div className="space-y-4 pt-8 border-t border-border">
               <div className="flex items-center gap-4">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                <span className="font-heading uppercase tracking-widest text-sm text-muted-foreground">System Status: Online</span>
+                <div className="w-2 h-2 bg-green-500 rounded-full" />
+                <span className="font-heading tracking-wide text-sm text-muted-foreground">Accepting New Partners</span>
               </div>
               <div className="flex items-center gap-4">
-                <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                <span className="font-heading uppercase tracking-widest text-sm text-muted-foreground">Slots Available: Limited</span>
+                <div className="w-2 h-2 bg-primary rounded-full" />
+                <span className="font-heading tracking-wide text-sm text-muted-foreground">Free Initial Consultation</span>
               </div>
             </div>
           </div>
 
           {/* Form */}
-          <div className="bg-card border border-border p-8 md:p-12 relative overflow-hidden group">
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-purple-500" />
-            
-            <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
+          <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-border/50">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
-                <Label htmlFor="name" className="font-heading uppercase tracking-wider text-xs text-muted-foreground">Agent Name</Label>
-                <Input id="name" required className="bg-background/50 border-border/50 focus:border-primary rounded-none h-12" placeholder="Enter your name" />
+                <Label htmlFor="name" className="font-heading tracking-wide text-xs text-muted-foreground uppercase">Your Name</Label>
+                <Input id="name" required className="bg-secondary/30 border-transparent focus:border-primary rounded-xl h-12" placeholder="Jane Doe" />
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="agency" className="font-heading uppercase tracking-wider text-xs text-muted-foreground">Agency</Label>
-                <Input id="agency" required className="bg-background/50 border-border/50 focus:border-primary rounded-none h-12" placeholder="e.g. Midland, Centaline" />
+                <Label htmlFor="agency" className="font-heading tracking-wide text-xs text-muted-foreground uppercase">Agency</Label>
+                <Input id="agency" required className="bg-secondary/30 border-transparent focus:border-primary rounded-xl h-12" placeholder="e.g. Midland, Centaline" />
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="whatsapp" className="font-heading uppercase tracking-wider text-xs text-muted-foreground">WhatsApp Number</Label>
-                <Input id="whatsapp" type="tel" required className="bg-background/50 border-border/50 focus:border-primary rounded-none h-12" placeholder="+852" />
+                <Label htmlFor="whatsapp" className="font-heading tracking-wide text-xs text-muted-foreground uppercase">WhatsApp Number</Label>
+                <Input id="whatsapp" type="tel" required className="bg-secondary/30 border-transparent focus:border-primary rounded-xl h-12" placeholder="+852" />
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="budget" className="font-heading uppercase tracking-wider text-xs text-muted-foreground">Monthly Ad Budget (HKD)</Label>
+                <Label htmlFor="budget" className="font-heading tracking-wide text-xs text-muted-foreground uppercase">Monthly Budget (HKD)</Label>
                 <Select>
-                  <SelectTrigger className="bg-background/50 border-border/50 focus:border-primary rounded-none h-12">
+                  <SelectTrigger className="bg-secondary/30 border-transparent focus:border-primary rounded-xl h-12">
                     <SelectValue placeholder="Select budget range" />
                   </SelectTrigger>
                   <SelectContent>
@@ -87,12 +85,12 @@ export default function Contact() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="message" className="font-heading uppercase tracking-wider text-xs text-muted-foreground">Mission Brief (Optional)</Label>
-                <Textarea id="message" className="bg-background/50 border-border/50 focus:border-primary rounded-none min-h-[100px]" placeholder="Tell us about your current challenges..." />
+                <Label htmlFor="message" className="font-heading tracking-wide text-xs text-muted-foreground uppercase">How can we help?</Label>
+                <Textarea id="message" className="bg-secondary/30 border-transparent focus:border-primary rounded-xl min-h-[100px]" placeholder="Tell us about your goals..." />
               </div>
 
-              <Button type="submit" disabled={isSubmitting} className="w-full font-heading font-bold uppercase tracking-widest rounded-none h-14 text-lg bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300">
-                {isSubmitting ? "Processing..." : "Initiate Sequence"}
+              <Button type="submit" disabled={isSubmitting} className="w-full font-heading font-bold tracking-wide rounded-full h-14 text-lg bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 shadow-lg">
+                {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </div>

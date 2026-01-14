@@ -18,12 +18,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-background text-foreground font-body selection:bg-primary selection:text-primary-foreground flex flex-col">
       {/* Navigation */}
-      <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-md">
+      <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-white/80 backdrop-blur-md shadow-sm">
         <div className="container flex h-20 items-center justify-between">
           {/* Logo */}
           <Link href="/">
-            <a className="text-2xl font-heading font-bold tracking-tighter text-primary hover:opacity-80 transition-opacity">
-              PROPEL<span className="text-foreground">HK</span>
+            <a className="text-2xl font-heading font-bold tracking-tight text-foreground hover:opacity-80 transition-opacity flex items-center gap-2">
+              <span className="text-primary">●</span> PROPELHK
             </a>
           </Link>
 
@@ -33,9 +33,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <Link key={item.href} href={item.href}>
                 <a
                   className={cn(
-                    "text-sm font-medium uppercase tracking-widest transition-colors hover:text-primary",
+                    "text-sm font-medium tracking-wide transition-colors hover:text-primary",
                     location === item.href
-                      ? "text-primary"
+                      ? "text-primary font-bold"
                       : "text-muted-foreground"
                   )}
                 >
@@ -44,8 +44,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </Link>
             ))}
             <Link href="/contact">
-              <Button variant="default" className="font-heading font-bold uppercase tracking-wider rounded-none">
-                Get Access
+              <Button variant="default" className="font-heading font-bold tracking-wide rounded-full px-6">
+                Get Started
               </Button>
             </Link>
           </nav>
@@ -92,17 +92,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border bg-card py-12">
+      <footer className="border-t border-border bg-secondary/30 py-16">
         <div className="container grid md:grid-cols-4 gap-8">
           <div className="col-span-2">
-            <h3 className="text-2xl font-heading font-bold text-primary mb-4">PROPELHK</h3>
-            <p className="text-muted-foreground max-w-md">
-              Architecting digital dominance for Hong Kong's elite real estate agents. 
-              Precision targeting. Cinematic authority. Automated velocity.
+            <h3 className="text-2xl font-heading font-bold text-foreground mb-4 flex items-center gap-2">
+              <span className="text-primary">●</span> PROPELHK
+            </h3>
+            <p className="text-muted-foreground max-w-md font-light leading-relaxed">
+              Cultivating meaningful connections for Hong Kong's real estate professionals. 
+              Authentic strategies. Sustainable growth. Human-centric marketing.
             </p>
           </div>
           <div>
-            <h4 className="font-heading font-bold uppercase tracking-wider mb-4">Sitemap</h4>
+            <h4 className="font-heading font-bold tracking-wide mb-4 text-foreground">Explore</h4>
             <ul className="space-y-2">
               {navItems.map((item) => (
                 <li key={item.href}>
