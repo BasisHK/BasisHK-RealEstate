@@ -23,37 +23,35 @@ export function LogoCarousel() {
         </p>
       </div>
       
-      <div className="relative flex overflow-x-hidden group">
-        <div className="animate-marquee whitespace-nowrap flex items-center space-x-16 px-8">
-          {LOGOS.map((logo, index) => (
-            <div key={index} className="flex items-center justify-center gap-2 h-12 w-48 opacity-50 hover:opacity-100 transition-all duration-300">
-              <logo.icon className="w-8 h-8 text-primary" />
-              <span className="text-sm font-heading font-semibold text-foreground">{logo.name}</span>
-            </div>
-          ))}
-          {/* Duplicate for seamless loop */}
-          {LOGOS.map((logo, index) => (
-            <div key={`dup-${index}`} className="flex items-center justify-center gap-2 h-12 w-48 opacity-50 hover:opacity-100 transition-all duration-300">
-              <logo.icon className="w-8 h-8 text-primary" />
-              <span className="text-sm font-heading font-semibold text-foreground">{logo.name}</span>
-            </div>
-          ))}
-        </div>
-
-        <div className="absolute top-0 animate-marquee2 whitespace-nowrap flex items-center space-x-16 px-8">
-          {LOGOS.map((logo, index) => (
-            <div key={`dup2-${index}`} className="flex items-center justify-center gap-2 h-12 w-48 opacity-50 hover:opacity-100 transition-all duration-300">
-              <logo.icon className="w-8 h-8 text-primary" />
-              <span className="text-sm font-heading font-semibold text-foreground">{logo.name}</span>
-            </div>
-          ))}
-          {/* Duplicate for seamless loop */}
-          {LOGOS.map((logo, index) => (
-            <div key={`dup3-${index}`} className="flex items-center justify-center gap-2 h-12 w-48 opacity-50 hover:opacity-100 transition-all duration-300">
-              <logo.icon className="w-8 h-8 text-primary" />
-              <span className="text-sm font-heading font-semibold text-foreground">{logo.name}</span>
-            </div>
-          ))}
+      <div className="relative flex overflow-hidden group mask-gradient">
+        <div className="flex animate-marquee whitespace-nowrap">
+          {/* First set of logos */}
+          <div className="flex items-center space-x-8 md:space-x-16 px-4 md:px-8">
+            {LOGOS.map((logo, index) => (
+              <div key={index} className="flex items-center justify-center gap-2 h-12 w-40 md:w-48 opacity-50 hover:opacity-100 transition-all duration-300 shrink-0">
+                <logo.icon className="w-6 h-6 md:w-8 md:h-8 text-primary" />
+                <span className="text-xs md:text-sm font-heading font-semibold text-foreground whitespace-normal text-center leading-tight">{logo.name}</span>
+              </div>
+            ))}
+          </div>
+          {/* Duplicate set for seamless loop */}
+          <div className="flex items-center space-x-8 md:space-x-16 px-4 md:px-8">
+            {LOGOS.map((logo, index) => (
+              <div key={`dup-${index}`} className="flex items-center justify-center gap-2 h-12 w-40 md:w-48 opacity-50 hover:opacity-100 transition-all duration-300 shrink-0">
+                <logo.icon className="w-6 h-6 md:w-8 md:h-8 text-primary" />
+                <span className="text-xs md:text-sm font-heading font-semibold text-foreground whitespace-normal text-center leading-tight">{logo.name}</span>
+              </div>
+            ))}
+          </div>
+          {/* Triplicate set for wide screens */}
+          <div className="flex items-center space-x-8 md:space-x-16 px-4 md:px-8">
+            {LOGOS.map((logo, index) => (
+              <div key={`dup2-${index}`} className="flex items-center justify-center gap-2 h-12 w-40 md:w-48 opacity-50 hover:opacity-100 transition-all duration-300 shrink-0">
+                <logo.icon className="w-6 h-6 md:w-8 md:h-8 text-primary" />
+                <span className="text-xs md:text-sm font-heading font-semibold text-foreground whitespace-normal text-center leading-tight">{logo.name}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
