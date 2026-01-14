@@ -27,26 +27,24 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-white/80 backdrop-blur-md shadow-sm">
         <div className="container flex h-20 items-center justify-between">
           {/* Logo */}
-          <Link href="/">
-            <a className="text-2xl font-heading font-bold tracking-tight text-foreground hover:opacity-80 transition-opacity flex items-center gap-2">
-              <span className="text-primary">●</span> BASISHK
-            </a>
+          <Link href="/" className="text-2xl font-heading font-bold tracking-tight text-foreground hover:opacity-80 transition-opacity flex items-center gap-2">
+            <span className="text-primary">●</span> BASISHK
           </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href}>
-                <a
-                  className={cn(
-                    "text-sm font-medium tracking-wide transition-colors hover:text-primary",
-                    location === item.href
-                      ? "text-primary font-bold"
-                      : "text-muted-foreground"
-                  )}
-                >
-                  {item.label}
-                </a>
+              <Link 
+                key={item.href} 
+                href={item.href}
+                className={cn(
+                  "text-sm font-medium tracking-wide transition-colors hover:text-primary",
+                  location === item.href
+                    ? "text-primary font-bold"
+                    : "text-muted-foreground"
+                )}
+              >
+                {item.label}
               </Link>
             ))}
             
@@ -88,18 +86,18 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         {isMobileMenuOpen && (
           <div className="md:hidden absolute top-20 left-0 right-0 bg-background border-b border-border p-4 flex flex-col gap-4 animate-in slide-in-from-top-5">
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href}>
-                <a
-                  className={cn(
-                    "text-lg font-heading font-bold uppercase tracking-wider py-2 border-b border-border/20",
-                    location === item.href
-                      ? "text-primary"
-                      : "text-muted-foreground"
-                  )}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
+              <Link 
+                key={item.href} 
+                href={item.href}
+                className={cn(
+                  "text-lg font-heading font-bold uppercase tracking-wider py-2 border-b border-border/20",
+                  location === item.href
+                    ? "text-primary"
+                    : "text-muted-foreground"
+                )}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {item.label}
               </Link>
             ))}
             <Link href="/contact">
@@ -132,10 +130,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <ul className="space-y-2">
               {navItems.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href}>
-                    <a className="text-muted-foreground hover:text-primary transition-colors">
-                      {item.label}
-                    </a>
+                  <Link 
+                    href={item.href}
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {item.label}
                   </Link>
                 </li>
               ))}
