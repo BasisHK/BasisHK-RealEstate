@@ -262,12 +262,36 @@ export default function Services() {
                   {t('services.faq.a3')}
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="item-4" className="border-b-0">
+              <AccordionItem value="item-4">
                 <AccordionTrigger className="text-left font-heading font-semibold text-foreground/90 hover:text-primary hover:no-underline">
                   {t('services.faq.q4')}
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground leading-relaxed">
                   {t('services.faq.a4')}
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-5">
+                <AccordionTrigger className="text-left font-heading font-semibold text-foreground/90 hover:text-primary hover:no-underline">
+                  {t('services.faq.q5')}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  {t('services.faq.a5')}
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-6">
+                <AccordionTrigger className="text-left font-heading font-semibold text-foreground/90 hover:text-primary hover:no-underline">
+                  {t('services.faq.q6')}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  {t('services.faq.a6')}
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-7" className="border-b-0">
+                <AccordionTrigger className="text-left font-heading font-semibold text-foreground/90 hover:text-primary hover:no-underline">
+                  {t('services.faq.q7')}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  {t('services.faq.a7')}
                 </AccordionContent>
               </AccordionItem>
             </Accordion>

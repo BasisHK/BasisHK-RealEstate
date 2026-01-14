@@ -122,6 +122,12 @@ export const translations: Record<Language, Record<string, string>> = {
     'services.faq.a3': 'Once you upload your property photos, our AI generates the initial draft within minutes. After your review, the final polished version is typically ready within 48 hours ready for revisions by our creative team.',
     'services.faq.q4': 'Do you handle the ad spend budget?',
     'services.faq.a4': 'The ad spend is paid directly to the platforms (Facebook/Instagram) by you. Our fee covers the management, optimization, and creative production.',
+    'services.faq.q5': 'What is the Advanced Lead Capture Bot?',
+    'services.faq.a5': 'Our Advanced Lead Capture Bot is an AI-powered assistant that engages visitors 24/7. It qualifies leads by asking key questions about their budget, preferences, and timeline, ensuring you only spend time on high-intent prospects.',
+    'services.faq.q6': 'How does Predictive Targeting work?',
+    'services.faq.a6': 'Predictive Targeting uses machine learning to analyze market trends and user behavior. It identifies potential buyers who are most likely to convert, allowing us to serve your ads to the most relevant audience before your competitors do.',
+    'services.faq.q7': 'What does a Dedicated Account Manager do?',
+    'services.faq.a7': 'Your Dedicated Account Manager is your strategic partner. They oversee your campaigns, provide monthly performance reports, and offer personalized advice to optimize your marketing strategy, ensuring your goals are met.',
 
     // About
     'about.title': 'Built by Agents, For Agents',
@@ -273,6 +279,12 @@ export const translations: Record<Language, Record<string, string>> = {
     'services.faq.a3': '當您上載樓盤照片後，我們的 AI 會在幾分鐘內生成初稿。經您審閱後，最終潤飾版本通常在 48 小時內完成，並由我們的創意團隊進行修訂。',
     'services.faq.q4': '你們會處理廣告預算嗎？',
     'services.faq.a4': '廣告費用由您直接支付給平台（Facebook/Instagram）。我們的費用涵蓋管理、優化和創意製作。',
+    'services.faq.q5': '什麼是高級潛在客戶捕獲機器人？',
+    'services.faq.a5': '我們的高級潛在客戶捕獲機器人是一個全天候運作的 AI 助手。它通過詢問有關預算、偏好和時間表的關鍵問題來篩選潛在客戶，確保您只將時間花在購買意向高的潛在客戶身上。',
+    'services.faq.q6': '預測性定位是如何運作的？',
+    'services.faq.a6': '預測性定位利用機器學習分析市場趨勢和用戶行為。它能識別最有可能轉化的潛在買家，讓我們能在競爭對手之前將您的廣告投放給最相關的受眾。',
+    'services.faq.q7': '專屬客戶經理負責什麼？',
+    'services.faq.a7': '您的專屬客戶經理是您的戰略合作夥伴。他們負責監督您的營銷活動，提供月度績效報告，並提供個性化建議以優化您的營銷策略，確保達成您的目標。',
 
     // About
     'about.title': '由代理建立，為代理而設',
