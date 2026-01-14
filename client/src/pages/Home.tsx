@@ -4,12 +4,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { ArrowRight, BarChart3, Bot, BrainCircuit, Check, Globe, Sparkles, Target, TrendingUp, Video, Zap } from "lucide-react";
 import { Link } from "wouter";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEO from "@/components/SEO";
 
 export default function Home() {
   const { t } = useLanguage();
 
   return (
     <Layout>
+      <SEO />
       {/* Hero Section - Creative Professional */}
       <section className="relative pt-20 pb-16 overflow-hidden">
         {/* Mesh Gradient Background */}

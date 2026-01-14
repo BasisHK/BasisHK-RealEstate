@@ -2,12 +2,18 @@ import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEO from "@/components/SEO";
 
 export default function About() {
   const { t } = useLanguage();
 
   return (
     <Layout>
+      <SEO 
+        title={t('about.title')}
+        description={t('about.desc')}
+        url="/about"
+      />
       <div className="bg-background min-h-screen">
         {/* Hero */}
         <section className="py-20 bg-secondary/30 border-b border-border">

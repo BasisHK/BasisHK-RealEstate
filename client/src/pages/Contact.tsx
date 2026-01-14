@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEO from "@/components/SEO";
 
 export default function Contact() {
   const { toast } = useToast();
@@ -29,6 +30,11 @@ export default function Contact() {
 
   return (
     <Layout>
+      <SEO 
+        title={t('contact.title')}
+        description={t('contact.desc')}
+        url="/contact"
+      />
       <div className="min-h-screen bg-background flex items-center justify-center py-20 px-4">
         <div className="w-full max-w-6xl grid md:grid-cols-2 gap-16 items-start">
           

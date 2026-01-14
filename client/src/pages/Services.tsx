@@ -5,6 +5,7 @@ import { Badge, Bot, BrainCircuit, Check, Sparkles, Video, Zap, X } from "lucide
 import { Link } from "wouter";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEO from "@/components/SEO";
 
 export default function Services() {
   const [billingCycle, setBillingCycle] = useState<"monthly" | "quarterly">("monthly");
@@ -58,6 +59,11 @@ export default function Services() {
 
   return (
     <Layout>
+      <SEO 
+        title={t('services.title')}
+        description={t('services.subtitle')}
+        url="/services"
+      />
       {/* Hero Section - Compact */}
       <section className="py-16 bg-background relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/5 rounded-full blur-[100px] -z-10" />
