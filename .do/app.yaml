@@ -1,0 +1,25 @@
+name: basishk-realestate
+region: sgp
+services:
+  - name: web
+    github:
+      repo: BasisHK/BasisHK-RealEstate
+      branch: main
+      deploy_on_push: true
+    build_command: npm install -g pnpm && pnpm install && pnpm build
+    run_command: node dist/index.js
+    envs:
+      - key: NODE_ENV
+        value: production
+    http_port: 8080
+    instance_count: 1
+    instance_size_slug: apps-s-1vcpu-0.5gb
+    routes:
+      - path: /
+    health_check:
+      http_path: /health
+      initial_delay_seconds: 10
+      period_seconds: 10
+      timeout_seconds: 5
+      success_threshold: 1
+      failure_threshold: 3

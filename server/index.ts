@@ -18,9 +18,9 @@ async function startServer() {
 
   app.use(express.static(staticPath));
 
-  // Health check endpoint for Railway
+  // Health check endpoint for cloud platforms (DigitalOcean, etc.)
   app.get("/health", (_req, res) => {
-    res.status(200).json({ status: "ok" });
+    res.status(200).json({ status: "ok", timestamp: new Date().toISOString() });
   });
 
   // Handle client-side routing - serve index.html for all routes
@@ -28,8 +28,9 @@ async function startServer() {
     res.sendFile(path.join(staticPath, "index.html"));
   });
 
-  const port = parseInt(process.env.PORT || "3000", 10);
-  const host = "0.0.0.0"; // Bind to all interfaces for Railway
+  // Use PORT from environment (DigitalOcean uses 8080 by default)
+  const port = parseInt(process.env.PORT || "8080", 10);
+  const host = "0.0.0.0"; // Bind to all interfaces for cloud deployment
 
   server.listen(port, host, () => {
     console.log(`Server running on http://${host}:${port}/`);
