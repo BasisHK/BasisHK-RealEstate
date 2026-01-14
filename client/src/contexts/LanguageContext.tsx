@@ -103,8 +103,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'home.cases.saikung.desc': 'Drone showcase captured 12 high-net-worth buyers.',
     'home.cases.saikung.stat1': '12 Buyers',
     'home.cases.saikung.label1': 'Qualified Leads',
-    'home.cases.saikung.stat2': '95%',
-    'home.cases.saikung.label2': 'Video Completion',
+    'home.cases.saikung.stat2': '14.2%',
+    'home.cases.saikung.label2': 'Engagement Rate',
 
     // Services
     'services.title': 'Intelligent Infrastructure',
@@ -281,8 +281,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'home.cases.saikung.desc': '航拍展示吸引 12 位高資產淨值買家。',
     'home.cases.saikung.stat1': '12 位',
     'home.cases.saikung.label1': '合資格買家',
-    'home.cases.saikung.stat2': '95%',
-    'home.cases.saikung.label2': '影片完播率',
+    'home.cases.saikung.stat2': '14.2%',
+    'home.cases.saikung.label2': '互動率',
 
     // Services
     'services.title': '智能基建',
