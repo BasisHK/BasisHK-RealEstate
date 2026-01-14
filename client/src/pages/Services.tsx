@@ -14,26 +14,26 @@ export default function Services() {
         <div className="container text-center max-w-4xl">
           <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-white border border-border/50 shadow-sm text-primary text-sm font-semibold mb-8 animate-in fade-in slide-in-from-bottom-5 duration-700">
             <Sparkles className="w-4 h-4" />
-            <span>AI-Powered Real Estate Marketing</span>
+            <span>Intelligent Real Estate Marketing</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-heading font-bold mb-8 text-foreground leading-tight">
             The Future of <br />
             <span className="text-primary">Lead Generation</span>
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed mb-12 max-w-2xl mx-auto">
-            We combine advanced AI technology with deep real estate expertise to deliver a marketing infrastructure that works 24/7.
+            We combine advanced automation technology with deep real estate expertise to deliver a marketing infrastructure that works 24/7.
           </p>
         </div>
       </section>
 
-      {/* AI Features Deep Dive - Bento Cards */}
+      {/* Features Deep Dive - Bento Cards */}
       <section className="py-24 bg-secondary/30">
         <div className="container">
           <div className="grid md:grid-cols-3 gap-8 mb-24">
             {[
               {
-                title: "AI Video Production",
-                desc: "Turn standard listing photos into viral-ready video tours. Our AI adds motion, voiceovers, and music automatically.",
+                title: "Generative Video Production",
+                desc: "Turn standard listing photos into viral-ready video tours. Our system adds motion, voiceovers, and music automatically.",
                 features: ["4K Video Generation", "Multi-Language Voiceovers", "Auto-Scripting"],
                 icon: Video,
                 color: "text-purple-600",
@@ -41,7 +41,7 @@ export default function Services() {
               },
               {
                 title: "Smart Lead Capture",
-                desc: "Deploy AI chatbots that live on your ads and website. They qualify leads instantly, filtering out low-intent inquiries.",
+                desc: "Deploy intelligent chatbots that live on your ads and website. They qualify leads instantly, filtering out low-intent inquiries.",
                 features: ["24/7 Instant Response", "Budget Qualification", "CRM Integration"],
                 icon: Bot,
                 color: "text-blue-600",
@@ -49,7 +49,7 @@ export default function Services() {
               },
               {
                 title: "Predictive Analytics",
-                desc: "Stop guessing. Our AI analyzes market data to predict which neighborhoods and demographics are ready to buy.",
+                desc: "Stop guessing. Our algorithms analyze market data to predict which neighborhoods and demographics are ready to buy.",
                 features: ["Audience Modeling", "Trend Forecasting", "Ad Spend Optimization"],
                 icon: BrainCircuit,
                 color: "text-indigo-600",
@@ -86,7 +86,7 @@ export default function Services() {
               Simple, Transparent Pricing
             </h2>
             <p className="text-lg text-muted-foreground">
-              Choose the AI infrastructure that fits your growth stage. No hidden fees, just results.
+              Choose the infrastructure that fits your growth stage. No hidden fees, just results.
             </p>
           </div>
 
@@ -94,7 +94,7 @@ export default function Services() {
             {/* Starter Plan */}
             <Card className="bg-white border-none shadow-lg rounded-[2rem] p-2 flex flex-col h-full hover:scale-105 transition-transform duration-300">
               <div className="p-8 pb-0">
-                <CardTitle className="text-2xl font-heading font-bold">Starter AI</CardTitle>
+                <CardTitle className="text-2xl font-heading font-bold">Starter</CardTitle>
                 <CardDescription className="mt-2">For individual agents starting their digital journey.</CardDescription>
                 <div className="mt-6 mb-6">
                   <span className="text-4xl font-bold text-foreground">HK$8,000</span>
@@ -104,7 +104,7 @@ export default function Services() {
               <CardContent className="flex-1 p-8 pt-0">
                 <ul className="space-y-4">
                   {[
-                    "5 AI-Generated Video Tours",
+                    "5 Generative Video Tours",
                     "Basic Lead Capture Bot",
                     "Social Media Content (12 Posts)",
                     "Monthly Performance Report",
@@ -128,7 +128,7 @@ export default function Services() {
                 Most Popular
               </div>
               <div className="p-8 pb-0">
-                <CardTitle className="text-3xl font-heading font-bold">Growth AI</CardTitle>
+                <CardTitle className="text-3xl font-heading font-bold">Growth</CardTitle>
                 <CardDescription className="text-primary-foreground/80 mt-2">For top producers scaling their volume.</CardDescription>
                 <div className="mt-6 mb-6">
                   <span className="text-5xl font-bold">HK$15,000</span>
@@ -138,7 +138,7 @@ export default function Services() {
               <CardContent className="flex-1 p-8 pt-0">
                 <ul className="space-y-5">
                   {[
-                    "Unlimited AI Video Tours",
+                    "Unlimited Generative Video Tours",
                     "Advanced Chatbot (WhatsApp Integration)",
                     "Social Media Content (Daily Posts)",
                     "Predictive Ad Targeting",
@@ -162,7 +162,7 @@ export default function Services() {
             {/* Enterprise Plan */}
             <Card className="bg-white border-none shadow-lg rounded-[2rem] p-2 flex flex-col h-full hover:scale-105 transition-transform duration-300">
               <div className="p-8 pb-0">
-                <CardTitle className="text-2xl font-heading font-bold">Agency AI</CardTitle>
+                <CardTitle className="text-2xl font-heading font-bold">Agency</CardTitle>
                 <CardDescription className="mt-2">For teams and boutique agencies.</CardDescription>
                 <div className="mt-6 mb-6">
                   <span className="text-4xl font-bold text-foreground">Custom</span>
@@ -171,7 +171,7 @@ export default function Services() {
               <CardContent className="flex-1 p-8 pt-0">
                 <ul className="space-y-4">
                   {[
-                    "Custom AI Model Training",
+                    "Custom Model Training",
                     "Full-Service Content Team",
                     "Dedicated Account Manager",
                     "Custom API Integrations",
@@ -193,16 +193,27 @@ export default function Services() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-background">
-        <div className="container text-center">
-          <div className="bg-secondary/30 rounded-[3rem] p-12 md:p-20">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">Still have questions?</h2>
-            <p className="text-muted-foreground mb-10 max-w-2xl mx-auto text-lg">
-              Book a free 15-minute demo to see our AI tools in action. We'll show you exactly how we generate leads for agents in your area.
-            </p>
+      {/* CTA Section - Compact & Sleek */}
+      <section className="py-16 container">
+        <div className="bg-primary rounded-[2.5rem] p-10 md:p-12 text-center relative overflow-hidden shadow-xl">
+          {/* Background Patterns */}
+          <div className="absolute top-0 left-0 w-full h-full bg-[url('/grid-pattern.svg')] opacity-10" />
+          <div className="absolute -top-24 -left-24 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
+          <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
+          
+          <div className="relative z-10 max-w-2xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="text-left">
+              <h2 className="text-2xl md:text-3xl font-heading font-bold mb-2 text-white leading-tight">
+                Ready to Automate Your Success?
+              </h2>
+              <p className="text-base text-white/90 leading-relaxed">
+                Join the top 1% of agents using intelligent tools to dominate the market.
+              </p>
+            </div>
             <Link href="/contact">
-              <Button size="lg" className="px-10 h-14 rounded-full text-lg shadow-lg hover:scale-105 transition-transform">Book Demo</Button>
+              <Button size="lg" variant="secondary" className="rounded-full font-heading font-bold text-primary h-12 px-8 text-base shadow-lg hover:bg-white hover:scale-105 transition-all whitespace-nowrap">
+                Book Strategy Session
+              </Button>
             </Link>
           </div>
         </div>
