@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useLocation } from "wouter";
 import SEO from "@/components/SEO";
 
 export default function Contact() {
@@ -14,6 +15,7 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const { t } = useLanguage();
+  const [, setLocation] = useLocation();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -44,7 +46,10 @@ export default function Contact() {
           description: t('contact.toast.desc'),
         });
         form.reset();
-        setTimeout(() => setIsSuccess(false), 3000);
+        setTimeout(() => {
+          setIsSuccess(false);
+          setLocation("/thank-you");
+        }, 1500);
       } else {
         throw new Error('Submission failed');
       }

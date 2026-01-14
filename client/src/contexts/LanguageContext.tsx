@@ -188,6 +188,13 @@ export const translations: Record<Language, Record<string, string>> = {
     'contact.form.submitting': 'Submitting...',
     'contact.toast.title': 'Inquiry Received',
     'contact.toast.desc': 'Thank you for contacting BasisHK. A representative will respond to your inquiry within 24 hours.',
+    
+    // Thank You
+    'thankyou.title': 'Thank You!',
+    'thankyou.subtitle': 'Your message has been received.',
+    'thankyou.desc': 'We have sent a confirmation email to your inbox. While you wait, why not schedule a free 15-minute strategy call with our team?',
+    'thankyou.button': 'Book Consultation',
+    'thankyou.back': 'Back to Home',
   },
   zh: {
     // Navigation
@@ -366,6 +373,13 @@ export const translations: Record<Language, Record<string, string>> = {
     'contact.form.submitting': '提交中...',
     'contact.toast.title': '已收到查詢',
     'contact.toast.desc': '感謝您聯絡 BasisHK。我們的代表將於 24 小時內回覆您的查詢。',
+
+    // Thank You
+    'thankyou.title': '感謝您的查詢！',
+    'thankyou.subtitle': '我們已收到您的訊息。',
+    'thankyou.desc': '確認郵件已發送至您的郵箱。在等待期間，不妨直接預約 15 分鐘免費策略諮詢？',
+    'thankyou.button': '預約諮詢',
+    'thankyou.back': '返回首頁',
   }
 };
 
