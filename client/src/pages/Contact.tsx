@@ -12,6 +12,7 @@ import SEO from "@/components/SEO";
 export default function Contact() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
   const { t } = useLanguage();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -37,11 +38,13 @@ export default function Contact() {
       });
 
       if (response.ok) {
+        setIsSuccess(true);
         toast({
           title: t('contact.toast.title'),
           description: t('contact.toast.desc'),
         });
         form.reset();
+        setTimeout(() => setIsSuccess(false), 3000);
       } else {
         throw new Error('Submission failed');
       }
@@ -139,8 +142,25 @@ export default function Contact() {
                 <Textarea id="message" name="message" className="bg-background min-h-[120px]" placeholder={t('contact.form.message.placeholder')} />
               </div>
 
-              <Button type="submit" disabled={isSubmitting} className="w-full font-semibold h-12 bg-primary text-primary-foreground hover:bg-primary/90">
-                {isSubmitting ? t('contact.form.submitting') : t('contact.form.submit')}
+              <Button 
+                type="submit" 
+                disabled={isSubmitting || isSuccess} 
+                className={`w-full font-semibold h-12 transition-all duration-500 ${
+                  isSuccess 
+                    ? "bg-green-600 hover:bg-green-700 text-white" 
+                    : "bg-primary text-primary-foreground hover:bg-primary/90"
+                }`}
+              >
+                {isSuccess ? (
+                  <span className="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-in zoom-in duration-300">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    Sent Successfully
+                  </span>
+                ) : (
+                  isSubmitting ? t('contact.form.submitting') : t('contact.form.submit')
+                )}
               </Button>
             </form>
           </div>
