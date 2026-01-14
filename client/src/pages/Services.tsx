@@ -77,7 +77,7 @@ export default function Services() {
             <Sparkles className="w-3.5 h-3.5" />
             <span>{t('services.title')}</span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6 text-foreground leading-tight">
+          <h1 className="text-3xl md:text-6xl font-heading font-bold mb-6 text-foreground leading-tight px-4">
             {t('services.title')} <br />
             <span className="text-primary">{t('services.subtitle')}</span>
           </h1>
@@ -165,9 +165,9 @@ export default function Services() {
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-6 max-w-5xl mx-auto items-stretch">
+          <div className="grid lg:grid-cols-3 gap-6 max-w-5xl mx-auto items-stretch px-2 md:px-0">
             {plans.map((plan, i) => (
-              <Card key={i} className={`bg-white border-none shadow-md rounded-2xl p-1 flex flex-col h-full hover:scale-[1.02] transition-transform duration-300 ${plan.highlight ? "ring-2 ring-primary shadow-xl scale-105 z-10" : ""}`}>
+              <Card key={i} className={`bg-white border-none shadow-md rounded-2xl p-1 flex flex-col h-full hover:scale-[1.02] transition-transform duration-300 ${plan.highlight ? "ring-2 ring-primary shadow-xl scale-100 md:scale-105 z-10 my-4 md:my-0" : ""}`}>
                 {plan.highlight && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-xs font-bold shadow-md">
                     {t('services.popular')}

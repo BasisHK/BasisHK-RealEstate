@@ -84,27 +84,31 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
         {/* Mobile Nav */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-20 left-0 right-0 bg-background border-b border-border p-4 flex flex-col gap-4 animate-in slide-in-from-top-5">
-            {navItems.map((item) => (
-              <Link 
-                key={item.href} 
-                href={item.href}
-                className={cn(
-                  "text-lg font-heading font-bold uppercase tracking-wider py-2 border-b border-border/20",
-                  location === item.href
-                    ? "text-primary"
-                    : "text-muted-foreground"
-                )}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {item.label}
+          <div className="md:hidden fixed inset-0 top-20 bg-background/95 backdrop-blur-lg z-40 p-6 flex flex-col gap-6 animate-in slide-in-from-top-5 overflow-y-auto">
+            <div className="flex flex-col gap-2">
+              {navItems.map((item) => (
+                <Link 
+                  key={item.href} 
+                  href={item.href}
+                  className={cn(
+                    "text-2xl font-heading font-medium py-4 border-b border-border/10 transition-colors",
+                    location === item.href
+                      ? "text-primary"
+                      : "text-foreground/80 hover:text-foreground"
+                  )}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+            <div className="mt-auto pb-8">
+              <Link href="/contact">
+                <Button size="lg" className="w-full font-heading font-bold rounded-full h-14 text-lg shadow-lg shadow-primary/20" onClick={() => setIsMobileMenuOpen(false)}>
+                  {t('nav.getStarted')}
+                </Button>
               </Link>
-            ))}
-            <Link href="/contact">
-              <Button className="w-full font-heading font-bold uppercase tracking-wider rounded-none mt-4" onClick={() => setIsMobileMenuOpen(false)}>
-                {t('nav.getAccess')}
-              </Button>
-            </Link>
+            </div>
           </div>
         )}
       </header>

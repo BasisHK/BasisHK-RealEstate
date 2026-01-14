@@ -32,7 +32,7 @@ export default function Home() {
             <span>{t('home.badge')}</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-heading font-medium mb-6 text-foreground leading-[1.1] tracking-tight">
+          <h1 className="text-4xl md:text-7xl font-heading font-medium mb-6 text-foreground leading-[1.1] tracking-tight px-4">
             {t('home.hero.title')} <br />
             <span className="italic font-light text-primary">
               {t('home.hero.subtitle')}
@@ -74,24 +74,24 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent mix-blend-multiply pointer-events-none" />
             
             {/* Floating Glass Cards - 3D Effect */}
-            <div className="absolute top-8 right-8 glass-card p-4 rounded-2xl animate-in fade-in slide-in-from-right-10 duration-1000 delay-300 max-w-[200px] hover:scale-105 transition-transform cursor-default">
+            <div className="absolute top-4 right-4 md:top-8 md:right-8 glass-card p-3 md:p-4 rounded-xl md:rounded-2xl animate-in fade-in slide-in-from-right-10 duration-1000 delay-300 max-w-[160px] md:max-w-[200px] hover:scale-105 transition-transform cursor-default scale-90 md:scale-100 origin-top-right">
               <div className="flex items-center gap-2 mb-2">
-                <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center border border-green-100">
-                  <TrendingUp className="w-4 h-4 text-green-600" />
+                <div className="w-6 h-6 md:w-8 md:h-8 bg-green-50 rounded-full flex items-center justify-center border border-green-100">
+                  <TrendingUp className="w-3 h-3 md:w-4 md:h-4 text-green-600" />
                 </div>
-                <span className="text-xs font-bold text-foreground tracking-wide">{t('home.float.roi')}</span>
+                <span className="text-[10px] md:text-xs font-bold text-foreground tracking-wide">{t('home.float.roi')}</span>
               </div>
-              <div className="text-3xl font-heading font-medium text-foreground italic">+312%</div>
-              <div className="text-[10px] text-muted-foreground uppercase tracking-wider font-medium mt-1">{t('home.float.industry')}</div>
+              <div className="text-2xl md:text-3xl font-heading font-medium text-foreground italic">+312%</div>
+              <div className="text-[9px] md:text-[10px] text-muted-foreground uppercase tracking-wider font-medium mt-1">{t('home.float.industry')}</div>
             </div>
 
-            <div className="absolute bottom-8 left-8 glass-card p-4 rounded-2xl animate-in fade-in slide-in-from-left-10 duration-1000 delay-500 flex items-center gap-4 max-w-[260px] hover:scale-105 transition-transform cursor-default">
-              <div className="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center shrink-0 border border-blue-100">
-                <Bot className="w-5 h-5 text-blue-600" />
+            <div className="absolute bottom-4 left-4 md:bottom-8 md:left-8 glass-card p-3 md:p-4 rounded-xl md:rounded-2xl animate-in fade-in slide-in-from-left-10 duration-1000 delay-500 flex items-center gap-3 md:gap-4 max-w-[220px] md:max-w-[260px] hover:scale-105 transition-transform cursor-default scale-90 md:scale-100 origin-bottom-left">
+              <div className="w-8 h-8 md:w-10 md:h-10 bg-blue-50 rounded-full flex items-center justify-center shrink-0 border border-blue-100">
+                <Bot className="w-4 h-4 md:w-5 md:h-5 text-blue-600" />
               </div>
               <div>
-                <div className="text-sm font-bold text-foreground">{t('home.float.lead')}</div>
-                <div className="text-[11px] text-muted-foreground mt-0.5">{t('home.float.budget')}: <span className="font-medium text-primary">HK$25M</span> • Mid-Levels</div>
+                <div className="text-xs md:text-sm font-bold text-foreground">{t('home.float.lead')}</div>
+                <div className="text-[10px] md:text-[11px] text-muted-foreground mt-0.5">{t('home.float.budget')}: <span className="font-medium text-primary">HK$25M</span> • Mid-Levels</div>
               </div>
             </div>
           </div>
@@ -230,90 +230,28 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-[600px] md:h-[500px]">
-          {/* Large Featured Item */}
-          <div className="col-span-2 row-span-2 relative group rounded-2xl overflow-hidden cursor-pointer">
+        <div className="max-w-5xl mx-auto">
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/50 bg-white aspect-video group">
             <video 
               autoPlay 
               loop 
               muted 
               playsInline
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              className="w-full h-full object-cover"
             >
               <source src="/videos/hong-kong-skyline-tour.mp4" type="video/mp4" />
             </video>
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
+            <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-300" />
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/50">
-                <Play className="w-6 h-6 text-white fill-white ml-1" />
+              <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/50">
+                <Play className="w-8 h-8 text-white fill-white ml-1" />
               </div>
             </div>
-            <div className="absolute bottom-6 left-6 text-white">
-              <div className="inline-block px-3 py-1 rounded-full bg-black/30 backdrop-blur-sm text-xs font-medium mb-2 border border-white/20">
+            <div className="absolute bottom-8 left-8 text-white">
+              <div className="inline-block px-4 py-1.5 rounded-full bg-black/30 backdrop-blur-sm text-sm font-medium mb-3 border border-white/20">
                 {t('home.gallery.tag.drone')}
               </div>
-              <h3 className="text-xl font-heading font-medium">Hong Kong Skyline Tour</h3>
-            </div>
-          </div>
-
-          {/* Tall Item */}
-          <div className="col-span-1 row-span-2 relative group rounded-2xl overflow-hidden cursor-pointer">
-            <img 
-              src="/images/mobile-marketing.jpg" 
-              alt="Social Media Promo" 
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
-            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/50">
-                <Play className="w-5 h-5 text-white fill-white ml-1" />
-              </div>
-            </div>
-            <div className="absolute bottom-4 left-4 text-white">
-              <div className="inline-block px-2 py-0.5 rounded-full bg-black/30 backdrop-blur-sm text-[10px] font-medium mb-1 border border-white/20">
-                {t('home.gallery.tag.promo')}
-              </div>
-              <h3 className="text-sm font-heading font-medium">Instagram Reel</h3>
-            </div>
-          </div>
-
-          {/* Standard Item 1 */}
-          <div className="col-span-1 row-span-1 relative group rounded-2xl overflow-hidden cursor-pointer">
-            <img 
-              src="/images/hero-daylight-hk.jpg" 
-              alt="Drone View" 
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
-            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/50">
-                <Play className="w-4 h-4 text-white fill-white ml-1" />
-              </div>
-            </div>
-            <div className="absolute bottom-4 left-4 text-white">
-              <div className="inline-block px-2 py-0.5 rounded-full bg-black/30 backdrop-blur-sm text-[10px] font-medium mb-1 border border-white/20">
-                {t('home.gallery.tag.drone')}
-              </div>
-            </div>
-          </div>
-
-          {/* Standard Item 2 */}
-          <div className="col-span-1 row-span-1 relative group rounded-2xl overflow-hidden cursor-pointer">
-            <img 
-              src="/images/agent-meeting-warm.jpg" 
-              alt="Virtual Tour" 
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
-            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/50">
-                <Play className="w-4 h-4 text-white fill-white ml-1" />
-              </div>
-            </div>
-            <div className="absolute bottom-4 left-4 text-white">
-              <div className="inline-block px-2 py-0.5 rounded-full bg-black/30 backdrop-blur-sm text-[10px] font-medium mb-1 border border-white/20">
-                {t('home.gallery.tag.tour')}
-              </div>
+              <h3 className="text-2xl md:text-3xl font-heading font-medium">Hong Kong Skyline Tour</h3>
             </div>
           </div>
         </div>
