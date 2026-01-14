@@ -34,14 +34,14 @@ export default function Home() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in slide-in-from-bottom-5 duration-700 delay-300">
               <Link href="/contact">
-                <Button size="lg" className="rounded-full font-heading font-semibold text-base px-10 h-14 bg-primary text-primary-foreground hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105">
+                <span className="inline-flex items-center justify-center rounded-full font-heading font-semibold text-base px-10 h-14 bg-primary text-primary-foreground hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105 cursor-pointer">
                   Start Transformation
-                </Button>
+                </span>
               </Link>
               <Link href="/services">
-                <Button variant="outline" size="lg" className="rounded-full font-heading font-semibold text-base px-10 h-14 bg-white/50 backdrop-blur-sm hover:bg-white border-border shadow-sm transition-all hover:scale-105">
+                <span className="inline-flex items-center justify-center rounded-full font-heading font-semibold text-base px-10 h-14 bg-white/50 backdrop-blur-sm hover:bg-white border-border border shadow-sm transition-all hover:scale-105 cursor-pointer">
                   View Pricing Plans
-                </Button>
+                </span>
               </Link>
             </div>
           </div>
@@ -255,9 +255,9 @@ export default function Home() {
               </p>
             </div>
             <Link href="/contact">
-              <Button size="lg" variant="secondary" className="rounded-full font-heading font-bold text-primary h-12 px-8 text-base shadow-lg hover:bg-white hover:scale-105 transition-all whitespace-nowrap">
+              <span className="inline-flex items-center justify-center rounded-full font-heading font-bold text-primary bg-secondary h-12 px-8 text-base shadow-lg hover:bg-white hover:scale-105 transition-all whitespace-nowrap cursor-pointer">
                 Book Strategy Session
-              </Button>
+              </span>
             </Link>
           </div>
         </div>
