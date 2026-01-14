@@ -1,4 +1,4 @@
-# PropelHK Website Content - Neo-Urban Noir Style
+# BasisHK Website Content - Neo-Urban Noir Style
 
 ## Brand Voice
 **Tone:** Sophisticated, Ambitious, Tech-Forward, "Insider", High-Energy.
@@ -53,7 +53,7 @@
 ## Page: About Us
 
 **Headline:** We Are the Architects of Attention.
-**Body:** PropelHK wasn't born in a boardroom. It was forged in the fast-paced, high-stakes environment of Hong Kong's digital underground. We saw a gap between the luxury of HK real estate and the mediocrity of agent marketing. We exist to close that gap. We are data scientists, creative directors, and strategists dedicated to one mission: making you the only option.
+**Body:** BasisHK wasn't born in a boardroom. It was forged in the fast-paced, high-stakes environment of Hong Kong's digital underground. We saw a gap between the luxury of HK real estate and the mediocrity of agent marketing. We exist to close that gap. We are data scientists, creative directors, and strategists dedicated to one mission: making you the only option.
 
 ---
 
