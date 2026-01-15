@@ -123,7 +123,7 @@ export default function Contact() {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch("https://formsubmit.co/ajax/pangmichael29@gmail.com", {
+      const response = await fetch("https://formsubmit.co/ajax/business@basis.hk", {
         method: "POST",
         headers: { 
           'Content-Type': 'application/json',
@@ -494,8 +494,8 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground">{t('contact.email.title')}</h4>
-                      <a href="mailto:contact@basishk.com" className="text-primary text-sm mt-1 hover:underline">
-                        contact@basishk.com
+                      <a href="mailto:business@basis.hk" className="text-primary text-sm mt-1 hover:underline">
+                        business@basis.hk
                       </a>
                     </div>
                   </div>
