@@ -74,10 +74,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <span>{language === 'en' ? '繁' : 'EN'}</span>
             </button>
             <button
-              className="text-foreground"
+              className="text-foreground p-2 hover:bg-secondary/50 rounded-md transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
             >
-              {isMobileMenuOpen ? <X /> : <Menu />}
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>

@@ -506,7 +506,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground">{t('contact.phone.title')}</h4>
-                      <p className="text-muted-foreground text-sm mt-1">+852 XXXX XXXX</p>
+                      <a href="tel:+85267559118" className="text-primary text-sm mt-1 hover:underline">+852 6755 9118</a>
                     </div>
                   </div>
                 </div>
