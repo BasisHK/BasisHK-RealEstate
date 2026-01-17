@@ -1,0 +1,15 @@
+# robots.txt for BasisHK
+# https://basis.hk
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://basis.hk/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Disallow admin or private paths (if any)
+Disallow: /api/
+Disallow: /_

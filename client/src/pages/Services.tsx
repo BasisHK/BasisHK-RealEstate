@@ -12,7 +12,7 @@ import SEO from "@/components/SEO";
 export default function Services() {
   const [billingCycle, setBillingCycle] = useState<"monthly" | "quarterly">("monthly");
   const [videoCount, setVideoCount] = useState<number>(5);
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const pricePerVideo = { monthly: 1000, quarterly: 800 }; // 20% discount for quarterly
 
   const plans = [
@@ -62,11 +62,34 @@ export default function Services() {
     }
   ];
 
+  const servicesTitle = language === 'en'
+    ? "Real Estate Marketing Services & Pricing | AI Property Videos Hong Kong"
+    : "地產營銷服務及價格 | AI 樓盤影片香港";
+
+  const servicesDescription = language === 'en'
+    ? "Explore BasisHK's real estate marketing packages. AI property video production starting at HK$1,000, lead generation bots, and digital marketing solutions for Hong Kong real estate agents."
+    : "探索 BasisHK 的地產營銷套餐。AI 樓盤影片製作由 HK$1,000 起，客源開發機械人及香港地產代理數碼營銷方案。";
+
+  const servicesKeywords = language === 'en'
+    ? [
+        "real estate marketing pricing Hong Kong",
+        "property video production cost",
+        "real estate lead generation services",
+        "AI property marketing packages"
+      ]
+    : [
+        "香港地產營銷價格",
+        "樓盤影片製作費用",
+        "地產客源開發服務",
+        "AI 物業營銷套餐"
+      ];
+
   return (
     <Layout>
       <SEO 
-        title={t('services.title')}
-        description={t('services.subtitle')}
+        title={servicesTitle}
+        description={servicesDescription}
+        keywords={servicesKeywords}
         url="/services"
       />
       {/* Hero Section - Compact */}

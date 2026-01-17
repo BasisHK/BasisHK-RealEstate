@@ -11,12 +11,41 @@ export default function Home() {
   const { t, language } = useLanguage();
 
   const homeKeywords = language === 'en'
-    ? ["Real Estate Marketing Automation", "Generative Video for Agents", "Predictive Lead Scoring", "Hong Kong Property Tech", "Luxury Real Estate Marketing"]
-    : ["地產營銷自動化", "生成式影片", "預測性客源分析", "香港房地產科技", "豪宅營銷"];
+    ? [
+        "real estate marketing agency Hong Kong",
+        "property marketing services HK",
+        "AI property video production",
+        "real estate lead generation",
+        "PropTech solutions Hong Kong",
+        "luxury property marketing",
+        "real estate digital marketing"
+      ]
+    : [
+        "香港地產營銷公司",
+        "物業推廣服務",
+        "AI 樓盤影片製作",
+        "地產客源開發",
+        "地產科技方案",
+        "豪宅營銷",
+        "地產數碼營銷"
+      ];
+
+  const homeTitle = language === 'en'
+    ? "Hong Kong Real Estate Marketing Agency | AI Property Videos & Lead Generation"
+    : "香港地產營銷公司 | AI 樓盤影片及客源開發";
+
+  const homeDescription = language === 'en'
+    ? "BasisHK is Hong Kong's leading real estate marketing agency. We provide AI-powered property video production, automated lead generation, and digital marketing solutions for elite real estate agents and property developers."
+    : "BasisHK 是香港領先的地產營銷公司。我們為精英地產代理及發展商提供 AI 樓盤影片製作、自動化客源開發及數碼營銷方案。";
 
   return (
     <Layout>
-      <SEO keywords={homeKeywords} />
+      <SEO 
+        title={homeTitle}
+        description={homeDescription}
+        keywords={homeKeywords}
+        url="/"
+      />
       {/* Hero Section - Creative Professional */}
       <section className="relative pt-20 pb-16 overflow-hidden">
         {/* Mesh Gradient Background */}
