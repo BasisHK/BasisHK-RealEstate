@@ -13,7 +13,7 @@ export default function Services() {
   const [billingCycle, setBillingCycle] = useState<"monthly" | "quarterly">("monthly");
   const [videoCount, setVideoCount] = useState<number>(5);
   const { t } = useLanguage();
-  const pricePerVideo = 1000;
+  const pricePerVideo = { monthly: 1000, quarterly: 800 }; // 20% discount for quarterly
 
   const plans = [
     {
@@ -231,9 +231,14 @@ export default function Services() {
           <div className="max-w-3xl mx-auto mt-16">
             <Card className="bg-white border-none shadow-lg rounded-2xl overflow-hidden">
               <div className="bg-gradient-to-r from-purple-600 to-indigo-600 p-6 text-white">
-                <div className="flex items-center gap-3 mb-2">
-                  <Video className="w-6 h-6" />
-                  <CardTitle className="text-xl font-heading font-bold text-white">{t('services.plan.videoOnly')}</CardTitle>
+                <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center gap-3">
+                    <Video className="w-6 h-6" />
+                    <CardTitle className="text-xl font-heading font-bold text-white">{t('services.plan.videoOnly')}</CardTitle>
+                  </div>
+                  {billingCycle === "quarterly" && (
+                    <span className="text-xs font-bold bg-white/20 px-3 py-1 rounded-full">{t('services.save')}</span>
+                  )}
                 </div>
                 <CardDescription className="text-white/80 text-sm">{t('services.plan.videoOnly.desc')}</CardDescription>
               </div>
@@ -258,8 +263,24 @@ export default function Services() {
                     </div>
                   </div>
                   <div className="text-center md:text-right md:min-w-[180px]">
-                    <div className="text-3xl font-bold text-foreground">HK${(videoCount * pricePerVideo).toLocaleString()}</div>
-                    <div className="text-xs text-muted-foreground mt-1">HK${pricePerVideo.toLocaleString()} {t('services.videoSlider.perVideo')}</div>
+                    <div className="flex flex-col items-center md:items-end">
+                      <div className="text-3xl font-bold text-foreground">
+                        HK${(videoCount * pricePerVideo[billingCycle]).toLocaleString()}
+                      </div>
+                      <div className="text-xs text-muted-foreground mt-1">
+                        HK${pricePerVideo[billingCycle].toLocaleString()} {t('services.videoSlider.perVideo')}
+                      </div>
+                      {billingCycle === "quarterly" && (
+                        <div className="text-xs text-muted-foreground line-through decoration-destructive/50 decoration-2 mt-1">
+                          HK${(videoCount * pricePerVideo.monthly).toLocaleString()}
+                        </div>
+                      )}
+                      {billingCycle === "quarterly" && (
+                        <div className="text-xs text-green-600 font-medium mt-1">
+                          {t('services.quarterly')} ({t('services.save')})
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
                 <div className="mt-6 pt-6 border-t border-border/50">
