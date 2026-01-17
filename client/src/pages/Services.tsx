@@ -18,13 +18,12 @@ export default function Services() {
       desc: t('services.plan.starter.desc'),
       price: { monthly: 8000, quarterly: 6400 },
       features: [
+        { name: t('services.feature.aiOptimizer'), included: true },
         { name: `4 ${t('services.feature.video')}`, included: true },
+        { name: t('services.feature.basicPortal'), included: true },
+        { name: t('services.feature.limitedListings'), included: true },
         { name: `${t('services.feature.basic')} ${t('services.feature.bot')}`, included: true },
-        { name: `${t('services.feature.content')} (12 ${t('services.feature.posts')})`, included: true },
-        { name: t('services.feature.revisions'), included: true },
-        { name: t('services.feature.consultancy'), included: true },
-        { name: `${t('services.feature.monthly')} ${t('services.feature.report')}`, included: true },
-        { name: t('services.feature.support'), included: true },
+        { name: t('services.feature.adsBoosting2k'), included: true },
         { name: t('services.feature.manager'), included: false }
       ]
     },
@@ -33,13 +32,12 @@ export default function Services() {
       desc: t('services.plan.growth.desc'),
       price: { monthly: 15000, quarterly: 12000 },
       features: [
+        { name: t('services.feature.aiOptimizer'), included: true },
         { name: `8 ${t('services.feature.video')}`, included: true },
+        { name: t('services.feature.basicPortal'), included: true },
+        { name: t('services.feature.unlimitedListings'), included: true },
         { name: `${t('services.feature.advanced')} ${t('services.feature.bot')}`, included: true },
-        { name: `${t('services.feature.content')} (${t('services.feature.weekly')} ${t('services.feature.posts')})`, included: true },
-        { name: t('services.feature.revisions'), included: true },
-        { name: t('services.feature.consultancy'), included: true },
-        { name: t('home.pillars.predictive.title'), included: true },
-        { name: t('services.feature.report'), included: true },
+        { name: t('services.feature.adsBoosting4k'), included: true },
         { name: t('services.feature.manager'), included: false }
       ],
       highlight: true
