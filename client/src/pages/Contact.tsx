@@ -24,7 +24,8 @@ import {
   Bot,
   Target,
   Clock,
-  Send
+  Send,
+  Calendar
 } from "lucide-react";
 
 interface FormData {
@@ -146,6 +147,8 @@ export default function Contact() {
         });
         setTimeout(() => {
           setIsSuccess(false);
+          // Redirect to Calendly for booking
+          window.open('https://calendly.com/business-basis/30min', '_blank');
           setLocation("/thank-you");
         }, 1500);
       } else {
@@ -512,8 +515,24 @@ export default function Contact() {
                 </div>
 
                 <div className="mt-8 pt-6 border-t border-primary/10">
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-muted-foreground mb-4">
                     {t('contact.response.time')}
+                  </p>
+                  
+                  {/* Direct Booking Button */}
+                  <a 
+                    href="https://calendly.com/business-basis/30min" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-full"
+                  >
+                    <Button className="w-full h-12 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">
+                      <Calendar className="w-5 h-5 mr-2" />
+                      {language === 'zh' ? '直接預約諮詢' : 'Book a Call Directly'}
+                    </Button>
+                  </a>
+                  <p className="text-xs text-muted-foreground text-center mt-2">
+                    {language === 'zh' ? '無需填寫表格' : 'Skip the form'}
                   </p>
                 </div>
               </div>

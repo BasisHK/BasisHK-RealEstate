@@ -41,7 +41,7 @@ export default function ThankYou() {
           {/* Actions */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <a 
-              href="https://calendly.com/" 
+              href="https://calendly.com/business-basis/30min" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex"
