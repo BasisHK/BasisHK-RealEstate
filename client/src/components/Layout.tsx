@@ -15,6 +15,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { label: t('nav.services'), href: "/services" },
     { label: t('nav.about'), href: "/about" },
     { label: t('nav.contact'), href: "/contact" },
+    { label: t('nav.blog'), href: "/blog" },
   ];
 
   const toggleLanguage = () => {

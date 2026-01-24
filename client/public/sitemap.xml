@@ -52,6 +52,41 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Blog - Content Hub -->
+  <url>
+    <loc>https://basis.hk/blog</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://basis.hk/blog"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://basis.hk/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://basis.hk/blog"/>
+    <lastmod>2026-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Post: Asia Real Estate Tech Outdated -->
+  <url>
+    <loc>https://basis.hk/blog/asia-real-estate-tech-outdated</loc>
+    <lastmod>2026-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog Post: Content is King -->
+  <url>
+    <loc>https://basis.hk/blog/content-is-king-real-estate</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog Post: BasisHK Changing Real Estate Marketing -->
+  <url>
+    <loc>https://basis.hk/blog/basishk-changing-real-estate-marketing</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Thank You Page -->
   <url>
     <loc>https://basis.hk/thank-you</loc>
