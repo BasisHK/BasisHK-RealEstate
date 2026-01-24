@@ -242,9 +242,11 @@ export default function Services() {
                   </ul>
                 </CardContent>
                 <CardFooter className="p-6 pt-0">
-                  <Button className={`w-full rounded-lg h-10 font-semibold text-sm ${plan.highlight ? "bg-primary text-primary-foreground hover:bg-primary/90" : "bg-secondary text-secondary-foreground hover:bg-secondary/80"}`}>
-                    {plan.price.monthly === "Custom" ? t('about.cta.button') : t('nav.getStarted')}
-                  </Button>
+                  <a href="https://calendly.com/business-basis/30min" target="_blank" rel="noopener noreferrer" className="w-full">
+                    <Button className={`w-full rounded-lg h-10 font-semibold text-sm ${plan.highlight ? "bg-primary text-primary-foreground hover:bg-primary/90" : "bg-secondary text-secondary-foreground hover:bg-secondary/80"}`}>
+                      {plan.price.monthly === "Custom" ? t('about.cta.button') : t('nav.getStarted')}
+                    </Button>
+                  </a>
                 </CardFooter>
               </Card>
             ))}
@@ -328,11 +330,11 @@ export default function Services() {
                 </div>
               </CardContent>
               <CardFooter className="p-6 pt-0">
-                <Link href="/contact" className="w-full">
+                <a href="https://calendly.com/business-basis/30min" target="_blank" rel="noopener noreferrer" className="w-full">
                   <Button className="w-full rounded-lg h-10 font-semibold text-sm bg-gradient-to-r from-purple-600 to-indigo-600 text-white hover:from-purple-700 hover:to-indigo-700">
                     {t('services.videoOnly.cta')}
                   </Button>
-                </Link>
+                </a>
               </CardFooter>
             </Card>
           </div>

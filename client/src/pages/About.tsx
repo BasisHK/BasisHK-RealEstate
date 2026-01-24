@@ -148,11 +148,11 @@ export default function About() {
               <h2 className="text-3xl md:text-5xl font-heading font-medium mb-8 text-white">
                 {t('about.cta.title')}
               </h2>
-              <Link href="/contact">
+              <a href="https://calendly.com/business-basis/30min" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="rounded-full px-12 h-14 text-lg font-medium bg-white text-primary hover:bg-accent hover:text-primary-foreground transition-all shadow-lg hover:scale-105">
                   {t('about.cta.button')}
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
         </section>

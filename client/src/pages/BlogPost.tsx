@@ -878,12 +878,12 @@ export default function BlogPost() {
             }
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
+            <a href="https://calendly.com/business-basis/30min" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="rounded-full px-10">
                 {language === 'en' ? 'Get Started' : '立即開始'}
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
-            </Link>
+            </a>
             <Link href="/blog">
               <Button size="lg" variant="outline" className="rounded-full px-10">
                 {language === 'en' ? 'Read More Articles' : '閱讀更多文章'}

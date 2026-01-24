@@ -78,11 +78,11 @@ export default function Home() {
                 {t('home.hero.cta.explore')}
               </Button>
             </Link>
-            <Link href="/contact">
+            <a href="https://calendly.com/business-basis/30min" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" size="lg" className="rounded-full px-10 h-12 text-base font-medium bg-white/50 backdrop-blur-sm hover:bg-white border-primary/10 text-primary">
                 {t('home.hero.cta.demo')}
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -432,11 +432,11 @@ export default function Home() {
                 {t('home.cta.desc')}
               </p>
             </div>
-            <Link href="/contact">
+            <a href="https://calendly.com/business-basis/30min" target="_blank" rel="noopener noreferrer">
               <span className="inline-flex items-center justify-center rounded-full font-heading font-bold text-primary bg-white h-14 px-10 text-base shadow-lg hover:bg-accent hover:text-primary-foreground hover:scale-105 transition-all whitespace-nowrap cursor-pointer">
                 {t('home.cta.button')}
               </span>
-            </Link>
+            </a>
           </div>
         </div>
       </section>

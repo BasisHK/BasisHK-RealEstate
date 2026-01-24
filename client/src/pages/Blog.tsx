@@ -267,12 +267,12 @@ export default function Blog() {
               : "加入已經使用 AI 內容來成交更多交易的代理行列。"
             }
           </p>
-          <Link href="/contact">
+          <a href="https://calendly.com/business-basis/30min" target="_blank" rel="noopener noreferrer">
             <Button size="lg" className="rounded-full px-10">
               {language === 'en' ? 'Get Started' : '立即開始'}
               <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
-          </Link>
+          </a>
         </div>
       </section>
     </Layout>
