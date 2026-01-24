@@ -16,15 +16,16 @@ interface BlogPostData {
   readTime: string;
   category: string;
   categoryZh: string;
+  image: string;
   content: string;
   contentZh: string;
 }
 
 const blogPostsData: Record<string, BlogPostData> = {
-  "asia-real-estate-tech-outdated": {
+"asia-real-estate-tech-outdated": {
     slug: "asia-real-estate-tech-outdated",
     title: "Why Asia's Real Estate Tech is Stuck in 2010 — And What Needs to Change",
-    titleZh: "亞洲地產科技為何停滯不前 — 以及如何改變現狀",
+    titleZh: "亞洲地產科技為何停滞不前 — 以及如何改變現狀",
     author: "James Chen",
     authorRole: "Industry Analyst",
     authorRoleZh: "行業分析師",
@@ -32,6 +33,7 @@ const blogPostsData: Record<string, BlogPostData> = {
     readTime: "8 min read",
     category: "Industry Analysis",
     categoryZh: "行業分析",
+    image: "/images/hero-city-night.jpg",
     content: `
 ## The Uncomfortable Truth About Asian PropTech
 
@@ -198,6 +200,7 @@ At BasisHK, we've chosen our side. Have you?
     readTime: "6 min read",
     category: "Marketing Strategy",
     categoryZh: "營銷策略",
+    image: "/images/luxury-interior-day.jpg",
     content: `
 ## The 1.7 Second Problem
 
@@ -474,6 +477,7 @@ The question is: will you be creating the content, or scrolling past it?
     readTime: "10 min read",
     category: "Company Vision",
     categoryZh: "公司願景",
+    image: "/images/hero-daylight-hk.jpg",
     content: `
 ## The Moment Everything Changed
 
@@ -775,11 +779,11 @@ export default function BlogPost() {
       />
       
       {/* Hero Section */}
-      <section className="relative pt-24 pb-12 overflow-hidden">
+      <section className="relative pt-24 pb-8 overflow-hidden">
         <div className="absolute inset-0 mesh-bg -z-20" />
         <div className="absolute top-[-10%] right-[-5%] w-[400px] h-[400px] bg-secondary/20 rounded-full blur-[100px] -z-10" />
         
-        <div className="container max-w-3xl">
+        <div className="container max-w-4xl">
           <Link href="/blog">
             <Button variant="ghost" className="mb-6 -ml-4">
               <ArrowLeft className="mr-2 w-4 h-4" />
@@ -795,7 +799,7 @@ export default function BlogPost() {
             {title}
           </h1>
           
-          <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
+          <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground mb-8">
             <div className="flex items-center gap-2">
               <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
                 <User className="w-5 h-5 text-primary" />
@@ -813,6 +817,16 @@ export default function BlogPost() {
               <Clock className="w-4 h-4" />
               {post.readTime}
             </span>
+          </div>
+          
+          {/* Cover Image */}
+          <div className="relative aspect-[21/9] rounded-2xl overflow-hidden shadow-2xl">
+            <img 
+              src={post.image} 
+              alt={title}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
           </div>
         </div>
       </section>

@@ -34,7 +34,7 @@ const blogPosts: BlogPost[] = [
     readTime: "8 min",
     category: "Industry Analysis",
     categoryZh: "行業分析",
-    image: "/images/blog-tech-outdated.jpg"
+    image: "/images/hero-city-night.jpg"
   },
   {
     id: "2",
@@ -48,7 +48,7 @@ const blogPosts: BlogPost[] = [
     readTime: "6 min",
     category: "Marketing Strategy",
     categoryZh: "營銷策略",
-    image: "/images/blog-content-king.jpg"
+    image: "/images/luxury-interior-day.jpg"
   },
   {
     id: "3",
@@ -62,7 +62,7 @@ const blogPosts: BlogPost[] = [
     readTime: "10 min",
     category: "Company Vision",
     categoryZh: "公司願景",
-    image: "/images/blog-basishk-vision.jpg"
+    image: "/images/hero-daylight-hk.jpg"
   }
 ];
 
@@ -93,6 +93,10 @@ export default function Blog() {
     ? "Explore insights on real estate technology, property marketing strategies, and how AI is transforming the industry in Asia. Expert perspectives from the BasisHK team."
     : "探索地產科技、物業營銷策略，以及 AI 如何改變亞洲地產行業的洞察。來自 BasisHK 團隊的專業觀點。";
 
+  // Featured post (first one)
+  const featuredPost = blogPosts[0];
+  const otherPosts = blogPosts.slice(1);
+
   return (
     <Layout>
       <SEO 
@@ -103,7 +107,7 @@ export default function Blog() {
       />
       
       {/* Hero Section */}
-      <section className="relative pt-24 pb-16 overflow-hidden">
+      <section className="relative pt-24 pb-12 overflow-hidden">
         <div className="absolute inset-0 mesh-bg -z-20" />
         <div className="absolute top-[-10%] right-[-5%] w-[400px] h-[400px] bg-secondary/20 rounded-full blur-[100px] -z-10" />
         
@@ -123,24 +127,102 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* Blog Posts Grid */}
-      <section className="py-16 bg-muted/30">
+      {/* Featured Post */}
+      <section className="py-8">
         <div className="container">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post) => (
+          <Link href={`/blog/${featuredPost.slug}`}>
+            <div className="group relative rounded-2xl overflow-hidden bg-background border border-border/50 hover:border-primary/30 hover:shadow-2xl transition-all duration-500">
+              <div className="grid lg:grid-cols-2 gap-0">
+                {/* Image Side */}
+                <div className="relative aspect-[16/10] lg:aspect-auto lg:min-h-[400px] overflow-hidden">
+                  <img 
+                    src={featuredPost.image} 
+                    alt={language === 'en' ? featuredPost.title : featuredPost.titleZh}
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-black/10" />
+                  <div className="absolute top-4 left-4">
+                    <span className="px-4 py-1.5 rounded-full bg-primary text-primary-foreground text-xs font-semibold uppercase tracking-wider">
+                      {language === 'en' ? 'Featured' : '精選文章'}
+                    </span>
+                  </div>
+                </div>
+                
+                {/* Content Side */}
+                <div className="p-8 lg:p-12 flex flex-col justify-center">
+                  <span className="inline-block px-3 py-1 rounded-full bg-accent/10 text-accent-foreground text-xs font-medium w-fit mb-4">
+                    {language === 'en' ? featuredPost.category : featuredPost.categoryZh}
+                  </span>
+                  
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-medium mb-4 group-hover:text-primary transition-colors">
+                    {language === 'en' ? featuredPost.title : featuredPost.titleZh}
+                  </h2>
+                  
+                  <p className="text-muted-foreground mb-6 line-clamp-3 text-base lg:text-lg">
+                    {language === 'en' ? featuredPost.excerpt : featuredPost.excerptZh}
+                  </p>
+                  
+                  <div className="flex items-center gap-6 text-sm text-muted-foreground mb-6">
+                    <span className="flex items-center gap-2">
+                      <User className="w-4 h-4" />
+                      {featuredPost.author}
+                    </span>
+                    <span className="flex items-center gap-2">
+                      <Calendar className="w-4 h-4" />
+                      {featuredPost.date}
+                    </span>
+                    <span className="flex items-center gap-2">
+                      <Clock className="w-4 h-4" />
+                      {featuredPost.readTime}
+                    </span>
+                  </div>
+                  
+                  <div className="flex items-center gap-2 text-primary font-medium">
+                    {language === 'en' ? 'Read Article' : '閱讀全文'}
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Link>
+        </div>
+      </section>
+
+      {/* Other Blog Posts */}
+      <section className="py-12 bg-muted/30">
+        <div className="container">
+          <h3 className="text-2xl font-heading font-medium mb-8">
+            {language === 'en' ? 'More Articles' : '更多文章'}
+          </h3>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {otherPosts.map((post) => (
               <Link key={post.id} href={`/blog/${post.slug}`}>
                 <Card className="group h-full bg-background/80 backdrop-blur-sm border-border/50 hover:border-primary/30 hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden">
-                  {/* Image Placeholder */}
-                  <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 relative overflow-hidden">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-                        <span className="text-2xl font-heading font-bold text-primary">{post.id}</span>
-                      </div>
-                    </div>
+                  {/* Image */}
+                  <div className="aspect-[16/9] relative overflow-hidden">
+                    <img 
+                      src={post.image} 
+                      alt={language === 'en' ? post.title : post.titleZh}
+                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                     <div className="absolute top-4 left-4">
                       <span className="px-3 py-1 rounded-full bg-background/90 backdrop-blur-sm text-xs font-medium text-foreground">
                         {language === 'en' ? post.category : post.categoryZh}
                       </span>
+                    </div>
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <div className="flex items-center gap-4 text-xs text-white/90">
+                        <span className="flex items-center gap-1">
+                          <Calendar className="w-3.5 h-3.5" />
+                          {post.date}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Clock className="w-3.5 h-3.5" />
+                          {post.readTime}
+                        </span>
+                      </div>
                     </div>
                   </div>
                   
@@ -151,22 +233,19 @@ export default function Blog() {
                   </CardHeader>
                   
                   <CardContent>
-                    <CardDescription className="text-muted-foreground line-clamp-3 mb-4">
+                    <CardDescription className="text-muted-foreground line-clamp-2 mb-4">
                       {language === 'en' ? post.excerpt : post.excerptZh}
                     </CardDescription>
                     
-                    <div className="flex items-center justify-between text-sm text-muted-foreground">
-                      <div className="flex items-center gap-4">
-                        <span className="flex items-center gap-1">
-                          <User className="w-3.5 h-3.5" />
-                          {post.author}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <Clock className="w-3.5 h-3.5" />
-                          {post.readTime}
-                        </span>
-                      </div>
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-primary" />
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="flex items-center gap-2 text-muted-foreground">
+                        <User className="w-3.5 h-3.5" />
+                        {post.author}
+                      </span>
+                      <span className="flex items-center gap-1 text-primary font-medium">
+                        {language === 'en' ? 'Read' : '閱讀'}
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </span>
                     </div>
                   </CardContent>
                 </Card>
