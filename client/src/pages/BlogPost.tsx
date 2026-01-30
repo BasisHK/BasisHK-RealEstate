@@ -35,7 +35,7 @@ const blogPostsData: Record<string, BlogPostData> = {
     readTime: "8 min read",
     category: "Industry Analysis",
     categoryZh: "行業分析",
-    image: "/images/hero-city-night.jpg",
+    image: "/images/asia-proptech-outdated.png",
     content: `
 ## The Uncomfortable Truth About Asian PropTech
 
@@ -202,7 +202,7 @@ At BasisHK, we've chosen our side. Have you?
     readTime: "6 min read",
     category: "Marketing Strategy",
     categoryZh: "營銷策略",
-    image: "/images/luxury-interior-day.jpg",
+    image: "/images/content-is-king.png",
     content: `
 ## The 1.7 Second Problem
 
@@ -479,7 +479,7 @@ The question is: will you be creating the content, or scrolling past it?
     readTime: "10 min read",
     category: "Company Vision",
     categoryZh: "公司願景",
-    image: "/images/hero-daylight-hk.jpg",
+    image: "/images/basishk-rewriting-rules.png",
     content: `
 ## The Moment Everything Changed
 
@@ -752,7 +752,7 @@ BasisHK 由四位從不同角度看到同一問題的人創立：
     readTime: "7 min read",
     category: "AI Technology",
     categoryZh: "AI 科技",
-    image: "/images/hero-city-night.jpg",
+    image: "/images/generative-ai-property.png",
     content: `
 ## The AI Revolution in Property Marketing
 
@@ -961,7 +961,7 @@ AI 可以即時翻譯和文化適應不同市場的樓盤 — 不僅僅是逐字
     readTime: "5 min read",
     category: "PropTech Trends",
     categoryZh: "地產科技趨勢",
-    image: "/images/luxury-interior-day.jpg",
+    image: "/images/ai-video-tours.png",
     content: `
 ## The Problem with Physical Viewings
 
@@ -1198,7 +1198,7 @@ AI 生成的影片導覽正在徹底改變這個等式。影片成為篩選工�
     readTime: "12 min read",
     category: "Practical Guide",
     categoryZh: "實用指南",
-    image: "/images/hero-daylight-hk.jpg",
+    image: "/images/agent-chatgpt-guide.png",
     content: `
 ## Why Every Agent Needs AI in Their Toolkit
 

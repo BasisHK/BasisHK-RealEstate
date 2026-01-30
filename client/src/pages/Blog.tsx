@@ -34,7 +34,7 @@ const blogPosts: BlogPost[] = [
     readTime: "8 min",
     category: "Industry Analysis",
     categoryZh: "行業分析",
-    image: "/images/hero-city-night.jpg"
+    image: "/images/asia-proptech-outdated.png"
   },
   {
     id: "2",
@@ -48,7 +48,7 @@ const blogPosts: BlogPost[] = [
     readTime: "6 min",
     category: "Marketing Strategy",
     categoryZh: "營銷策略",
-    image: "/images/luxury-interior-day.jpg"
+    image: "/images/content-is-king.png"
   },
   {
     id: "3",
@@ -62,7 +62,7 @@ const blogPosts: BlogPost[] = [
     readTime: "10 min",
     category: "Company Vision",
     categoryZh: "公司願景",
-    image: "/images/hero-daylight-hk.jpg"
+    image: "/images/basishk-vision.png"
   },
   {
     id: "4",
@@ -76,7 +76,7 @@ const blogPosts: BlogPost[] = [
     readTime: "7 min",
     category: "AI Technology",
     categoryZh: "AI 科技",
-    image: "/images/hero-city-night.jpg"
+    image: "/images/generative-ai-listings.png"
   },
   {
     id: "5",
@@ -90,7 +90,7 @@ const blogPosts: BlogPost[] = [
     readTime: "5 min",
     category: "PropTech Trends",
     categoryZh: "地產科技趨勢",
-    image: "/images/luxury-interior-day.jpg"
+    image: "/images/ai-video-tours.png"
   },
   {
     id: "6",
@@ -104,7 +104,7 @@ const blogPosts: BlogPost[] = [
     readTime: "12 min",
     category: "Practical Guide",
     categoryZh: "實用指南",
-    image: "/images/hero-daylight-hk.jpg"
+    image: "/images/chatgpt-agents-guide.png"
   }
 ];
 
