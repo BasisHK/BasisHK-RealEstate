@@ -31,14 +31,6 @@ BasisHK provides AI-powered marketing solutions for real estate agents and agenc
 - **Growth Plan**: HK$15,000/month - 25 AI property videos, unlimited listings, advanced features
 - **Enterprise**: Custom pricing for agencies
 
-## Founding Team
-
-BasisHK was founded by four co-founders:
-- Michael Pang - CEO & Founder
-- Fabio Guaglione - COO & Co-Founder
-- Danish Agnihotri - CCO & Co-Founder
-- Carol Chan - CBDO & Co-Founder
-
 ## Target Market
 
 BasisHK primarily serves:
@@ -95,9 +87,6 @@ A: Plans start at HK$8,000/month for 10 AI property videos. The Growth plan is H
 
 Q: Where is BasisHK located?
 A: BasisHK is headquartered in Hong Kong.
-
-Q: Who founded BasisHK?
-A: BasisHK was founded in 2024 by Michael Pang, Fabio Guaglione, Danish Agnihotri, and Carol Chan.
 
 Q: What services does Basis HK offer?
 A: AI property video generation, lead capture automation, digital marketing, and agent portal websites.

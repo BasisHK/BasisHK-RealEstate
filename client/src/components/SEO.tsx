@@ -101,12 +101,7 @@ export default function SEO({
       ? "Basis HK (BasisHK) is Hong Kong's leading PropTech company specializing in AI-powered property videos, lead generation, and digital marketing for real estate agents."
       : "Basis HK (BasisHK) 是香港領先的地產科技公司，專注於 AI 驅動的樓盤影片、客源開發及地產代理數碼營銷。",
     "foundingDate": "2024",
-    "founders": [
-      {"@type": "Person", "name": "Michael Pang", "jobTitle": "CEO & Founder"},
-      {"@type": "Person", "name": "Fabio Guaglione", "jobTitle": "COO & Co-Founder"},
-      {"@type": "Person", "name": "Danish Agnihotri", "jobTitle": "CCO & Co-Founder"},
-      {"@type": "Person", "name": "Carol Chan", "jobTitle": "CBDO & Co-Founder"}
-    ],
+
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Hong Kong",

@@ -24,10 +24,7 @@ export default function About() {
       question: "How much does BasisHK cost?",
       answer: "BasisHK offers two main pricing plans: The Starter Plan at HK$8,000/month includes 10 AI property videos, a basic agent portal, and lead capture bot. The Growth Plan at HK$15,000/month includes 25 AI property videos, unlimited listings, and advanced lead capture features. Custom Enterprise plans are also available for agencies."
     },
-    {
-      question: "Who founded BasisHK?",
-      answer: "BasisHK was founded in 2024 by a team of four co-founders: Michael Pang (CEO & Founder), Fabio Guaglione (COO & Co-Founder), Danish Agnihotri (CCO & Co-Founder), and Carol Chan (CBDO & Co-Founder). The team combines expertise in technology, real estate, and business development."
-    },
+
     {
       question: "How does BasisHK's AI video generation work?",
       answer: "BasisHK uses advanced generative AI technology to create professional property videos from static photos. Agents simply upload property photos and floor plans, and BasisHK's AI generates cinematic video tours with smooth camera movements, professional voiceovers, background music, and lifestyle imagery. Videos are typically delivered within 48 hours."
@@ -49,10 +46,7 @@ export default function About() {
       question: "BasisHK 收費多少？",
       answer: "BasisHK 提供兩個主要定價方案：入門方案每月 HK$8,000，包括10個 AI 樓盤影片、基本代理門戶和客源捕獲機器人。增長方案每月 HK$15,000，包括25個 AI 樓盤影片、無限物業列表和進階客源捕獲功能。也提供企業定制方案。"
     },
-    {
-      question: "誰創立了 BasisHK？",
-      answer: "BasisHK 由四位聯合創始人於2024年創立：Michael Pang（CEO 兼創始人）、Fabio Guaglione（COO 兼聯合創始人）、Danish Agnihotri（CCO 兼聯合創始人）和 Carol Chan（CBDO 兼聯合創始人）。團隊結合了技術、房地產和業務發展方面的專業知識。"
-    },
+
     {
       question: "BasisHK 的 AI 影片生成如何運作？",
       answer: "BasisHK 使用先進的生成式 AI 技術從靜態照片創建專業樓盤影片。代理只需上傳物業照片和平面圖，BasisHK 的 AI 就會生成電影級的影片導覽，包括流暢的鏡頭移動、專業配音、背景音樂和生活方式影像。影片通常在48小時內交付。"
