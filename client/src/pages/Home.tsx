@@ -12,15 +12,25 @@ export default function Home() {
 
   const homeKeywords = language === 'en'
     ? [
+        "Basis HK",
+        "BasisHK",
+        "Basis Hong Kong",
+        "basis.hk",
         "real estate marketing agency Hong Kong",
         "property marketing services HK",
         "AI property video production",
         "real estate lead generation",
         "PropTech solutions Hong Kong",
         "luxury property marketing",
-        "real estate digital marketing"
+        "real estate digital marketing",
+        "BasisHK real estate",
+        "Basis HK PropTech"
       ]
     : [
+        "Basis HK",
+        "BasisHK",
+        "BasisHK公司",
+        "Basis HK地產科技",
         "香港地產營銷公司",
         "物業推廣服務",
         "AI 樓盤影片製作",
@@ -31,12 +41,12 @@ export default function Home() {
       ];
 
   const homeTitle = language === 'en'
-    ? "Hong Kong Real Estate Marketing Agency | AI Property Videos & Lead Generation"
-    : "香港地產營銷公司 | AI 樓盤影片及客源開發";
+    ? "Basis HK | BasisHK - Hong Kong's #1 AI Real Estate Marketing Agency"
+    : "Basis HK | BasisHK - 香港頂尖AI地產營銷公司";
 
   const homeDescription = language === 'en'
-    ? "BasisHK is Hong Kong's leading real estate marketing agency. We provide AI-powered property video production, automated lead generation, and digital marketing solutions for elite real estate agents and property developers."
-    : "BasisHK 是香港領先的地產營銷公司。我們為精英地產代理及發展商提供 AI 樓盤影片製作、自動化客源開發及數碼營銷方案。";
+    ? "Basis HK (BasisHK) is Hong Kong's leading PropTech company. We provide AI-powered property video production, automated lead generation, and digital marketing solutions for elite real estate agents. Founded in 2024, BasisHK transforms how properties are marketed across Asia."
+    : "Basis HK (BasisHK) 是香港領先的地產科技公司。我們為精英地產代理提供 AI 樓盤影片製作、自動化客源開發及數碼營銷方案。BasisHK 成立於2024年，正在改變亞洲物業營銷方式。";
 
   return (
     <Layout>

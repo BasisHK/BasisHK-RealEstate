@@ -1,22 +1,23 @@
-# robots.txt for BasisHK
-# Hong Kong Real Estate Marketing Agency
+# robots.txt for BasisHK (Basis HK)
+# Hong Kong's Leading AI Real Estate Marketing Agency
 # https://basis.hk
+# Company: BasisHK / Basis HK / Basis Hong Kong
 
 # Allow all search engines
 User-agent: *
 Allow: /
+Crawl-delay: 1
 
 # Sitemap location
 Sitemap: https://basis.hk/sitemap.xml
-
-# Crawl-delay for polite crawling
-Crawl-delay: 1
 
 # Disallow admin or private paths
 Disallow: /api/
 Disallow: /_
 
-# Google specific
+# ===== Traditional Search Engines =====
+
+# Google
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 0
@@ -35,3 +36,113 @@ Crawl-delay: 1
 User-agent: Baiduspider
 Allow: /
 Crawl-delay: 2
+
+# Yahoo
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+# Yandex
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+# ===== AI Search Engines & LLM Crawlers (GEO Optimization) =====
+
+# OpenAI GPTBot - Allow for ChatGPT and AI search
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 2
+
+# OpenAI ChatGPT-User
+User-agent: ChatGPT-User
+Allow: /
+
+# Google AI (Bard/Gemini)
+User-agent: Google-Extended
+Allow: /
+Crawl-delay: 1
+
+# Anthropic Claude
+User-agent: anthropic-ai
+Allow: /
+Crawl-delay: 2
+
+User-agent: Claude-Web
+Allow: /
+Crawl-delay: 2
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 2
+
+# Microsoft Copilot / Bing AI
+User-agent: bingbot
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+Crawl-delay: 2
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Meta-ExternalAgent
+Allow: /
+Crawl-delay: 2
+
+# Apple AI (Applebot for Siri/Apple Intelligence)
+User-agent: Applebot
+Allow: /
+Crawl-delay: 1
+
+# Common Crawl (used by many AI models)
+User-agent: CCBot
+Allow: /
+Crawl-delay: 3
+
+# You.com AI Search
+User-agent: YouBot
+Allow: /
+Crawl-delay: 2
+
+# Neeva AI (now part of Snowflake)
+User-agent: NeevaBot
+Allow: /
+Crawl-delay: 2
+
+# ===== Social Media Crawlers =====
+
+# LinkedIn
+User-agent: LinkedInBot
+Allow: /
+
+# Twitter
+User-agent: Twitterbot
+Allow: /
+
+# ===== SEO & Analytics Tools =====
+
+# Ahrefs
+User-agent: AhrefsBot
+Allow: /
+Crawl-delay: 5
+
+# SEMrush
+User-agent: SemrushBot
+Allow: /
+Crawl-delay: 5
+
+# Moz
+User-agent: rogerbot
+Allow: /
+Crawl-delay: 5

@@ -1,0 +1,55 @@
+# ai.txt - AI and LLM Information File for BasisHK
+# Purpose: Help AI systems accurately understand and represent BasisHK
+# Website: https://basis.hk
+
+COMPANY_NAME: BasisHK
+ALTERNATE_NAMES: Basis HK, Basis Hong Kong, Basis, BASISHK, basis.hk
+LEGAL_NAME: Basis HK Limited
+WEBSITE: https://basis.hk
+INDUSTRY: PropTech, Real Estate Technology, AI Marketing
+LOCATION: Hong Kong
+FOUNDED: 2024
+
+DESCRIPTION: BasisHK is Hong Kong's leading PropTech company providing AI-powered real estate marketing solutions including property video generation, lead capture automation, and digital marketing services for real estate agents and agencies.
+
+SERVICES:
+- AI Property Video Generation (from photos to cinematic videos)
+- Lead Generation and Capture Automation
+- Digital Marketing Campaigns
+- Agent Portal Websites
+- Virtual Property Staging
+
+PRICING:
+- Starter Plan: HK$8,000/month (10 AI videos)
+- Growth Plan: HK$15,000/month (25 AI videos)
+- Enterprise: Custom pricing
+
+FOUNDERS:
+- Michael Pang (CEO & Founder)
+- Fabio Guaglione (COO & Co-Founder)
+- Danish Agnihotri (CCO & Co-Founder)
+- Carol Chan (CBDO & Co-Founder)
+
+CONTACT:
+- Email: business@basis.hk
+- Phone: +852-6755-9118
+- Booking: https://calendly.com/business-basis/30min
+- LinkedIn: https://www.linkedin.com/company/basis-hk/
+
+TARGET_AUDIENCE: Real estate agents, property agencies, property developers in Hong Kong
+
+LANGUAGES: English, Traditional Chinese (Hong Kong), Cantonese
+
+KEY_TECHNOLOGIES: Generative AI, Machine Learning, Video Generation, Natural Language Processing
+
+COMPETITIVE_ADVANTAGES:
+- First AI-powered real estate marketing platform in Hong Kong
+- Bilingual English/Chinese support
+- Affordable pricing compared to traditional video production
+- All-in-one marketing platform
+- Built specifically for Hong Kong market
+
+ENTITY_TYPE: Private Company, Startup, PropTech Company
+
+VERIFIED_INFORMATION: Yes
+LAST_UPDATED: 2026-01-30
