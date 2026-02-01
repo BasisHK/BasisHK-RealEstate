@@ -426,6 +426,44 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Video Teaser Section - The Future Of Real Estate Marketing */}
+      <section className="py-20 bg-secondary/20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-[0.03]" />
+        <div className="container relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-5xl font-heading font-medium mb-4 text-foreground">
+              {t('home.video.title')} <span className="italic text-primary">{t('home.video.subtitle')}</span>
+            </h2>
+            <p className="text-base text-muted-foreground font-light max-w-xl mx-auto">
+              {t('home.video.desc')}
+            </p>
+          </div>
+
+          <div className="relative max-w-4xl mx-auto">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/50 bg-black aspect-video group">
+              <video 
+                controls
+                playsInline
+                poster="/images/video-poster.jpg"
+                className="w-full h-full object-cover"
+              >
+                <source src="/videos/BasisHKTeaserTrailer.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            
+            {/* CTA below video */}
+            <div className="text-center mt-8">
+              <Link href="/contact">
+                <Button size="lg" className="rounded-full px-10 h-14 text-base font-medium shadow-xl shadow-primary/10 hover:shadow-primary/20 transition-all hover:-translate-y-1 bg-primary text-white border-none">
+                  {t('home.video.cta')} <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section - Creative Finish */}
       <section className="py-16 container">
         <div className="bg-primary rounded-[2rem] p-10 md:p-16 text-center relative overflow-hidden shadow-2xl max-w-5xl mx-auto group">
