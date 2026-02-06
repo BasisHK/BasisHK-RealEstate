@@ -23,6 +23,48 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: "7",
+    slug: "predictive-targeting-beyond-demographics",
+    title: "Beyond Demographics: The Power of Predictive Targeting in Real Estate",
+    titleZh: "超越人口統計：預測性目標客群在房地產中的力量",
+    excerpt: "Stop targeting by age and location. The future is about intent. Learn how predictive targeting analyzes thousands of data signals to find buyers before they even start searching for property.",
+    excerptZh: "停止按年齡和地點進行目標設定。未來在於意圖。了解預測性目標客群如何分析數千個數據信號，在買家開始尋找物業之前就找到他們。",
+    author: "Emily Kwan",
+    date: "2026-02-10",
+    readTime: "7 min",
+    category: "AI Marketing",
+    categoryZh: "AI 營銷",
+    image: "/images/predictive-targeting-demographics.png"
+  },
+  {
+    id: "8",
+    slug: "ai-finds-buyers-deep-dive",
+    title: "How AI Finds Your Next Buyer: A Deep Dive into Predictive Targeting Campaigns",
+    titleZh: "AI 如何找到您的下一個買家：深入探討預測性目標客群行銷活動",
+    excerpt: "Go behind the scenes of a predictive targeting campaign. Understand how machine learning models analyze data, create ideal buyer personas, and use feedback loops to get smarter with every ad dollar spent.",
+    excerptZh: "深入了解預測性目標客群行銷活動的幕後。了解機器學習模型如何分析數據、創建理想的買家畫像，並利用反饋循環使每一分廣告支出都更智能。",
+    author: "Mark Chan",
+    date: "2026-02-15",
+    readTime: "9 min",
+    category: "Data Science",
+    categoryZh: "數據科學",
+    image: "/images/ai-deep-dive.png"
+  },
+  {
+    id: "9",
+    slug: "case-study-predictive-targeting-luxury-property",
+    title: "From Clicks to Closing: A Predictive Targeting Case Study for a Luxury HK Property",
+    titleZh: "從點擊到成交：香港豪宅的預測性目標客群案例研究",
+    excerpt: "A HK$50M penthouse sat on the market for 90 days. With predictive targeting, it generated 5 qualified viewings in 2 weeks and sold. Here’s the step-by-step breakdown of the campaign that did it.",
+    excerptZh: "一個價值 5000 萬港元的頂層公寓在市場上停滯了 90 天。通過預測性目標客群，它在 2 週內產生了 5 次合資格的睇樓並成功售出。這是該行銷活動的詳細分步解析。",
+    author: "Jessica Wong",
+    date: "2026-02-20",
+    readTime: "6 min",
+    category: "Case Study",
+    categoryZh: "案例研究",
+    image: "/images/case-study-luxury-property.png"
+  },
+  {
     id: "1",
     slug: "asia-real-estate-tech-outdated",
     title: "Why Asia's Real Estate Tech is Stuck in 2010 — And What Needs to Change",

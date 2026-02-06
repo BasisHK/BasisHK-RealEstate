@@ -146,6 +146,42 @@
     </image:image>
   </url>
 
+  <!-- Blog Post: Predictive Targeting Beyond Demographics -->
+  <url>
+    <loc>https://basis.hk/blog/predictive-targeting-beyond-demographics</loc>
+    <lastmod>2026-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://basis.hk/images/predictive-targeting-demographics.png</image:loc>
+      <image:title>Predictive Targeting in Real Estate - BasisHK Blog</image:title>
+    </image:image>
+  </url>
+
+  <!-- Blog Post: AI Finds Buyers Deep Dive -->
+  <url>
+    <loc>https://basis.hk/blog/ai-finds-buyers-deep-dive</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://basis.hk/images/ai-deep-dive.png</image:loc>
+      <image:title>How AI Finds Buyers - BasisHK Blog</image:title>
+    </image:image>
+  </url>
+
+  <!-- Blog Post: Case Study Predictive Targeting Luxury Property -->
+  <url>
+    <loc>https://basis.hk/blog/case-study-predictive-targeting-luxury-property</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://basis.hk/images/case-study-luxury-property.png</image:loc>
+      <image:title>Predictive Targeting Case Study - BasisHK Blog</image:title>
+    </image:image>
+  </url>
+
   <!-- Thank You Page -->
   <url>
     <loc>https://basis.hk/thank-you</loc>
