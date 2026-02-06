@@ -1,17 +1,100 @@
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge, Bot, BrainCircuit, Check, Sparkles, Video, Zap, X } from "lucide-react";
+import { Badge, Bot, BrainCircuit, Check, Sparkles, Video, Zap, X, Eye } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from "wouter";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Slider } from "@/components/ui/slider";
 import SEO from "@/components/SEO";
 
+// Portal Preview Component
+function PortalPreview({ isVisible, onClose }: { isVisible: boolean; onClose: () => void }) {
+  const { language } = useLanguage();
+  if (!isVisible) return null;
+  
+  return (
+    <div 
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
+      onClick={onClose}
+    >
+      <div 
+        className="bg-white rounded-2xl shadow-2xl max-w-4xl w-[95%] max-h-[85vh] overflow-hidden"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="flex items-center justify-between p-5 border-b border-border/50">
+          <div>
+            <h3 className="text-lg font-heading font-bold text-foreground">
+              {language === 'en' ? 'Custom Branded Property Portal' : '專屬品牌樓盤網頁'}
+            </h3>
+            <p className="text-xs text-muted-foreground mt-1">
+              {language === 'en' ? 'See what your branded portal could look like' : '查看您的品牌網頁範例'}
+            </p>
+          </div>
+          <button 
+            onClick={onClose}
+            className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center hover:bg-secondary/80 transition-colors"
+          >
+            <X className="w-4 h-4" />
+          </button>
+        </div>
+        <div className="p-5 overflow-y-auto max-h-[calc(85vh-80px)]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="group cursor-pointer">
+              <div className="rounded-xl overflow-hidden border border-border/50 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.02]">
+                <img 
+                  src="/images/portal-listings.png" 
+                  alt="Property Listings Page" 
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+              <p className="text-xs text-center text-muted-foreground mt-2 font-medium">
+                {language === 'en' ? 'Property Listings' : '樓盤列表'}
+              </p>
+            </div>
+            <div className="group cursor-pointer">
+              <div className="rounded-xl overflow-hidden border border-border/50 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.02]">
+                <img 
+                  src="/images/portal-listing-detail.png" 
+                  alt="Listing Detail Page" 
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+              <p className="text-xs text-center text-muted-foreground mt-2 font-medium">
+                {language === 'en' ? 'Listing Detail' : '樓盤詳情'}
+              </p>
+            </div>
+            <div className="group cursor-pointer">
+              <div className="rounded-xl overflow-hidden border border-border/50 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.02]">
+                <img 
+                  src="/images/portal-contact.png" 
+                  alt="Contact Page" 
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+              <p className="text-xs text-center text-muted-foreground mt-2 font-medium">
+                {language === 'en' ? 'Contact Page' : '聯繫頁面'}
+              </p>
+            </div>
+          </div>
+          <div className="mt-4 text-center">
+            <p className="text-xs text-muted-foreground">
+              {language === 'en' 
+                ? 'Each portal is fully customized with your branding, colors, and listings.' 
+                : '每個網頁均可完全自訂您的品牌、配色和樓盤。'}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Services() {
   const [billingCycle, setBillingCycle] = useState<"monthly" | "quarterly">("monthly");
   const [videoCount, setVideoCount] = useState<number>(5);
+  const [showPortalPreview, setShowPortalPreview] = useState(false);
   const { t, language } = useLanguage();
   const pricePerVideo = { monthly: 1000, quarterly: 950 }; // 5% discount for quarterly
 
@@ -86,6 +169,7 @@ export default function Services() {
 
   return (
     <Layout>
+      <PortalPreview isVisible={showPortalPreview} onClose={() => setShowPortalPreview(false)} />
       <SEO 
         title={servicesTitle}
         description={servicesDescription}
@@ -227,18 +311,31 @@ export default function Services() {
                 </div>
                 <CardContent className="flex-1 p-6 pt-0">
                   <ul className="space-y-3">
-                    {plan.features.map((feature, j) => (
-                      <li key={j} className={`flex items-start gap-2 text-xs ${feature.included ? "text-muted-foreground" : "text-muted-foreground/50"}`}>
-                        {feature.included ? (
-                          <Check className={`w-4 h-4 ${plan.highlight ? "text-primary" : "text-primary/70"} shrink-0`} />
-                        ) : (
-                          <X className="w-4 h-4 text-muted-foreground/40 shrink-0" />
-                        )}
-                        <span className={feature.included ? "" : "line-through decoration-muted-foreground/40"}>
-                          {feature.name}
-                        </span>
-                      </li>
-                    ))}
+                    {plan.features.map((feature, j) => {
+                      const isPortalFeature = feature.name === t('services.feature.basicPortal');
+                      return (
+                        <li key={j} className={`flex items-start gap-2 text-xs ${feature.included ? "text-muted-foreground" : "text-muted-foreground/50"}`}>
+                          {feature.included ? (
+                            <Check className={`w-4 h-4 ${plan.highlight ? "text-primary" : "text-primary/70"} shrink-0`} />
+                          ) : (
+                            <X className="w-4 h-4 text-muted-foreground/40 shrink-0" />
+                          )}
+                          {isPortalFeature && feature.included ? (
+                            <span 
+                              className="cursor-pointer border-b border-dashed border-primary/50 hover:text-primary hover:border-primary transition-colors inline-flex items-center gap-1 group"
+                              onClick={(e) => { e.preventDefault(); setShowPortalPreview(true); }}
+                            >
+                              {feature.name}
+                              <Eye className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity text-primary" />
+                            </span>
+                          ) : (
+                            <span className={feature.included ? "" : "line-through decoration-muted-foreground/40"}>
+                              {feature.name}
+                            </span>
+                          )}
+                        </li>
+                      );
+                    })}
                   </ul>
                 </CardContent>
                 <CardFooter className="p-6 pt-0">
