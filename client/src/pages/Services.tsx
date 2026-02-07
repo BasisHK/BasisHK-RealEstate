@@ -282,16 +282,16 @@ export default function Services() {
                   </div>
                 )}
                 <div className="p-6 pb-0">
-                  <CardTitle className="text-xl font-heading font-bold">{plan.title}</CardTitle>
-                  <CardDescription className="mt-1 text-xs">{plan.desc}</CardDescription>
+                  <CardTitle className="text-2xl font-heading font-semibold tracking-tight">{plan.title}</CardTitle>
+                  <CardDescription className="mt-1.5 text-sm text-muted-foreground">{plan.desc}</CardDescription>
                   <div className="mt-4 mb-4">
                     {typeof plan.price.monthly === "number" ? (
                       <div className="flex flex-col items-start">
                         <div className="flex items-baseline gap-1 flex-wrap">
-                          <span className="text-3xl font-bold text-foreground">
+                          <span className="text-3xl font-heading font-bold text-foreground tracking-tight">
                             HK${billingCycle === "quarterly" ? plan.price.quarterly.toLocaleString() : plan.price.monthly.toLocaleString()}
                           </span>
-                          <span className="text-xs text-muted-foreground whitespace-nowrap">/{t('services.feature.monthly')}</span>
+                          <span className="text-sm text-muted-foreground whitespace-nowrap font-normal">/{t('services.feature.monthly')}</span>
                         </div>
                         {billingCycle === "quarterly" && (
                           <span className="text-sm text-muted-foreground line-through decoration-destructive/50 decoration-2 mt-1">
@@ -300,7 +300,7 @@ export default function Services() {
                         )}
                       </div>
                     ) : (
-                      <span className="text-3xl font-bold text-foreground">{plan.price.monthly}</span>
+                      <span className="text-3xl font-heading font-bold text-foreground tracking-tight">{plan.price.monthly}</span>
                     )}
                     {billingCycle === "quarterly" && typeof plan.price.monthly === "number" && typeof plan.price.quarterly === "number" && (
                       <div className="text-xs text-green-600 font-medium mt-1">
@@ -314,7 +314,7 @@ export default function Services() {
                     {plan.features.map((feature, j) => {
                       const isPortalFeature = feature.name === t('services.feature.basicPortal');
                       return (
-                        <li key={j} className={`flex items-start gap-2 text-xs ${feature.included ? "text-muted-foreground" : "text-muted-foreground/50"}`}>
+                        <li key={j} className={`flex items-start gap-2.5 text-sm ${feature.included ? "text-foreground/80" : "text-muted-foreground/50"}`}>
                           {feature.included ? (
                             <Check className={`w-4 h-4 ${plan.highlight ? "text-primary" : "text-primary/70"} shrink-0`} />
                           ) : (
@@ -340,7 +340,7 @@ export default function Services() {
                 </CardContent>
                 <CardFooter className="p-6 pt-0">
                   <a href="https://calendly.com/business-basis/30min" target="_blank" rel="noopener noreferrer" className="w-full">
-                    <Button className={`w-full rounded-lg h-10 font-semibold text-sm ${plan.highlight ? "bg-primary text-primary-foreground hover:bg-primary/90" : "bg-secondary text-secondary-foreground hover:bg-secondary/80"}`}>
+                    <Button className={`w-full rounded-lg h-11 font-heading font-semibold text-sm tracking-wide ${plan.highlight ? "bg-primary text-primary-foreground hover:bg-primary/90" : "bg-secondary text-secondary-foreground hover:bg-secondary/80"}`}>
                       {plan.price.monthly === "Custom" ? t('about.cta.button') : t('nav.getStarted')}
                     </Button>
                   </a>
@@ -386,10 +386,10 @@ export default function Services() {
                   </div>
                   <div className="text-center md:text-right md:min-w-[180px]">
                     <div className="flex flex-col items-center md:items-end">
-                      <div className="text-3xl font-bold text-foreground">
+                      <div className="text-3xl font-heading font-bold text-foreground tracking-tight">
                         HK${(videoCount * pricePerVideo[billingCycle]).toLocaleString()}
                       </div>
-                      <div className="text-xs text-muted-foreground mt-1">
+                      <div className="text-sm text-muted-foreground mt-1">
                         HK${pricePerVideo[billingCycle].toLocaleString()} {t('services.videoSlider.perVideo')}
                       </div>
                       {billingCycle === "quarterly" && (
@@ -407,19 +407,19 @@ export default function Services() {
                 </div>
                 <div className="mt-6 pt-6 border-t border-border/50">
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    <li className="flex items-center gap-2 text-xs text-muted-foreground">
+                      <li className="flex items-center gap-2.5 text-sm text-foreground/80">
                       <Check className="w-4 h-4 text-purple-600 shrink-0" />
                       {t('services.videoOnly.feature1')}
                     </li>
-                    <li className="flex items-center gap-2 text-xs text-muted-foreground">
+                    <li className="flex items-center gap-2.5 text-sm text-foreground/80">
                       <Check className="w-4 h-4 text-purple-600 shrink-0" />
                       {t('services.videoOnly.feature2')}
                     </li>
-                    <li className="flex items-center gap-2 text-xs text-muted-foreground">
+                    <li className="flex items-center gap-2.5 text-sm text-foreground/80">
                       <Check className="w-4 h-4 text-purple-600 shrink-0" />
                       {t('services.videoOnly.feature3')}
                     </li>
-                    <li className="flex items-center gap-2 text-xs text-muted-foreground">
+                    <li className="flex items-center gap-2.5 text-sm text-foreground/80">
                       <Check className="w-4 h-4 text-purple-600 shrink-0" />
                       {t('services.videoOnly.feature4')}
                     </li>
@@ -428,7 +428,7 @@ export default function Services() {
               </CardContent>
               <CardFooter className="p-6 pt-0">
                 <a href="https://calendly.com/business-basis/30min" target="_blank" rel="noopener noreferrer" className="w-full">
-                  <Button className="w-full rounded-lg h-10 font-semibold text-sm bg-gradient-to-r from-purple-600 to-indigo-600 text-white hover:from-purple-700 hover:to-indigo-700">
+                  <Button className="w-full rounded-lg h-11 font-heading font-semibold text-sm tracking-wide bg-gradient-to-r from-purple-600 to-indigo-600 text-white hover:from-purple-700 hover:to-indigo-700">
                     {t('services.videoOnly.cta')}
                   </Button>
                 </a>
@@ -524,9 +524,9 @@ export default function Services() {
                     <div className="w-8 h-8 rounded-lg bg-primary/5 flex items-center justify-center shrink-0 group-hover:bg-primary/10 transition-colors">
                       <service.icon className="w-4 h-4 text-primary" />
                     </div>
-                    <h3 className="text-xs font-heading font-bold text-foreground leading-tight">{service.title}</h3>
+                    <h3 className="text-sm font-heading font-semibold text-foreground leading-tight">{service.title}</h3>
                   </div>
-                  <p className="text-[11px] text-muted-foreground leading-relaxed">{service.desc}</p>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{service.desc}</p>
                 </div>
               ))}
             </div>
@@ -548,7 +548,7 @@ export default function Services() {
                 <AccordionTrigger className="text-left font-heading font-semibold text-foreground/90 hover:text-primary hover:no-underline">
                   {t('services.faq.q1')}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed">
+                <AccordionContent className="text-sm text-muted-foreground leading-relaxed">
                   {t('services.faq.a1')}
                 </AccordionContent>
               </AccordionItem>
@@ -556,7 +556,7 @@ export default function Services() {
                 <AccordionTrigger className="text-left font-heading font-semibold text-foreground/90 hover:text-primary hover:no-underline">
                   {t('services.faq.q2')}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed">
+                <AccordionContent className="text-sm text-muted-foreground leading-relaxed">
                   {t('services.faq.a2')}
                 </AccordionContent>
               </AccordionItem>
@@ -564,7 +564,7 @@ export default function Services() {
                 <AccordionTrigger className="text-left font-heading font-semibold text-foreground/90 hover:text-primary hover:no-underline">
                   {t('services.faq.q3')}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed">
+                <AccordionContent className="text-sm text-muted-foreground leading-relaxed">
                   {t('services.faq.a3')}
                 </AccordionContent>
               </AccordionItem>
@@ -572,7 +572,7 @@ export default function Services() {
                 <AccordionTrigger className="text-left font-heading font-semibold text-foreground/90 hover:text-primary hover:no-underline">
                   {t('services.faq.q4')}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed">
+                <AccordionContent className="text-sm text-muted-foreground leading-relaxed">
                   {t('services.faq.a4')}
                 </AccordionContent>
               </AccordionItem>
@@ -580,7 +580,7 @@ export default function Services() {
                 <AccordionTrigger className="text-left font-heading font-semibold text-foreground/90 hover:text-primary hover:no-underline">
                   {t('services.faq.q5')}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed">
+                <AccordionContent className="text-sm text-muted-foreground leading-relaxed">
                   {t('services.faq.a5')}
                 </AccordionContent>
               </AccordionItem>
@@ -588,7 +588,7 @@ export default function Services() {
                 <AccordionTrigger className="text-left font-heading font-semibold text-foreground/90 hover:text-primary hover:no-underline">
                   {t('services.faq.q6')}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed">
+                <AccordionContent className="text-sm text-muted-foreground leading-relaxed">
                   {t('services.faq.a6')}
                 </AccordionContent>
               </AccordionItem>
@@ -596,7 +596,7 @@ export default function Services() {
                 <AccordionTrigger className="text-left font-heading font-semibold text-foreground/90 hover:text-primary hover:no-underline">
                   {t('services.faq.q7')}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed">
+                <AccordionContent className="text-sm text-muted-foreground leading-relaxed">
                   {t('services.faq.a7')}
                 </AccordionContent>
               </AccordionItem>
@@ -618,7 +618,7 @@ export default function Services() {
               <h2 className="text-xl md:text-2xl font-heading font-bold mb-1 text-white leading-tight">
                 {t('home.cta.title')} {t('home.cta.subtitle')}
               </h2>
-              <p className="text-sm text-white/90 leading-relaxed">
+              <p className="text-sm text-white/80 leading-relaxed font-normal">
                 {t('home.cta.desc')}
               </p>
             </div>
