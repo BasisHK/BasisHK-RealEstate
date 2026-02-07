@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge, Bot, BrainCircuit, Check, Sparkles, Video, Zap, X, Eye } from "lucide-react";
+import { Badge, Bot, BrainCircuit, Check, Sparkles, Video, Zap, X, Eye, Search, Megaphone, Mail, MessageSquare, Camera, BarChart3, Globe, PenTool, Users, Target, Smartphone, FileText } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from "wouter";
 import { useState, useRef, useEffect } from "react";
@@ -434,6 +434,102 @@ export default function Services() {
                 </a>
               </CardFooter>
             </Card>
+          </div>
+
+          {/* Marketing Services Overview */}
+          <div className="max-w-5xl mx-auto mt-24">
+            <div className="text-center mb-10">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-border/50 shadow-sm text-primary text-xs font-semibold mb-4">
+                <Globe className="w-3.5 h-3.5" />
+                <span>{language === 'en' ? 'Full-Service Marketing' : '全方位營銷服務'}</span>
+              </div>
+              <h2 className="text-3xl font-heading font-bold mb-3 text-foreground">
+                {language === 'en' ? 'Everything You Need to Dominate' : '助您制霸市場的一切所需'}
+              </h2>
+              <p className="text-base text-muted-foreground max-w-2xl mx-auto">
+                {language === 'en'
+                  ? 'Beyond our core packages, we offer a full suite of real estate marketing services.'
+                  : '除核心套餐外，我們提供全方位的地產營銷服務。'}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+              {[
+                {
+                  icon: Search,
+                  title: language === 'en' ? 'Real Estate SEO' : '地產 SEO 優化',
+                  desc: language === 'en' ? 'Rank higher on Google for property searches in your area.' : '在您所在區域的物業搜索中提升 Google 排名。'
+                },
+                {
+                  icon: Megaphone,
+                  title: language === 'en' ? 'Social Media Ads' : '社交媒體廣告',
+                  desc: language === 'en' ? 'Targeted campaigns on Facebook, Instagram & LinkedIn.' : 'Facebook、Instagram 及 LinkedIn 精準廣告投放。'
+                },
+                {
+                  icon: PenTool,
+                  title: language === 'en' ? 'Content Creation' : '內容創作',
+                  desc: language === 'en' ? 'Property descriptions, blog posts, and social media content.' : '樓盤描述、博客文章及社交媒體內容。'
+                },
+                {
+                  icon: Mail,
+                  title: language === 'en' ? 'Email Marketing' : '電郵營銷',
+                  desc: language === 'en' ? 'Automated drip campaigns and property newsletters.' : '自動化電郵推廣及樓盤通訊。'
+                },
+                {
+                  icon: MessageSquare,
+                  title: language === 'en' ? 'WhatsApp Automation' : 'WhatsApp 自動化',
+                  desc: language === 'en' ? 'Broadcast lists, auto-replies, and lead nurturing.' : '群發列表、自動回覆及客戶培育。'
+                },
+                {
+                  icon: Camera,
+                  title: language === 'en' ? 'Virtual Staging' : '虛擬佈置',
+                  desc: language === 'en' ? 'AI-powered interior staging for empty properties.' : 'AI 驅動的空置物業虛擬室內佈置。'
+                },
+                {
+                  icon: BarChart3,
+                  title: language === 'en' ? 'Analytics & Reporting' : '數據分析與報告',
+                  desc: language === 'en' ? 'Track leads, views, and ROI across all campaigns.' : '追蹤所有廣告活動的客源、瀏覽量及投資回報率。'
+                },
+                {
+                  icon: Target,
+                  title: language === 'en' ? 'Google Ads (PPC)' : 'Google 廣告 (PPC)',
+                  desc: language === 'en' ? 'Search and display ads targeting active property buyers.' : '搜索及展示廣告精準定位活躍買家。'
+                },
+                {
+                  icon: Globe,
+                  title: language === 'en' ? 'Branded Websites' : '品牌網站',
+                  desc: language === 'en' ? 'Custom property portals with your branding and listings.' : '自訂品牌樓盤網站及物業列表。'
+                },
+                {
+                  icon: Smartphone,
+                  title: language === 'en' ? 'Video Reels & Shorts' : '短影片製作',
+                  desc: language === 'en' ? 'Vertical video content optimized for TikTok & Reels.' : '為 TikTok 及 Reels 優化的垂直短影片。'
+                },
+                {
+                  icon: Users,
+                  title: language === 'en' ? 'Lead Generation' : '客源開發',
+                  desc: language === 'en' ? 'Multi-channel strategies to find qualified buyers.' : '多渠道策略尋找合資格買家。'
+                },
+                {
+                  icon: FileText,
+                  title: language === 'en' ? 'Listing Optimization' : '樓盤優化',
+                  desc: language === 'en' ? 'AI-enhanced descriptions and photos for maximum impact.' : 'AI 增強描述及相片以達到最大效果。'
+                }
+              ].map((service, i) => (
+                <div
+                  key={i}
+                  className="group bg-white rounded-xl border border-border/50 p-4 hover:shadow-md hover:border-primary/20 transition-all duration-300"
+                >
+                  <div className="flex items-center gap-2.5 mb-2">
+                    <div className="w-8 h-8 rounded-lg bg-primary/5 flex items-center justify-center shrink-0 group-hover:bg-primary/10 transition-colors">
+                      <service.icon className="w-4 h-4 text-primary" />
+                    </div>
+                    <h3 className="text-xs font-heading font-bold text-foreground leading-tight">{service.title}</h3>
+                  </div>
+                  <p className="text-[11px] text-muted-foreground leading-relaxed">{service.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* FAQ Section */}
