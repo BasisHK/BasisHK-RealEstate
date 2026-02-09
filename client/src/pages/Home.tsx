@@ -5,7 +5,6 @@ import { ArrowRight, BarChart3, Bot, BrainCircuit, Check, Globe, Sparkles, Targe
 import { Link } from "wouter";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SEO from "@/components/SEO";
-import { LogoCarousel } from "@/components/LogoCarousel";
 
 export default function Home() {
   const { t, language } = useLanguage();
@@ -136,9 +135,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Logo Carousel */}
-      <LogoCarousel />
 
       {/* Core Pillars - Editorial Grid */}
       <section className="py-20 bg-secondary/20 relative overflow-hidden">
