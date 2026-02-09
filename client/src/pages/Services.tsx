@@ -657,26 +657,7 @@ export default function Services() {
                 beforeLabel={language === 'en' ? 'BEFORE' : '之前'}
                 afterLabel={language === 'en' ? 'AFTER' : '之後'}
               />
-              <div className="mt-6 grid grid-cols-3 gap-4 text-center">
-                <div className="bg-white rounded-xl border border-border/50 p-4">
-                  <p className="text-2xl font-heading font-bold text-primary">73%</p>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    {language === 'en' ? 'More Buyer Interest' : '更多買家興趣'}
-                  </p>
-                </div>
-                <div className="bg-white rounded-xl border border-border/50 p-4">
-                  <p className="text-2xl font-heading font-bold text-primary">2x</p>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    {language === 'en' ? 'Faster Time to Sell' : '更快成交速度'}
-                  </p>
-                </div>
-                <div className="bg-white rounded-xl border border-border/50 p-4">
-                  <p className="text-2xl font-heading font-bold text-primary">$500</p>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    {language === 'en' ? 'Per Room Staging' : '每房間佈置費用'}
-                  </p>
-                </div>
-              </div>
+
             </div>
           </div>
 
