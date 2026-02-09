@@ -1,13 +1,114 @@
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge, Bot, BrainCircuit, Check, Sparkles, Video, Zap, X, Eye, Search, Megaphone, Mail, MessageSquare, Camera, BarChart3, Globe, PenTool, Users, Target, Smartphone, FileText } from "lucide-react";
+import { Badge, Bot, BrainCircuit, Check, Sparkles, Video, Zap, X, Eye, Search, Megaphone, Mail, MessageSquare, Camera, BarChart3, Globe, PenTool, Users, Target, Smartphone, FileText, ArrowLeftRight } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from "wouter";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Slider } from "@/components/ui/slider";
 import SEO from "@/components/SEO";
+
+// Before/After Image Comparison Slider Component
+function BeforeAfterSlider({ beforeSrc, afterSrc, beforeLabel, afterLabel }: { beforeSrc: string; afterSrc: string; beforeLabel: string; afterLabel: string }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [sliderPosition, setSliderPosition] = useState(50);
+  const [isDragging, setIsDragging] = useState(false);
+
+  const handleMove = useCallback((clientX: number) => {
+    if (!containerRef.current) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    const x = clientX - rect.left;
+    const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
+    setSliderPosition(percentage);
+  }, []);
+
+  const handleMouseDown = useCallback((e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsDragging(true);
+    handleMove(e.clientX);
+  }, [handleMove]);
+
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    setIsDragging(true);
+    handleMove(e.touches[0].clientX);
+  }, [handleMove]);
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!isDragging) return;
+      handleMove(e.clientX);
+    };
+    const handleTouchMove = (e: TouchEvent) => {
+      if (!isDragging) return;
+      handleMove(e.touches[0].clientX);
+    };
+    const handleEnd = () => setIsDragging(false);
+
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseup', handleEnd);
+    window.addEventListener('touchmove', handleTouchMove);
+    window.addEventListener('touchend', handleEnd);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseup', handleEnd);
+      window.removeEventListener('touchmove', handleTouchMove);
+      window.removeEventListener('touchend', handleEnd);
+    };
+  }, [isDragging, handleMove]);
+
+  return (
+    <div
+      ref={containerRef}
+      className="relative w-full aspect-[16/10] rounded-2xl overflow-hidden cursor-col-resize select-none shadow-lg border border-border/30"
+      onMouseDown={handleMouseDown}
+      onTouchStart={handleTouchStart}
+    >
+      {/* After Image (full width, behind) */}
+      <img
+        src={afterSrc}
+        alt="After transformation"
+        className="absolute inset-0 w-full h-full object-cover"
+        draggable={false}
+      />
+      {/* Before Image (clipped) */}
+      <div
+        className="absolute inset-0 overflow-hidden"
+        style={{ width: `${sliderPosition}%` }}
+      >
+        <img
+          src={beforeSrc}
+          alt="Before transformation"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ width: containerRef.current ? `${containerRef.current.offsetWidth}px` : '100vw', maxWidth: 'none' }}
+          draggable={false}
+        />
+      </div>
+      {/* Slider Line */}
+      <div
+        className="absolute top-0 bottom-0 z-10"
+        style={{ left: `${sliderPosition}%`, transform: 'translateX(-50%)' }}
+      >
+        <div className="w-0.5 h-full bg-white shadow-lg" />
+        {/* Slider Handle */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-xl flex items-center justify-center border-2 border-white">
+          <ArrowLeftRight className="w-4 h-4 text-primary" />
+        </div>
+      </div>
+      {/* Labels */}
+      <div className="absolute top-4 left-4 z-20">
+        <span className="px-3 py-1.5 bg-black/60 backdrop-blur-sm text-white text-xs font-semibold rounded-full">
+          {beforeLabel}
+        </span>
+      </div>
+      <div className="absolute top-4 right-4 z-20">
+        <span className="px-3 py-1.5 bg-white/90 backdrop-blur-sm text-primary text-xs font-semibold rounded-full shadow-sm">
+          {afterLabel}
+        </span>
+      </div>
+    </div>
+  );
+}
 
 // Portal Preview Component
 function PortalPreview({ isVisible, onClose }: { isVisible: boolean; onClose: () => void }) {
@@ -529,6 +630,53 @@ export default function Services() {
                   <p className="text-xs text-muted-foreground leading-relaxed">{service.desc}</p>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* Before & After Property Transformations */}
+          <div className="max-w-5xl mx-auto mt-24">
+            <div className="text-center mb-10">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-border/50 shadow-sm text-primary text-xs font-semibold mb-4">
+                <Camera className="w-3.5 h-3.5" />
+                <span>{language === 'en' ? 'AI Virtual Staging' : 'AI 虛擬佈置'}</span>
+              </div>
+              <h2 className="text-3xl font-heading font-bold mb-3 text-foreground">
+                {language === 'en' ? 'Before & After Transformations' : '前後對比轉變'}
+              </h2>
+              <p className="text-base text-muted-foreground max-w-2xl mx-auto">
+                {language === 'en'
+                  ? 'See how AI virtual staging transforms empty spaces into stunning, furnished interiors. Drag the slider to compare.'
+                  : '了解 AI 虛擬佈置如何將空置空間轉變為精美的室內設計。拖動滑桿進行比較。'}
+              </p>
+            </div>
+
+            <div className="max-w-3xl mx-auto">
+              <BeforeAfterSlider
+                beforeSrc="/images/before-staging.jpg"
+                afterSrc="/images/after-staging.png"
+                beforeLabel={language === 'en' ? 'BEFORE' : '之前'}
+                afterLabel={language === 'en' ? 'AFTER' : '之後'}
+              />
+              <div className="mt-6 grid grid-cols-3 gap-4 text-center">
+                <div className="bg-white rounded-xl border border-border/50 p-4">
+                  <p className="text-2xl font-heading font-bold text-primary">73%</p>
+                  <p className="text-xs text-muted-foreground mt-1">
+                    {language === 'en' ? 'More Buyer Interest' : '更多買家興趣'}
+                  </p>
+                </div>
+                <div className="bg-white rounded-xl border border-border/50 p-4">
+                  <p className="text-2xl font-heading font-bold text-primary">2x</p>
+                  <p className="text-xs text-muted-foreground mt-1">
+                    {language === 'en' ? 'Faster Time to Sell' : '更快成交速度'}
+                  </p>
+                </div>
+                <div className="bg-white rounded-xl border border-border/50 p-4">
+                  <p className="text-2xl font-heading font-bold text-primary">$500</p>
+                  <p className="text-xs text-muted-foreground mt-1">
+                    {language === 'en' ? 'Per Room Staging' : '每房間佈置費用'}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
