@@ -12,12 +12,16 @@ import ThankYou from "./pages/ThankYou";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import CaseStudies from "./pages/CaseStudies";
+import Platform from "./pages/Platform";
+import Agency from "./pages/Agency";
 
 
 function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/platform"} component={Platform} />
+      <Route path={"/agency"} component={Agency} />
       <Route path={"/services"} component={Services} />
       <Route path={"/about"} component={About} />
       <Route path={"/contact"} component={Contact} />

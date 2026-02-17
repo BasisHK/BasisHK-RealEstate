@@ -12,11 +12,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   const navItems = [
     { label: t('nav.home'), href: "/" },
+    { label: t('nav.platform'), href: "/platform" },
+    { label: t('nav.agency'), href: "/agency" },
     { label: t('nav.services'), href: "/services" },
-    { label: t('nav.caseStudies'), href: "/case-studies" },
     { label: t('nav.about'), href: "/about" },
     { label: t('nav.contact'), href: "/contact" },
-    { label: t('nav.blog'), href: "/blog" },
   ];
 
   const toggleLanguage = () => {
