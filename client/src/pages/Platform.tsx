@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Bot, BrainCircuit, Check, Database, Globe, LayoutDashboard, MessageSquare, RefreshCw, Search, Smartphone, Sparkles, Users, Zap } from "lucide-react";
+import { ArrowRight, Bot, BrainCircuit, Check, Film, Globe, Languages, LayoutDashboard, Mail, MessageSquare, Mic, PenTool, Search, Smartphone, Sparkles, Target, Users, Video, Zap } from "lucide-react";
 import { Link } from "wouter";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SEO from "@/components/SEO";
@@ -10,14 +10,14 @@ export default function Platform() {
   const { t, language } = useLanguage();
 
   const keywords = language === 'en'
-    ? ["BasisHK CRM", "real estate CRM Hong Kong", "property management platform", "AI real estate tool", "listing management software", "lead tracking CRM", "PropTech CRM"]
-    : ["BasisHK CRM", "香港地產CRM", "物業管理平台", "AI地產工具", "樓盤管理軟件", "客源追蹤系統"];
+    ? ["BasisHK CRM", "real estate CRM Hong Kong", "property management platform", "AI real estate tool", "listing management software", "lead tracking CRM", "PropTech CRM", "WhatsApp CRM"]
+    : ["BasisHK CRM", "香港地產CRM", "物業管理平台", "AI地產工具", "樓盤管理軟件", "客源追蹤系統", "WhatsApp CRM"];
 
   return (
     <Layout>
       <SEO
         title={language === 'en' ? "BasisHK Platform | AI-Powered Real Estate CRM & Listing Management" : "BasisHK 平台 | AI 驅動地產 CRM 及樓盤管理系統"}
-        description={language === 'en' ? "Manage listings, track leads, and automate your workflow with BasisHK's intelligent CRM platform built for Hong Kong real estate agents." : "透過 BasisHK 智能 CRM 平台管理樓盤、追蹤客源、自動化工作流程，專為香港地產代理而設。"}
+        description={language === 'en' ? "AI lead qualification, real WhatsApp integration, personalized messaging, property video editing, and more — the only CRM built specifically for Hong Kong real estate agents." : "AI 客源篩選、真實 WhatsApp 整合、個人化訊息、樓盤影片編輯等 — 唯一專為香港地產代理而設的 CRM。"}
         keywords={keywords}
         url="/platform"
       />
@@ -60,47 +60,239 @@ export default function Platform() {
         </div>
       </section>
 
-      {/* Core Features Grid */}
+      {/* Headline Feature: AI Lead Qualification */}
       <section className="py-20 bg-secondary/20 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-[0.03]" />
         <div className="container relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-[10px] font-bold uppercase tracking-widest mb-4">
+              <BrainCircuit className="w-3 h-3" />
+              <span>{t('platform.section.ai')}</span>
+            </div>
             <h2 className="text-3xl md:text-5xl font-heading font-medium mb-4 text-foreground">
-              {t('platform.features.title')}
+              {t('platform.ai.title')}
             </h2>
             <p className="text-base text-muted-foreground font-light max-w-xl mx-auto">
-              {t('platform.features.desc')}
+              {t('platform.ai.desc')}
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {/* AI Lead Qualification */}
+            <Card className="bg-white/80 backdrop-blur-sm border-white/50 shadow-sm hover:shadow-xl transition-all duration-500 rounded-2xl overflow-hidden group hover:-translate-y-1">
+              <CardHeader className="p-8 pb-4">
+                <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
+                  <Target className="w-6 h-6 text-blue-600" />
+                </div>
+                <CardTitle className="text-xl font-heading font-medium">{t('platform.ai.qualify.title')}</CardTitle>
+              </CardHeader>
+              <CardContent className="p-8 pt-0 space-y-3">
+                <p className="text-sm leading-relaxed text-muted-foreground font-light">{t('platform.ai.qualify.desc')}</p>
+                <ul className="space-y-2">
+                  {['platform.ai.qualify.1', 'platform.ai.qualify.2', 'platform.ai.qualify.3'].map((key) => (
+                    <li key={key} className="flex items-start gap-2 text-sm text-muted-foreground font-light">
+                      <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                      <span>{t(key)}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* AI Personalized Messaging */}
+            <Card className="bg-white/80 backdrop-blur-sm border-white/50 shadow-sm hover:shadow-xl transition-all duration-500 rounded-2xl overflow-hidden group hover:-translate-y-1">
+              <CardHeader className="p-8 pb-4">
+                <div className="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
+                  <Sparkles className="w-6 h-6 text-purple-600" />
+                </div>
+                <CardTitle className="text-xl font-heading font-medium">{t('platform.ai.messaging.title')}</CardTitle>
+              </CardHeader>
+              <CardContent className="p-8 pt-0 space-y-3">
+                <p className="text-sm leading-relaxed text-muted-foreground font-light">{t('platform.ai.messaging.desc')}</p>
+                <ul className="space-y-2">
+                  {['platform.ai.messaging.1', 'platform.ai.messaging.2', 'platform.ai.messaging.3'].map((key) => (
+                    <li key={key} className="flex items-start gap-2 text-sm text-muted-foreground font-light">
+                      <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                      <span>{t(key)}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Communication Hub: WhatsApp + Email */}
+      <section className="py-20 container">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-50 border border-green-100 text-green-700 text-[10px] font-bold uppercase tracking-widest mb-4">
+            <MessageSquare className="w-3 h-3" />
+            <span>{t('platform.section.comms')}</span>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-heading font-medium mb-4 text-foreground">
+            {t('platform.comms.title')}
+          </h2>
+          <p className="text-base text-muted-foreground font-light max-w-xl mx-auto">
+            {t('platform.comms.desc')}
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          {/* WhatsApp Integration */}
+          <Card className="bg-white/80 backdrop-blur-sm border-white/50 shadow-sm hover:shadow-xl transition-all duration-500 rounded-2xl overflow-hidden group hover:-translate-y-1">
+            <CardHeader className="p-8 pb-4">
+              <div className="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
+                <MessageSquare className="w-6 h-6 text-green-600" />
+              </div>
+              <CardTitle className="text-xl font-heading font-medium">{t('platform.comms.whatsapp.title')}</CardTitle>
+            </CardHeader>
+            <CardContent className="p-8 pt-0 space-y-3">
+              <p className="text-sm leading-relaxed text-muted-foreground font-light">{t('platform.comms.whatsapp.desc')}</p>
+              <ul className="space-y-2">
+                {['platform.comms.whatsapp.1', 'platform.comms.whatsapp.2', 'platform.comms.whatsapp.3'].map((key) => (
+                  <li key={key} className="flex items-start gap-2 text-sm text-muted-foreground font-light">
+                    <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                    <span>{t(key)}</span>
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+
+          {/* Email Campaigns */}
+          <Card className="bg-white/80 backdrop-blur-sm border-white/50 shadow-sm hover:shadow-xl transition-all duration-500 rounded-2xl overflow-hidden group hover:-translate-y-1">
+            <CardHeader className="p-8 pb-4">
+              <div className="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
+                <Mail className="w-6 h-6 text-indigo-600" />
+              </div>
+              <CardTitle className="text-xl font-heading font-medium">{t('platform.comms.email.title')}</CardTitle>
+            </CardHeader>
+            <CardContent className="p-8 pt-0 space-y-3">
+              <p className="text-sm leading-relaxed text-muted-foreground font-light">{t('platform.comms.email.desc')}</p>
+              <ul className="space-y-2">
+                {['platform.comms.email.1', 'platform.comms.email.2', 'platform.comms.email.3'].map((key) => (
+                  <li key={key} className="flex items-start gap-2 text-sm text-muted-foreground font-light">
+                    <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                    <span>{t(key)}</span>
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Property Tools: Listings + Video */}
+      <section className="py-20 bg-secondary/20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-[0.03]" />
+        <div className="container relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-100 text-orange-700 text-[10px] font-bold uppercase tracking-widest mb-4">
+              <Film className="w-3 h-3" />
+              <span>{t('platform.section.property')}</span>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-heading font-medium mb-4 text-foreground">
+              {t('platform.property.title')}
+            </h2>
+            <p className="text-base text-muted-foreground font-light max-w-xl mx-auto">
+              {t('platform.property.desc')}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {/* Property Listings with AI Enhancement */}
+            <Card className="bg-white/80 backdrop-blur-sm border-white/50 shadow-sm hover:shadow-xl transition-all duration-500 rounded-2xl overflow-hidden group hover:-translate-y-1">
+              <CardHeader className="p-8 pb-4">
+                <div className="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
+                  <Sparkles className="w-6 h-6 text-orange-600" />
+                </div>
+                <CardTitle className="text-lg font-heading font-medium">{t('platform.property.listings.title')}</CardTitle>
+              </CardHeader>
+              <CardContent className="p-8 pt-0 space-y-3">
+                <ul className="space-y-2">
+                  {['platform.property.listings.1', 'platform.property.listings.2', 'platform.property.listings.3'].map((key) => (
+                    <li key={key} className="flex items-start gap-2 text-sm text-muted-foreground font-light">
+                      <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                      <span>{t(key)}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Property Video Enhancer */}
+            <Card className="bg-white/80 backdrop-blur-sm border-white/50 shadow-sm hover:shadow-xl transition-all duration-500 rounded-2xl overflow-hidden group hover:-translate-y-1">
+              <CardHeader className="p-8 pb-4">
+                <div className="w-12 h-12 bg-pink-50 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
+                  <Video className="w-6 h-6 text-pink-600" />
+                </div>
+                <CardTitle className="text-lg font-heading font-medium">{t('platform.property.enhancer.title')}</CardTitle>
+              </CardHeader>
+              <CardContent className="p-8 pt-0 space-y-3">
+                <ul className="space-y-2">
+                  {['platform.property.enhancer.1', 'platform.property.enhancer.2', 'platform.property.enhancer.3'].map((key) => (
+                    <li key={key} className="flex items-start gap-2 text-sm text-muted-foreground font-light">
+                      <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                      <span>{t(key)}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Property Video Editor */}
+            <Card className="bg-white/80 backdrop-blur-sm border-white/50 shadow-sm hover:shadow-xl transition-all duration-500 rounded-2xl overflow-hidden group hover:-translate-y-1">
+              <CardHeader className="p-8 pb-4">
+                <div className="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
+                  <PenTool className="w-6 h-6 text-red-600" />
+                </div>
+                <CardTitle className="text-lg font-heading font-medium">{t('platform.property.editor.title')}</CardTitle>
+              </CardHeader>
+              <CardContent className="p-8 pt-0 space-y-3">
+                <ul className="space-y-2">
+                  {['platform.property.editor.1', 'platform.property.editor.2', 'platform.property.editor.3', 'platform.property.editor.4'].map((key) => (
+                    <li key={key} className="flex items-start gap-2 text-sm text-muted-foreground font-light">
+                      <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                      <span>{t(key)}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Bilingual Section */}
+      <section className="py-20 bg-primary text-white">
+        <div className="container max-w-4xl text-center">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white text-[10px] font-bold uppercase tracking-widest mb-6">
+            <Languages className="w-3 h-3" />
+            <span>{t('platform.section.bilingual')}</span>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-heading font-medium mb-6">
+            {t('platform.bilingual.title')}
+          </h2>
+          <p className="text-lg text-white/70 font-light mb-12 max-w-2xl mx-auto">
+            {t('platform.bilingual.desc')}
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: Database, title: t('platform.feat.listings.title'), desc: t('platform.feat.listings.desc'), color: "text-blue-600", bg: "bg-blue-50" },
-              { icon: Users, title: t('platform.feat.leads.title'), desc: t('platform.feat.leads.desc'), color: "text-indigo-600", bg: "bg-indigo-50" },
-              { icon: Bot, title: t('platform.feat.chatbot.title'), desc: t('platform.feat.chatbot.desc'), color: "text-purple-600", bg: "bg-purple-50" },
-              { icon: RefreshCw, title: t('platform.feat.sync.title'), desc: t('platform.feat.sync.desc'), color: "text-green-600", bg: "bg-green-50" },
-              { icon: LayoutDashboard, title: t('platform.feat.dashboard.title'), desc: t('platform.feat.dashboard.desc'), color: "text-orange-600", bg: "bg-orange-50" },
-              { icon: Smartphone, title: t('platform.feat.mobile.title'), desc: t('platform.feat.mobile.desc'), color: "text-pink-600", bg: "bg-pink-50" },
-            ].map((feature, i) => (
-              <Card key={i} className="bg-white/80 backdrop-blur-sm border-white/50 shadow-sm hover:shadow-xl transition-all duration-500 rounded-2xl overflow-hidden group hover:-translate-y-1">
-                <CardHeader className="p-8 pb-4">
-                  <div className={`w-12 h-12 ${feature.bg} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500`}>
-                    <feature.icon className={`w-6 h-6 ${feature.color}`} />
-                  </div>
-                  <CardTitle className="text-xl font-heading font-medium">{feature.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="p-8 pt-0">
-                  <p className="text-sm leading-relaxed text-muted-foreground font-light">
-                    {feature.desc}
-                  </p>
-                </CardContent>
-              </Card>
+              { title: t('platform.bilingual.1.title'), desc: t('platform.bilingual.1.desc') },
+              { title: t('platform.bilingual.2.title'), desc: t('platform.bilingual.2.desc') },
+              { title: t('platform.bilingual.3.title'), desc: t('platform.bilingual.3.desc') },
+            ].map((item, i) => (
+              <div key={i} className="text-center">
+                <h3 className="text-xl font-heading font-medium mb-2">{item.title}</h3>
+                <p className="text-sm text-white/60 font-light leading-relaxed">{item.desc}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* How the CRM Works */}
+      {/* How It Works */}
       <section className="py-20 container">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-5xl font-heading font-medium mb-4 text-foreground">
@@ -129,49 +321,27 @@ export default function Platform() {
         </div>
       </section>
 
-      {/* Why Our CRM */}
-      <section className="py-20 bg-primary text-white">
-        <div className="container max-w-4xl text-center">
-          <h2 className="text-3xl md:text-5xl font-heading font-medium mb-6">
-            {t('platform.why.title')}
-          </h2>
-          <p className="text-lg text-white/70 font-light mb-12 max-w-2xl mx-auto">
-            {t('platform.why.desc')}
-          </p>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { title: t('platform.why.1.title'), desc: t('platform.why.1.desc') },
-              { title: t('platform.why.2.title'), desc: t('platform.why.2.desc') },
-              { title: t('platform.why.3.title'), desc: t('platform.why.3.desc') },
-            ].map((item, i) => (
-              <div key={i} className="text-center">
-                <h3 className="text-xl font-heading font-medium mb-2">{item.title}</h3>
-                <p className="text-sm text-white/60 font-light leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
-      <section className="py-20 container text-center">
-        <h2 className="text-3xl md:text-5xl font-heading font-medium mb-4">
-          {t('platform.cta.title')}
-        </h2>
-        <p className="text-lg text-muted-foreground font-light mb-8 max-w-xl mx-auto">
-          {t('platform.cta.desc')}
-        </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link href="/services">
-            <Button size="lg" className="rounded-full px-10 h-12 text-base font-medium shadow-xl shadow-primary/10">
-              {t('platform.cta.button')} <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
-          </Link>
-          <Link href="/agency">
-            <Button variant="outline" size="lg" className="rounded-full px-10 h-12 text-base font-medium">
-              {t('platform.cta.agency')}
-            </Button>
-          </Link>
+      <section className="py-20 bg-secondary/20 text-center">
+        <div className="container">
+          <h2 className="text-3xl md:text-5xl font-heading font-medium mb-4">
+            {t('platform.cta.title')}
+          </h2>
+          <p className="text-lg text-muted-foreground font-light mb-8 max-w-xl mx-auto">
+            {t('platform.cta.desc')}
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link href="/services">
+              <Button size="lg" className="rounded-full px-10 h-12 text-base font-medium shadow-xl shadow-primary/10">
+                {t('platform.cta.button')} <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
+            <Link href="/agency">
+              <Button variant="outline" size="lg" className="rounded-full px-10 h-12 text-base font-medium">
+                {t('platform.cta.agency')}
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
     </Layout>
