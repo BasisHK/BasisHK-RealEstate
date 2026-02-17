@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SEO from "@/components/SEO";
-import { Building2, Users, LineChart, Award, HeartHandshake, Lightbulb, ChevronDown, ChevronUp } from "lucide-react";
+import { Users, HeartHandshake, Lightbulb, Award, ChevronDown, ChevronUp, Brain, MessageSquare, Video, Target, BarChart3, Palette, ArrowRight, Database, Zap } from "lucide-react";
 import { useState } from "react";
 
 export default function About() {
@@ -24,7 +24,6 @@ export default function About() {
       question: "How much does BasisHK cost?",
       answer: "BasisHK offers three main plans: The Starter Plan at HK$8,000/month includes the CRM platform with AI lead qualification, WhatsApp integration, and 10 AI property videos. The Growth Plan at HK$15,000/month adds advanced features, 25 videos, and a branded property portal. The Agency Plan at HK$25,000/month includes everything plus dedicated account management, unlimited videos, and priority support. Add-on services like virtual staging, drone video editing, and social media content packs are also available."
     },
-
     {
       question: "How does BasisHK's AI video generation work?",
       answer: "BasisHK uses advanced generative AI technology to create professional property videos from static photos. Agents simply upload property photos and floor plans, and BasisHK's AI generates cinematic video tours with smooth camera movements, professional voiceovers, background music, and lifestyle imagery. Videos are typically delivered within 48 hours."
@@ -46,7 +45,6 @@ export default function About() {
       question: "BasisHK 收費多少？",
       answer: "BasisHK 提供三個主要方案：入門方案每月 HK$8,000，包括 CRM 平台、AI 客源篩選、WhatsApp 整合和10個 AI 樓盤影片。增長方案每月 HK$15,000，增加進階功能、25個影片和品牌樓盤門戶。代理方案每月 HK$25,000，包括一切功能加專屬客戶經理、無限影片和優先支援。另提供虛擬佈置、航拍影片剪輯等附加服務。"
     },
-
     {
       question: "BasisHK 的 AI 影片生成如何運作？",
       answer: "BasisHK 使用先進的生成式 AI 技術從靜態照片創建專業樓盤影片。代理只需上傳物業照片和平面圖，BasisHK 的 AI 就會生成電影級的影片導覽，包括流暢的鏡頭移動、專業配音、背景音樂和生活方式影像。影片通常在48小時內交付。"
@@ -99,7 +97,7 @@ export default function About() {
         schema={[aboutPageSchema, faqSchema]}
       />
       <div className="bg-background min-h-screen">
-        {/* Hero - Creative Professional */}
+        {/* Hero */}
         <section className="relative py-32 overflow-hidden">
           <div className="absolute inset-0 mesh-bg opacity-50 -z-20" />
           <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-secondary/20 rounded-full blur-[120px] -z-10" />
@@ -111,18 +109,15 @@ export default function About() {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-heading font-medium mb-8 text-foreground leading-tight">
-              {language === 'en' ? 'About Basis HK' : '關於 Basis HK'}
+              {t('about.title')}
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-2xl mx-auto leading-relaxed">
-              {language === 'en' 
-                ? "BasisHK is Hong Kong's leading PropTech company transforming real estate marketing with AI technology."
-                : "BasisHK 是香港領先的地產科技公司，以 AI 技術革新房地產營銷。"
-              }
+              {t('about.desc')}
             </p>
           </div>
         </section>
 
-        {/* Origin Story - Editorial Layout */}
+        {/* Origin Story */}
         <section className="container py-24">
           <div className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
             <div className="relative">
@@ -149,22 +144,13 @@ export default function About() {
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground font-light leading-relaxed">
                 <p>
-                  <span className="text-foreground font-medium">Basis HK (BasisHK)</span> {language === 'en' 
-                    ? "was founded in 2024 with a clear mission: to transform how properties are marketed in Asia using artificial intelligence."
-                    : "成立於2024年，使命明確：利用人工智能改變亞洲物業營銷方式。"
-                  }
+                  <span className="text-foreground font-medium">Basis HK (BasisHK)</span> {t('about.mission.1')}
                 </p>
                 <p className="pl-4 border-l-2 border-accent">
-                  {language === 'en'
-                    ? "Our founders saw that while Western markets had embraced PropTech, Asia's real estate industry was still relying on outdated methods. BasisHK was created to bridge this gap."
-                    : "我們的創始人發現，雖然西方市場已經接受了地產科技，但亞洲的房地產行業仍然依賴過時的方法。BasisHK 的創立正是為了填補這一空白。"
-                  }
+                  {t('about.mission.2')}
                 </p>
                 <p>
-                  {language === 'en'
-                    ? "Today, BasisHK serves real estate agents across Hong Kong, helping them create stunning AI-powered property videos and generate more leads than ever before."
-                    : "如今，BasisHK 服務香港各地的地產代理，幫助他們創建令人驚嘆的 AI 樓盤影片，並獲得前所未有的客源。"
-                  }
+                  {t('about.mission.3')}
                 </p>
               </div>
               
@@ -182,10 +168,108 @@ export default function About() {
           </div>
         </section>
 
-        {/* Values - Grid */}
+        {/* Two Pillars Section */}
         <section className="py-24 bg-secondary/20 relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-[0.03]" />
           <div className="container relative z-10 max-w-6xl">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-white/40 shadow-sm text-primary text-[11px] font-bold uppercase tracking-widest mb-6">
+                <Zap className="w-3 h-3" />
+                <span>{language === 'en' ? 'Two Products, One Mission' : '兩大產品，一個使命'}</span>
+              </div>
+              <h2 className="text-3xl md:text-5xl font-heading font-medium mb-4">
+                {language === 'en' ? 'CRM Platform + Marketing Agency' : 'CRM 平台 + 營銷代理'}
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                {language === 'en' 
+                  ? 'The only company in Hong Kong that gives agents both the technology and the team to dominate their market.'
+                  : '香港唯一一家同時為代理提供技術工具和專業團隊的公司，助您制霸市場。'
+                }
+              </p>
+              <div className="w-20 h-1 bg-accent mx-auto rounded-full mt-6" />
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* CRM Platform Pillar */}
+              <div className="bg-white/80 backdrop-blur-sm border border-white/60 rounded-2xl p-10 shadow-sm hover:shadow-xl transition-all duration-500 group">
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                  <Database className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="text-2xl font-heading font-medium text-foreground mb-4">
+                  {language === 'en' ? 'AI-Powered CRM Platform' : 'AI 驅動 CRM 平台'}
+                </h3>
+                <p className="text-muted-foreground font-light leading-relaxed mb-6">
+                  {language === 'en'
+                    ? 'A purpose-built CRM for real estate agents. Not a generic tool with a property skin — every feature was designed from the ground up for how agents actually work in Hong Kong.'
+                    : '專為地產代理打造的 CRM。不是套上地產外殼的通用工具 — 每個功能都是從零開始，按照香港代理的實際工作方式設計。'
+                  }
+                </p>
+                <ul className="space-y-3 mb-8">
+                  {[
+                    { icon: Brain, text: language === 'en' ? 'AI Lead Qualification with BANT Scoring' : 'BANT 評分 AI 客源篩選' },
+                    { icon: MessageSquare, text: language === 'en' ? 'Real WhatsApp Integration' : '真實 WhatsApp 整合' },
+                    { icon: Zap, text: language === 'en' ? 'AI Personalized Messaging' : 'AI 個人化訊息' },
+                    { icon: Video, text: language === 'en' ? 'Property Video Editor & Enhancer' : '樓盤影片編輯器及增強器' },
+                    { icon: Palette, text: language === 'en' ? 'AI Virtual Staging & Enhancement' : 'AI 虛擬佈置及增強' },
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3 text-sm text-foreground/80">
+                      <div className="w-8 h-8 rounded-lg bg-primary/5 flex items-center justify-center shrink-0">
+                        <item.icon className="w-4 h-4 text-primary" />
+                      </div>
+                      {item.text}
+                    </li>
+                  ))}
+                </ul>
+                <Link href="/platform">
+                  <span className="inline-flex items-center gap-2 text-primary font-medium text-sm hover:gap-3 transition-all cursor-pointer">
+                    {language === 'en' ? 'Explore the Platform' : '探索平台'} <ArrowRight className="w-4 h-4" />
+                  </span>
+                </Link>
+              </div>
+
+              {/* Marketing Agency Pillar */}
+              <div className="bg-white/80 backdrop-blur-sm border border-white/60 rounded-2xl p-10 shadow-sm hover:shadow-xl transition-all duration-500 group">
+                <div className="w-14 h-14 rounded-xl bg-accent/20 flex items-center justify-center mb-6 group-hover:bg-accent/30 transition-colors">
+                  <Target className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="text-2xl font-heading font-medium text-foreground mb-4">
+                  {language === 'en' ? 'Full-Service Marketing Agency' : '全方位營銷代理'}
+                </h3>
+                <p className="text-muted-foreground font-light leading-relaxed mb-6">
+                  {language === 'en'
+                    ? 'A dedicated marketing team that works as an extension of your business. We handle the creative, the campaigns, and the content — you focus on closing deals.'
+                    : '一支專屬營銷團隊，作為您業務的延伸。我們負責創意、廣告和內容 — 您專注成交。'
+                  }
+                </p>
+                <ul className="space-y-3 mb-8">
+                  {[
+                    { icon: Video, text: language === 'en' ? 'AI Property Video Production' : 'AI 樓盤影片製作' },
+                    { icon: Target, text: language === 'en' ? 'Targeted Ad Campaigns (Meta & Google)' : '精準廣告投放 (Meta 及 Google)' },
+                    { icon: Palette, text: language === 'en' ? 'Social Media Content Creation' : '社交媒體內容創作' },
+                    { icon: BarChart3, text: language === 'en' ? 'Performance Analytics & Reporting' : '成效分析及報告' },
+                    { icon: Lightbulb, text: language === 'en' ? 'Drone Video Editing & Virtual Staging' : '航拍影片剪輯及虛擬佈置' },
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3 text-sm text-foreground/80">
+                      <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center shrink-0">
+                        <item.icon className="w-4 h-4 text-primary" />
+                      </div>
+                      {item.text}
+                    </li>
+                  ))}
+                </ul>
+                <Link href="/agency">
+                  <span className="inline-flex items-center gap-2 text-primary font-medium text-sm hover:gap-3 transition-all cursor-pointer">
+                    {language === 'en' ? 'Explore the Agency' : '探索代理服務'} <ArrowRight className="w-4 h-4" />
+                  </span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Values */}
+        <section className="py-24 container">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-heading font-medium mb-4">{t('about.values.title')}</h2>
               <div className="w-20 h-1 bg-accent mx-auto rounded-full" />
@@ -210,7 +294,7 @@ export default function About() {
                 }
               ].map((item, i) => (
                 <div key={i} className="p-10 bg-white/80 backdrop-blur-sm border border-white/60 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group">
-                  <div className="w-14 h-14 bg-primary/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
+                  <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
                     <item.icon className="w-7 h-7 text-primary" />
                   </div>
                   <h3 className="text-xl font-heading font-medium text-foreground mb-4">{item.title}</h3>
@@ -222,50 +306,52 @@ export default function About() {
         </section>
 
         {/* FAQ Section for AEO */}
-        <section className="py-24 container">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-heading font-medium mb-4">
-                {language === 'en' ? 'Frequently Asked Questions' : '常見問題'}
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                {language === 'en' 
-                  ? 'Learn more about Basis HK and our AI-powered real estate marketing services'
-                  : '了解更多關於 Basis HK 和我們的 AI 房地產營銷服務'
-                }
-              </p>
-              <div className="w-20 h-1 bg-accent mx-auto rounded-full mt-6" />
-            </div>
-            
-            <div className="space-y-4">
-              {faqs.map((faq, index) => (
-                <div 
-                  key={index} 
-                  className="bg-white/80 backdrop-blur-sm border border-white/60 rounded-xl overflow-hidden shadow-sm"
-                >
-                  <button
-                    onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                    className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-secondary/30 transition-colors"
+        <section className="py-24 bg-secondary/20">
+          <div className="container">
+            <div className="max-w-3xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-5xl font-heading font-medium mb-4">
+                  {language === 'en' ? 'Frequently Asked Questions' : '常見問題'}
+                </h2>
+                <p className="text-lg text-muted-foreground">
+                  {language === 'en' 
+                    ? 'Learn more about BasisHK\'s CRM platform and marketing agency services'
+                    : '了解更多關於 BasisHK 的 CRM 平台及營銷代理服務'
+                  }
+                </p>
+                <div className="w-20 h-1 bg-accent mx-auto rounded-full mt-6" />
+              </div>
+              
+              <div className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <div 
+                    key={index} 
+                    className="bg-white/80 backdrop-blur-sm border border-white/60 rounded-xl overflow-hidden shadow-sm"
                   >
-                    <h3 className="text-lg font-medium text-foreground pr-4">{faq.question}</h3>
-                    {openFaq === index ? (
-                      <ChevronUp className="w-5 h-5 text-primary flex-shrink-0" />
-                    ) : (
-                      <ChevronDown className="w-5 h-5 text-muted-foreground flex-shrink-0" />
+                    <button
+                      onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                      className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-secondary/30 transition-colors"
+                    >
+                      <h3 className="text-lg font-medium text-foreground pr-4">{faq.question}</h3>
+                      {openFaq === index ? (
+                        <ChevronUp className="w-5 h-5 text-primary flex-shrink-0" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5 text-muted-foreground flex-shrink-0" />
+                      )}
+                    </button>
+                    {openFaq === index && (
+                      <div className="px-6 pb-5">
+                        <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
+                      </div>
                     )}
-                  </button>
-                  {openFaq === index && (
-                    <div className="px-6 pb-5">
-                      <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
-                    </div>
-                  )}
-                </div>
-              ))}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Slogan - In Content We Trust */}
+        {/* Slogan */}
         <section className="py-20 container">
           <div className="max-w-4xl mx-auto text-center">
             <div className="relative">
@@ -293,15 +379,22 @@ export default function About() {
               </h2>
               <p className="text-white/80 text-lg mb-8 max-w-xl mx-auto">
                 {language === 'en' 
-                  ? 'Join the real estate agents who are already transforming their marketing with Basis HK.'
-                  : '加入已經通過 Basis HK 改變營銷方式的地產代理行列。'
+                  ? 'Whether you need a smarter CRM, a dedicated marketing team, or both — we\'ve got you covered.'
+                  : '無論您需要更智能的 CRM、專屬營銷團隊，還是兩者兼備 — 我們都能為您提供。'
                 }
               </p>
-              <a href="https://calendly.com/business-basis/30min" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="rounded-full px-12 h-14 text-lg font-medium bg-white text-primary hover:bg-accent hover:text-primary-foreground transition-all shadow-lg hover:scale-105">
-                  {t('about.cta.button')}
-                </Button>
-              </a>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://calendly.com/business-basis/30min" target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" className="rounded-full px-12 h-14 text-lg font-medium bg-white text-primary hover:bg-accent hover:text-primary-foreground transition-all shadow-lg hover:scale-105">
+                    {t('about.cta.button')}
+                  </Button>
+                </a>
+                <Link href="/services">
+                  <Button size="lg" variant="outline" className="rounded-full px-12 h-14 text-lg font-medium border-white/30 text-white hover:bg-white/10 transition-all">
+                    {language === 'en' ? 'View Plans' : '查看方案'}
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </section>
