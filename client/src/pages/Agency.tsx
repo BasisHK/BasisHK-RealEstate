@@ -113,17 +113,19 @@ export default function Agency() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {[
-            { title: t('agency.addon.videopack.title'), price: "HK$2,500", desc: t('agency.addon.videopack.desc') },
-            { title: t('agency.addon.imagepack.title'), price: "HK$800", desc: t('agency.addon.imagepack.desc') },
-            { title: t('agency.addon.voiceover.title'), price: "HK$1,500", desc: t('agency.addon.voiceover.desc') },
-            { title: t('agency.addon.staging.title'), price: "HK$500", desc: t('agency.addon.staging.desc') },
-            { title: t('agency.addon.drone.title'), price: "HK$3,000", desc: t('agency.addon.drone.desc') },
-            { title: t('agency.addon.social.title'), price: "HK$2,000", desc: t('agency.addon.social.desc') },
-            { title: t('agency.addon.portal.title'), price: "HK$5,000", desc: t('agency.addon.portal.desc') },
-            { title: t('agency.addon.rush.title'), price: "HK$800", desc: t('agency.addon.rush.desc') },
+            { title: t('agency.addon.videopack.title'), desc: t('agency.addon.videopack.desc'), icon: Film },
+            { title: t('agency.addon.imagepack.title'), desc: t('agency.addon.imagepack.desc'), icon: Camera },
+            { title: t('agency.addon.voiceover.title'), desc: t('agency.addon.voiceover.desc'), icon: MessageSquare },
+            { title: t('agency.addon.staging.title'), desc: t('agency.addon.staging.desc'), icon: Sparkles },
+            { title: t('agency.addon.drone.title'), desc: t('agency.addon.drone.desc'), icon: Video },
+            { title: t('agency.addon.social.title'), desc: t('agency.addon.social.desc'), icon: Globe },
+            { title: t('agency.addon.portal.title'), desc: t('agency.addon.portal.desc'), icon: Zap },
+            { title: t('agency.addon.rush.title'), desc: t('agency.addon.rush.desc'), icon: TrendingUp },
           ].map((addon, i) => (
             <div key={i} className="p-6 rounded-2xl border border-border/50 bg-white/60 hover:shadow-lg transition-all hover:-translate-y-1 group">
-              <div className="text-2xl font-heading font-medium text-primary mb-2">{addon.price}</div>
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                <addon.icon className="w-5 h-5 text-primary" />
+              </div>
               <h3 className="text-base font-heading font-medium mb-2">{addon.title}</h3>
               <p className="text-xs text-muted-foreground font-light leading-relaxed">{addon.desc}</p>
             </div>
