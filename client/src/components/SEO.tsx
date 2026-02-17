@@ -32,29 +32,36 @@ export default function SEO({
   const brandVariations = "Basis HK, BasisHK, Basis Hong Kong";
   
   const defaultTitle = language === 'en' 
-    ? "Basis HK | BasisHK - Hong Kong's #1 AI Real Estate Marketing Agency" 
-    : "Basis HK | BasisHK - 香港頂尖AI地產營銷公司";
+    ? "Basis HK | BasisHK - AI Real Estate CRM Platform & Marketing Agency in Hong Kong" 
+    : "Basis HK | BasisHK - 香港 AI 地產 CRM 平台及營銷代理";
   
   const defaultDescription = language === 'en'
-    ? "Basis HK (BasisHK) is Hong Kong's leading PropTech company. We provide AI-powered property video production, automated lead generation, and digital marketing solutions for elite real estate agents. Founded in 2024, BasisHK transforms how properties are marketed across Asia."
-    : "Basis HK (BasisHK) 是香港領先的地產科技公司。我們為精英地產代理提供 AI 驅動的樓盤影片製作、自動化客源開發及數碼營銷方案。BasisHK 成立於2024年，正在改變亞洲物業營銷方式。";
+    ? "Basis HK (BasisHK) is Hong Kong's leading PropTech company combining an AI-powered real estate CRM platform with a full-service marketing agency. AI lead qualification, real WhatsApp integration, personalized messaging, property video production, and targeted ad campaigns — everything agents need to close more deals."
+    : "Basis HK (BasisHK) 是香港領先的地產科技公司，結合 AI 驅動的地產 CRM 平台與全方位營銷代理。AI 客源篩選、真實 WhatsApp 整合、個人化訊息、樓盤影片製作及精準廣告投放 — 助代理成交更多交易。";
 
-  // Enhanced keywords with brand name variations
+  // Enhanced keywords with brand name variations and dual offering
   const defaultKeywords = language === 'en'
     ? [
         "Basis HK",
         "BasisHK",
         "Basis Hong Kong",
         "basis.hk",
-        "Hong Kong real estate marketing agency",
-        "property marketing agency Hong Kong",
-        "real estate digital marketing HK",
+        "real estate CRM Hong Kong",
+        "property CRM platform",
+        "AI real estate CRM",
+        "WhatsApp CRM real estate",
+        "AI lead qualification",
+        "real estate marketing agency Hong Kong",
+        "property marketing agency HK",
         "PropTech Hong Kong",
-        "AI real estate marketing",
-        "property video marketing Hong Kong",
+        "AI property video production",
         "real estate lead generation Hong Kong",
-        "luxury property marketing HK",
-        "AI property videos Hong Kong",
+        "property listing management",
+        "real estate digital marketing HK",
+        "AI personalized messaging",
+        "property video editor",
+        "virtual staging Hong Kong",
+        "BasisHK CRM",
         "BasisHK real estate",
         "Basis HK PropTech"
       ]
@@ -63,15 +70,22 @@ export default function SEO({
         "BasisHK",
         "BasisHK公司",
         "Basis HK地產科技",
+        "香港地產CRM",
+        "地產CRM平台",
+        "AI地產CRM",
+        "WhatsApp CRM",
+        "AI客源篩選",
         "香港地產營銷公司",
-        "房地產數碼營銷",
         "物業推廣服務",
         "地產科技香港",
-        "AI地產營銷",
-        "樓盤影片製作",
+        "AI樓盤影片製作",
         "地產客源開發",
-        "豪宅營銷香港",
-        "AI樓盤影片香港"
+        "樓盤管理系統",
+        "地產數碼營銷",
+        "AI個人化訊息",
+        "樓盤影片編輯器",
+        "虛擬佈置香港",
+        "BasisHK CRM"
       ];
 
   const fullTitle = title ? `${title} | ${siteName}` : defaultTitle;
@@ -81,14 +95,14 @@ export default function SEO({
   const fullImage = image.startsWith("http") ? image : `${siteUrl}${image}`;
   const finalKeywords = [...defaultKeywords, ...keywords].join(", ");
 
-  // Enhanced Organization Schema with brand variations
+  // Enhanced Organization Schema with dual offering
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "@id": "https://basis.hk/#organization",
     "name": "BasisHK",
     "legalName": "Basis HK Limited",
-    "alternateName": ["Basis HK", "Basis Hong Kong", "BasisHK Real Estate Marketing", "Basis", "BASISHK"],
+    "alternateName": ["Basis HK", "Basis Hong Kong", "BasisHK Real Estate", "BasisHK CRM", "BASISHK"],
     "url": "https://basis.hk",
     "logo": {
       "@type": "ImageObject",
@@ -98,10 +112,9 @@ export default function SEO({
     },
     "image": "https://basis.hk/og-image.png",
     "description": language === 'en' 
-      ? "Basis HK (BasisHK) is Hong Kong's leading PropTech company specializing in AI-powered property videos, lead generation, and digital marketing for real estate agents."
-      : "Basis HK (BasisHK) 是香港領先的地產科技公司，專注於 AI 驅動的樓盤影片、客源開發及地產代理數碼營銷。",
+      ? "Basis HK (BasisHK) is Hong Kong's leading PropTech company offering an AI-powered real estate CRM platform and full-service marketing agency. Features include AI lead qualification, real WhatsApp integration, personalized messaging, property video production, and targeted ad campaigns."
+      : "Basis HK (BasisHK) 是香港領先的地產科技公司，提供 AI 驅動的地產 CRM 平台及全方位營銷代理。功能包括 AI 客源篩選、真實 WhatsApp 整合、個人化訊息、樓盤影片製作及精準廣告投放。",
     "foundingDate": "2024",
-
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Hong Kong",
@@ -120,13 +133,20 @@ export default function SEO({
       "https://www.linkedin.com/company/basis-hk/"
     ],
     "knowsAbout": [
+      "Real Estate CRM",
+      "AI Lead Qualification",
+      "WhatsApp Business Integration",
+      "Property Listing Management",
+      "AI Personalized Messaging",
+      "Property Video Production",
+      "Property Video Editing",
+      "Virtual Staging",
       "Real Estate Marketing",
       "PropTech",
-      "AI Video Generation",
-      "Property Technology",
       "Lead Generation",
       "Digital Marketing",
-      "Hong Kong Real Estate"
+      "Hong Kong Real Estate",
+      "Cantonese AI Voiceover"
     ]
   };
 
@@ -135,13 +155,13 @@ export default function SEO({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": "https://basis.hk/#localbusiness",
-    "name": "Basis HK - BasisHK Real Estate Marketing Agency",
-    "alternateName": ["BasisHK", "Basis HK", "Basis Hong Kong"],
+    "name": "Basis HK - BasisHK Real Estate CRM & Marketing Agency",
+    "alternateName": ["BasisHK", "Basis HK", "Basis Hong Kong", "BasisHK CRM"],
     "url": "https://basis.hk",
     "image": "https://basis.hk/og-image.png",
     "description": language === 'en'
-      ? "Basis HK (BasisHK) provides AI-powered real estate marketing services in Hong Kong including property videos, lead generation, and digital marketing."
-      : "Basis HK (BasisHK) 提供香港AI地產營銷服務，包括樓盤影片、客源開發及數碼營銷。",
+      ? "Basis HK (BasisHK) provides an AI-powered real estate CRM platform and full-service marketing agency in Hong Kong. AI lead qualification, WhatsApp integration, property video production, and targeted ad campaigns."
+      : "Basis HK (BasisHK) 提供 AI 驅動的地產 CRM 平台及全方位營銷代理服務。AI 客源篩選、WhatsApp 整合、樓盤影片製作及精準廣告投放。",
     "telephone": "+852-6755-9118",
     "email": "business@basis.hk",
     "address": {
@@ -167,13 +187,51 @@ export default function SEO({
     }
   };
 
-  // Enhanced Service Schema
+  // SoftwareApplication Schema for the CRM Platform
+  const softwareSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "@id": "https://basis.hk/#software",
+    "name": "BasisHK CRM",
+    "alternateName": ["BasisHK Platform", "Basis HK CRM"],
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": language === 'en'
+      ? "AI-powered real estate CRM built for Hong Kong agents. Features AI lead qualification with BANT scoring, real WhatsApp integration, AI personalized messaging, property video enhancer, video editor with Cantonese AI voiceover, and bilingual support."
+      : "專為香港地產代理打造的 AI 驅動 CRM。功能包括 BANT 評分 AI 客源篩選、真實 WhatsApp 整合、AI 個人化訊息、樓盤影片增強器、內建廣東話 AI 旁白的影片編輯器及雙語支援。",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "8000",
+      "highPrice": "25000",
+      "priceCurrency": "HKD",
+      "offerCount": "3"
+    },
+    "featureList": [
+      "AI Lead Qualification with BANT Scoring",
+      "Real WhatsApp Integration",
+      "AI Personalized Messaging",
+      "Email Campaigns with Reply Tracking",
+      "AI-Enhanced Property Listings",
+      "Property Video Enhancer",
+      "Property Video Editor",
+      "Cantonese AI Voiceover",
+      "Bilingual (English / Traditional Chinese)",
+      "Gmail Auto-Sync"
+    ],
+    "provider": {
+      "@type": "Organization",
+      "name": "BasisHK",
+      "@id": "https://basis.hk/#organization"
+    }
+  };
+
+  // Enhanced Service Schema for the Marketing Agency
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": "https://basis.hk/#service",
-    "serviceType": language === 'en' ? "AI Real Estate Marketing" : "AI地產營銷",
-    "name": "BasisHK AI Real Estate Marketing Services",
+    "serviceType": language === 'en' ? "Real Estate Marketing Agency" : "地產營銷代理",
+    "name": "BasisHK Marketing Agency Services",
     "provider": {
       "@type": "Organization",
       "name": "BasisHK",
@@ -185,7 +243,7 @@ export default function SEO({
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": language === 'en' ? "BasisHK Real Estate Marketing Plans" : "BasisHK地產營銷方案",
+      "name": language === 'en' ? "BasisHK Services & Plans" : "BasisHK 服務及方案",
       "itemListElement": [
         {
           "@type": "Offer",
@@ -200,21 +258,39 @@ export default function SEO({
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": language === 'en' ? "Real Estate Lead Generation" : "地產客源開發"
+            "name": language === 'en' ? "Predictive Ad Targeting & Lead Generation" : "精準廣告投放及客源開發"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": language === 'en' ? "Property Digital Marketing" : "物業數碼營銷"
+            "name": language === 'en' ? "Social Media Content & Management" : "社交媒體內容及管理"
           }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": language === 'en' ? "Virtual Staging" : "虛擬佈置"
+          },
+          "price": "500",
+          "priceCurrency": "HKD"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": language === 'en' ? "Drone Video Editing" : "航拍影片剪輯"
+          },
+          "price": "3000",
+          "priceCurrency": "HKD"
         }
       ]
     }
   };
 
-  const combinedSchema = schema || [organizationSchema, localBusinessSchema, serviceSchema];
+  const combinedSchema = schema || [organizationSchema, localBusinessSchema, softwareSchema, serviceSchema];
 
   return (
     <Helmet>
@@ -245,7 +321,7 @@ export default function SEO({
       <meta property="og:image" content={fullImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={`Basis HK - BasisHK - ${title || 'Hong Kong Real Estate Marketing'}`} />
+      <meta property="og:image:alt" content={`Basis HK - BasisHK - ${title || 'AI Real Estate CRM & Marketing Agency'}`} />
       <meta property="og:site_name" content={siteName} />
       <meta property="og:locale" content={language === 'en' ? 'en_HK' : 'zh_HK'} />
 
@@ -266,7 +342,7 @@ export default function SEO({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={finalDescription} />
       <meta name="twitter:image" content={fullImage} />
-      <meta name="twitter:image:alt" content={`Basis HK - BasisHK - ${title || 'Hong Kong Real Estate Marketing'}`} />
+      <meta name="twitter:image:alt" content={`Basis HK - BasisHK - ${title || 'AI Real Estate CRM & Marketing Agency'}`} />
       <meta name="twitter:site" content="@basishk" />
       <meta name="twitter:creator" content="@basishk" />
 
@@ -279,7 +355,7 @@ export default function SEO({
       {/* Dublin Core Metadata for Enhanced Discovery */}
       <meta name="DC.title" content={fullTitle} />
       <meta name="DC.creator" content="BasisHK" />
-      <meta name="DC.subject" content="Real Estate Marketing, PropTech, AI, Hong Kong" />
+      <meta name="DC.subject" content="Real Estate CRM, Marketing Agency, PropTech, AI, Hong Kong" />
       <meta name="DC.description" content={finalDescription} />
       <meta name="DC.publisher" content="BasisHK" />
       <meta name="DC.language" content={language === 'en' ? 'en' : 'zh-HK'} />

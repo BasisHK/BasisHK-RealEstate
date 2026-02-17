@@ -15,13 +15,17 @@ export default function Home() {
         "BasisHK",
         "Basis Hong Kong",
         "basis.hk",
+        "real estate CRM Hong Kong",
         "real estate marketing agency Hong Kong",
-        "property marketing services HK",
+        "AI real estate CRM platform",
+        "property CRM WhatsApp integration",
+        "AI lead qualification real estate",
         "AI property video production",
         "real estate lead generation",
         "PropTech solutions Hong Kong",
-        "luxury property marketing",
+        "property listing management",
         "real estate digital marketing",
+        "BasisHK CRM",
         "BasisHK real estate",
         "Basis HK PropTech"
       ]
@@ -30,22 +34,25 @@ export default function Home() {
         "BasisHK",
         "BasisHK公司",
         "Basis HK地產科技",
+        "香港CRM地產平台",
         "香港地產營銷公司",
-        "物業推廣服務",
-        "AI 樓盤影片製作",
+        "AI地產CRM",
+        "WhatsApp CRM地產",
+        "AI客源篩選",
+        "AI樓盤影片製作",
         "地產客源開發",
-        "地產科技方案",
-        "豪宅營銷",
-        "地產數碼營銷"
+        "樓盤管理系統",
+        "地產數碼營銷",
+        "BasisHK CRM"
       ];
 
   const homeTitle = language === 'en'
-    ? "Basis HK | BasisHK - Hong Kong's #1 AI Real Estate Marketing Agency"
-    : "Basis HK | BasisHK - 香港頂尖AI地產營銷公司";
+    ? "Basis HK | BasisHK - AI Real Estate CRM Platform & Marketing Agency in Hong Kong"
+    : "Basis HK | BasisHK - 香港 AI 地產 CRM 平台及營銷代理";
 
   const homeDescription = language === 'en'
-    ? "Basis HK (BasisHK) is Hong Kong's leading PropTech company. We provide AI-powered property video production, automated lead generation, and digital marketing solutions for elite real estate agents. Founded in 2024, BasisHK transforms how properties are marketed across Asia."
-    : "Basis HK (BasisHK) 是香港領先的地產科技公司。我們為精英地產代理提供 AI 樓盤影片製作、自動化客源開發及數碼營銷方案。BasisHK 成立於2024年，正在改變亞洲物業營銷方式。";
+    ? "Basis HK (BasisHK) combines an AI-powered real estate CRM platform with a full-service marketing agency. AI lead qualification, real WhatsApp integration, personalized messaging, property video production, and targeted ad campaigns — one platform and one agency for Hong Kong’s top agents."
+    : "Basis HK (BasisHK) 結合 AI 驅動的地產 CRM 平台與全方位營銷代理。AI 客源篩選、真實 WhatsApp 整合、個人化訊息、樓盤影片製作及精準廣告投放 — 一個平台加一個代理，助香港頂尖代理贏盡市場。";
 
   return (
     <Layout>

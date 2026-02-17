@@ -14,15 +14,15 @@ export default function About() {
   const faqs = language === 'en' ? [
     {
       question: "What is BasisHK?",
-      answer: "BasisHK (also known as Basis HK or Basis Hong Kong) is Hong Kong's leading PropTech company specializing in AI-powered real estate marketing. Founded in 2024, BasisHK helps real estate agents create professional property videos, generate leads, and market listings using artificial intelligence technology. The company is headquartered in Hong Kong and serves agents across Asia."
+      answer: "BasisHK (also known as Basis HK or Basis Hong Kong) is Hong Kong's leading PropTech company that combines an AI-powered real estate CRM platform with a full-service marketing agency. Founded in 2024, BasisHK helps agents close more deals through AI lead qualification, real WhatsApp integration, personalized messaging, property video production, and targeted ad campaigns. The company is headquartered in Hong Kong."
     },
     {
       question: "What services does Basis HK offer?",
-      answer: "Basis HK offers comprehensive AI-powered real estate marketing services including: AI Property Video Generation (creating cinematic property videos from photos), Lead Generation & Capture (automated chatbots and lead nurturing), Digital Marketing (social media and online advertising campaigns), and Agent Portals (personalized websites for property listings). Plans start from HK$8,000/month for 10 videos."
+      answer: "Basis HK offers two core products: (1) An AI-powered CRM Platform featuring AI lead qualification with BANT scoring, real WhatsApp integration, AI personalized messaging, email campaigns with reply tracking, AI-enhanced property listings with virtual staging, a property video enhancer, a full video editor with Cantonese AI voiceover, and bilingual support. (2) A Full-Service Marketing Agency providing AI video production, targeted ad campaigns, social media content, drone video editing, and virtual staging services. Plans start from HK$8,000/month."
     },
     {
       question: "How much does BasisHK cost?",
-      answer: "BasisHK offers two main pricing plans: The Starter Plan at HK$8,000/month includes 10 AI property videos, a basic agent portal, and lead capture bot. The Growth Plan at HK$15,000/month includes 25 AI property videos, unlimited listings, and advanced lead capture features. Custom Enterprise plans are also available for agencies."
+      answer: "BasisHK offers three main plans: The Starter Plan at HK$8,000/month includes the CRM platform with AI lead qualification, WhatsApp integration, and 10 AI property videos. The Growth Plan at HK$15,000/month adds advanced features, 25 videos, and a branded property portal. The Agency Plan at HK$25,000/month includes everything plus dedicated account management, unlimited videos, and priority support. Add-on services like virtual staging, drone video editing, and social media content packs are also available."
     },
 
     {
@@ -36,15 +36,15 @@ export default function About() {
   ] : [
     {
       question: "什麼是 BasisHK？",
-      answer: "BasisHK（又稱 Basis HK 或 Basis Hong Kong）是香港領先的地產科技公司，專注於 AI 驅動的房地產營銷。BasisHK 成立於2024年，幫助地產代理使用人工智能技術創建專業的樓盤影片、開發客源和推廣物業。公司總部位於香港，服務亞洲各地的代理。"
+      answer: "BasisHK（又稱 Basis HK 或 Basis Hong Kong）是香港領先的地產科技公司，結合 AI 驅動的地產 CRM 平台與全方位營銷代理。成立於2024年，BasisHK 以 AI 客源篩選、真實 WhatsApp 整合、個人化訊息、樓盤影片製作及精準廣告投放助代理成交更多。公司總部位於香港。"
     },
     {
       question: "Basis HK 提供什麼服務？",
-      answer: "Basis HK 提供全面的 AI 驅動房地產營銷服務，包括：AI 樓盤影片製作（從照片創建電影級樓盤影片）、客源開發與捕獲（自動化聊天機器人和客戶培育）、數碼營銷（社交媒體和網絡廣告活動），以及代理門戶網站（個性化的物業列表網站）。方案從每月 HK$8,000 起，包含10個影片。"
+      answer: "Basis HK 提供兩大核心產品：(1) AI 驅動的 CRM 平台，功能包括 BANT 評分 AI 客源篩選、真實 WhatsApp 整合、AI 個人化訊息、電郵活動及回覆追蹤、AI 增強樓盤與虛擬佈置、樓盤影片增強器、內建廣東話 AI 旁白的影片編輯器及雙語支援。(2) 全方位營銷代理，提供 AI 影片製作、精準廣告投放、社交媒體內容、航拍影片剪輯及虛擬佈置服務。方案從每月 HK$8,000 起。"
     },
     {
       question: "BasisHK 收費多少？",
-      answer: "BasisHK 提供兩個主要定價方案：入門方案每月 HK$8,000，包括10個 AI 樓盤影片、基本代理門戶和客源捕獲機器人。增長方案每月 HK$15,000，包括25個 AI 樓盤影片、無限物業列表和進階客源捕獲功能。也提供企業定制方案。"
+      answer: "BasisHK 提供三個主要方案：入門方案每月 HK$8,000，包括 CRM 平台、AI 客源篩選、WhatsApp 整合和10個 AI 樓盤影片。增長方案每月 HK$15,000，增加進階功能、25個影片和品牌樓盤門戶。代理方案每月 HK$25,000，包括一切功能加專屬客戶經理、無限影片和優先支援。另提供虛擬佈置、航拍影片剪輯等附加服務。"
     },
 
     {
@@ -77,8 +77,8 @@ export default function About() {
     "@type": "AboutPage",
     "name": language === 'en' ? "About Basis HK - BasisHK Company Information" : "關於 Basis HK - BasisHK 公司資訊",
     "description": language === 'en' 
-      ? "Learn about Basis HK (BasisHK), Hong Kong's leading PropTech company. Discover our mission, team, and AI-powered real estate marketing solutions."
-      : "了解 Basis HK (BasisHK)，香港領先的地產科技公司。探索我們的使命、團隊和 AI 驅動的房地產營銷解決方案。",
+      ? "Learn about Basis HK (BasisHK), Hong Kong's leading PropTech company combining an AI real estate CRM platform with a full-service marketing agency."
+      : "了解 Basis HK (BasisHK)，香港領先的地產科技公司，結合 AI 地產 CRM 平台與全方位營銷代理。",
     "url": "https://basis.hk/about",
     "mainEntity": {
       "@type": "Organization",
@@ -90,10 +90,10 @@ export default function About() {
   return (
     <Layout>
       <SEO 
-        title={language === 'en' ? "About Basis HK | BasisHK Company & Team" : "關於 Basis HK | BasisHK 公司與團隊"}
+        title={language === 'en' ? "About Basis HK | BasisHK - AI Real Estate CRM & Marketing Agency" : "關於 Basis HK | BasisHK - AI 地產 CRM 及營銷代理"}
         description={language === 'en' 
-          ? "Learn about Basis HK (BasisHK), Hong Kong's leading PropTech company. Founded in 2024, we provide AI-powered real estate marketing solutions for agents across Asia."
-          : "了解 Basis HK (BasisHK)，香港領先的地產科技公司。成立於2024年，我們為亞洲各地的代理提供 AI 驅動的房地產營銷解決方案。"
+          ? "Learn about Basis HK (BasisHK), Hong Kong's leading PropTech company combining an AI-powered real estate CRM platform with a full-service marketing agency. AI lead qualification, WhatsApp integration, property video production, and targeted ad campaigns."
+          : "了解 Basis HK (BasisHK)，香港領先的地產科技公司，結合 AI 地產 CRM 平台與全方位營銷代理。AI 客源篩選、WhatsApp 整合、樓盤影片製作及精準廣告投放。"
         }
         url="/about"
         schema={[aboutPageSchema, faqSchema]}

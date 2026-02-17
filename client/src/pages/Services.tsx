@@ -247,25 +247,33 @@ export default function Services() {
   ];
 
   const servicesTitle = language === 'en'
-    ? "Real Estate Marketing Services & Pricing | AI Property Videos Hong Kong"
-    : "地產營銷服務及價格 | AI 樓盤影片香港";
+    ? "CRM Platform Plans & Marketing Agency Services | BasisHK Pricing"
+    : "CRM 平台方案及營銷代理服務 | BasisHK 收費";
 
   const servicesDescription = language === 'en'
-    ? "Explore BasisHK's real estate marketing packages. AI property video production starting at HK$1,000, lead generation bots, and digital marketing solutions for Hong Kong real estate agents."
-    : "探索 BasisHK 的地產營銷套餐。AI 樓盤影片製作由 HK$1,000 起，客源開發機械人及香港地產代理數碼營銷方案。";
+    ? "Explore BasisHK's CRM platform plans and marketing agency services. AI lead qualification, WhatsApp CRM, property video production, targeted ad campaigns, and add-on services. Plans from HK$8,000/month."
+    : "探索 BasisHK 的 CRM 平台方案及營銷代理服務。AI 客源篩選、WhatsApp CRM、樓盤影片製作、精準廣告投放及附加服務。方案從每月 HK$8,000 起。";
 
   const servicesKeywords = language === 'en'
     ? [
-        "real estate marketing pricing Hong Kong",
-        "property video production cost",
+        "real estate CRM pricing Hong Kong",
+        "property CRM platform plans",
+        "real estate marketing agency pricing",
+        "AI property video production cost",
+        "WhatsApp CRM real estate",
         "real estate lead generation services",
-        "AI property marketing packages"
+        "virtual staging pricing",
+        "BasisHK pricing"
       ]
     : [
-        "香港地產營銷價格",
-        "樓盤影片製作費用",
+        "香港CRM地產價格",
+        "CRM平台方案",
+        "地產營銷代理收費",
+        "AI樓盤影片製作費用",
+        "WhatsApp CRM地產",
         "地產客源開發服務",
-        "AI 物業營銷套餐"
+        "虛擬佈置價格",
+        "BasisHK收費"
       ];
 
   return (
