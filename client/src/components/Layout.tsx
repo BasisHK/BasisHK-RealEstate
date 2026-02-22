@@ -16,6 +16,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { label: t('nav.agency'), href: "/agency" },
     { label: t('nav.services'), href: "/services" },
     { label: t('nav.about'), href: "/about" },
+    { label: t('nav.blog'), href: "/blog" },
     { label: t('nav.contact'), href: "/contact" },
   ];
 
