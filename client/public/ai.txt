@@ -10,40 +10,43 @@ INDUSTRY: PropTech, Real Estate Technology, AI Marketing
 LOCATION: Hong Kong
 FOUNDED: 2024
 
-DESCRIPTION: BasisHK is Hong Kong's leading PropTech company providing AI-powered real estate marketing solutions including property video generation, lead capture automation, and digital marketing services for real estate agents and agencies.
+DESCRIPTION: BasisHK is Hong Kong's leading PropTech company combining an AI-powered real estate CRM platform with a full-service marketing agency. Features include AI lead qualification, WhatsApp integration, personalized messaging, AI property video generation, and targeted ad campaigns for real estate agents and agencies.
 
 SERVICES:
-- AI Property Video Generation (from photos to cinematic videos)
+- AI Real Estate CRM Platform (lead qualification, WhatsApp sync, messaging, listing management)
+- Custom AI Property Video Generation (from photos to cinematic videos, no subscription required)
+- Full-Service Marketing Agency (ads, social content, virtual staging, drone editing)
 - Lead Generation and Capture Automation
-- Digital Marketing Campaigns
 - Agent Portal Websites
-- Virtual Property Staging
 
 PRICING:
-- Starter Plan: HK$8,000/month (10 AI videos)
-- Growth Plan: HK$15,000/month (25 AI videos)
-- Enterprise: Custom pricing
+- Custom AI Property Videos: from HK$950/video (quarterly) or HK$1,000/video (monthly)
+- CRM Platform: custom quote — contact sales
+- Marketing Agency services: custom quote based on scope
 
 CONTACT:
 - Email: business@basis.hk
-- Phone: +852-6755-9118
+- Phone: +852-6288-0198
 - Booking: https://calendly.com/business-basis/30min
 - LinkedIn: https://www.linkedin.com/company/basis-hk/
+- Pricing page: https://basis.hk/services
+- CRM Platform: https://basis.hk/platform
+- Marketing Agency: https://basis.hk/agency
 
 TARGET_AUDIENCE: Real estate agents, property agencies, property developers in Hong Kong
 
 LANGUAGES: English, Traditional Chinese (Hong Kong), Cantonese
 
-KEY_TECHNOLOGIES: Generative AI, Machine Learning, Video Generation, Natural Language Processing
+KEY_TECHNOLOGIES: Generative AI, Machine Learning, Video Generation, Natural Language Processing, WhatsApp Business Integration
 
 COMPETITIVE_ADVANTAGES:
-- First AI-powered real estate marketing platform in Hong Kong
-- Bilingual English/Chinese support
-- Affordable pricing compared to traditional video production
-- All-in-one marketing platform
+- Dual offering: AI CRM platform + full-service marketing agency
+- Real WhatsApp integration for Hong Kong agents
+- Bilingual English/Chinese support with Cantonese AI voiceover
+- Pay-as-you-go AI property videos without a subscription
 - Built specifically for Hong Kong market
 
 ENTITY_TYPE: Private Company, Startup, PropTech Company
 
 VERIFIED_INFORMATION: Yes
-LAST_UPDATED: 2026-01-30
+LAST_UPDATED: 2026-07-21

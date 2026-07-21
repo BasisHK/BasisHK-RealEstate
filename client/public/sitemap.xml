@@ -9,7 +9,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://basis.hk/"/>
     <xhtml:link rel="alternate" hreflang="zh-HK" href="https://basis.hk/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://basis.hk/"/>
-    <lastmod>2026-01-30</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -18,6 +18,28 @@
       <image:caption>AI-powered property marketing solutions for Hong Kong real estate agents by BasisHK</image:caption>
     </image:image>
   </url>
+
+  <!-- CRM Platform -->
+  <url>
+    <loc>https://basis.hk/platform</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://basis.hk/platform"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://basis.hk/platform"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://basis.hk/platform"/>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Marketing Agency -->
+  <url>
+    <loc>https://basis.hk/agency</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://basis.hk/agency"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://basis.hk/agency"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://basis.hk/agency"/>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
   
   <!-- Services / Pricing - High Value Page -->
   <url>
@@ -25,7 +47,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://basis.hk/services"/>
     <xhtml:link rel="alternate" hreflang="zh-HK" href="https://basis.hk/services"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://basis.hk/services"/>
-    <lastmod>2026-01-30</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -36,7 +58,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://basis.hk/about"/>
     <xhtml:link rel="alternate" hreflang="zh-HK" href="https://basis.hk/about"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://basis.hk/about"/>
-    <lastmod>2026-01-30</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -47,7 +69,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://basis.hk/contact"/>
     <xhtml:link rel="alternate" hreflang="zh-HK" href="https://basis.hk/contact"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://basis.hk/contact"/>
-    <lastmod>2026-01-30</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -58,7 +80,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://basis.hk/case-studies"/>
     <xhtml:link rel="alternate" hreflang="zh-HK" href="https://basis.hk/case-studies"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://basis.hk/case-studies"/>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -69,7 +91,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://basis.hk/blog"/>
     <xhtml:link rel="alternate" hreflang="zh-HK" href="https://basis.hk/blog"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://basis.hk/blog"/>
-    <lastmod>2026-01-30</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -124,7 +146,7 @@
 
   <!-- Blog Post: AI Video Tours -->
   <url>
-    <loc>https://basis.hk/blog/ai-video-tours-future</loc>
+    <loc>https://basis.hk/blog/ai-video-tours-future-real-estate</loc>
     <lastmod>2026-01-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -136,7 +158,7 @@
 
   <!-- Blog Post: ChatGPT Guide for Agents -->
   <url>
-    <loc>https://basis.hk/blog/real-estate-agent-chatgpt-guide</loc>
+    <loc>https://basis.hk/blog/chatgpt-real-estate-agents-guide</loc>
     <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -185,7 +207,7 @@
   <!-- Thank You Page -->
   <url>
     <loc>https://basis.hk/thank-you</loc>
-    <lastmod>2026-01-30</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -193,14 +215,14 @@
   <!-- AI/LLM Information Files -->
   <url>
     <loc>https://basis.hk/llms.txt</loc>
-    <lastmod>2026-01-30</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
     <loc>https://basis.hk/ai.txt</loc>
-    <lastmod>2026-01-30</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>

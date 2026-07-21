@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge, Bot, BrainCircuit, Check, Sparkles, Video, Zap, X, Eye, Search, Megaphone, Mail, MessageSquare, Camera, BarChart3, Globe, PenTool, Users, Target, Smartphone, FileText, ArrowLeftRight } from "lucide-react";
+import { Bot, BrainCircuit, Check, Sparkles, Video, Zap, Search, Megaphone, Mail, MessageSquare, Camera, BarChart3, Globe, PenTool, Users, Target, Smartphone, FileText, ArrowLeftRight } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from "wouter";
 import { useState, useRef, useEffect, useCallback } from "react";
@@ -110,154 +110,23 @@ function BeforeAfterSlider({ beforeSrc, afterSrc, beforeLabel, afterLabel }: { b
   );
 }
 
-// Portal Preview Component
-function PortalPreview({ isVisible, onClose }: { isVisible: boolean; onClose: () => void }) {
-  const { language } = useLanguage();
-  if (!isVisible) return null;
-  
-  return (
-    <div 
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
-      onClick={onClose}
-    >
-      <div 
-        className="bg-white rounded-2xl shadow-2xl max-w-4xl w-[95%] max-h-[85vh] overflow-hidden"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className="flex items-center justify-between p-5 border-b border-border/50">
-          <div>
-            <h3 className="text-lg font-heading font-bold text-foreground">
-              {language === 'en' ? 'Custom Branded Property Portal' : '專屬品牌樓盤網頁'}
-            </h3>
-            <p className="text-xs text-muted-foreground mt-1">
-              {language === 'en' ? 'See what your branded portal could look like' : '查看您的品牌網頁範例'}
-            </p>
-          </div>
-          <button 
-            onClick={onClose}
-            className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center hover:bg-secondary/80 transition-colors"
-          >
-            <X className="w-4 h-4" />
-          </button>
-        </div>
-        <div className="p-5 overflow-y-auto max-h-[calc(85vh-80px)]">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="group cursor-pointer">
-              <div className="rounded-xl overflow-hidden border border-border/50 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.02]">
-                <img 
-                  src="/images/portal-listings.png" 
-                  alt="Property Listings Page" 
-                  className="w-full h-auto object-contain"
-                />
-              </div>
-              <p className="text-xs text-center text-muted-foreground mt-2 font-medium">
-                {language === 'en' ? 'Property Listings' : '樓盤列表'}
-              </p>
-            </div>
-            <div className="group cursor-pointer">
-              <div className="rounded-xl overflow-hidden border border-border/50 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.02]">
-                <img 
-                  src="/images/portal-listing-detail.png" 
-                  alt="Listing Detail Page" 
-                  className="w-full h-auto object-contain"
-                />
-              </div>
-              <p className="text-xs text-center text-muted-foreground mt-2 font-medium">
-                {language === 'en' ? 'Listing Detail' : '樓盤詳情'}
-              </p>
-            </div>
-            <div className="group cursor-pointer">
-              <div className="rounded-xl overflow-hidden border border-border/50 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.02]">
-                <img 
-                  src="/images/portal-contact.png" 
-                  alt="Contact Page" 
-                  className="w-full h-auto object-contain"
-                />
-              </div>
-              <p className="text-xs text-center text-muted-foreground mt-2 font-medium">
-                {language === 'en' ? 'Contact Page' : '聯繫頁面'}
-              </p>
-            </div>
-          </div>
-          <div className="mt-4 text-center">
-            <p className="text-xs text-muted-foreground">
-              {language === 'en' 
-                ? 'Each portal is fully customized with your branding, colors, and listings.' 
-                : '每個網頁均可完全自訂您的品牌、配色和樓盤。'}
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export default function Services() {
   const [billingCycle, setBillingCycle] = useState<"monthly" | "quarterly">("monthly");
   const [videoCount, setVideoCount] = useState<number>(5);
-  const [showPortalPreview, setShowPortalPreview] = useState(false);
   const { t, language } = useLanguage();
   const pricePerVideo = { monthly: 1000, quarterly: 950 }; // 5% discount for quarterly
 
-  const plans = [
-    {
-      title: t('services.plan.starter'),
-      desc: t('services.plan.starter.desc'),
-      price: { monthly: 8000, quarterly: 7600 },
-      features: [
-        { name: t('services.feature.aiOptimizer'), included: true },
-        { name: `10 ${t('services.feature.video')}`, included: true },
-        { name: t('services.feature.basicPortal'), included: true },
-        { name: t('services.feature.limitedListings'), included: true },
-        { name: `${t('services.feature.basic')} ${t('services.feature.bot')}`, included: true },
-        { name: t('services.feature.adsBoosting2k'), included: true },
-        { name: t('services.feature.manager'), included: false }
-      ]
-    },
-    {
-      title: t('services.plan.growth'),
-      desc: t('services.plan.growth.desc'),
-      price: { monthly: 15000, quarterly: 14250 },
-      features: [
-        { name: t('services.feature.aiOptimizer'), included: true },
-        { name: `25 ${t('services.feature.video')}`, included: true },
-        { name: t('services.feature.basicPortal'), included: true },
-        { name: t('services.feature.unlimitedListings'), included: true },
-        { name: `${t('services.feature.advanced')} ${t('services.feature.bot')}`, included: true },
-        { name: t('services.feature.adsBoosting4k'), included: true },
-        { name: t('services.feature.manager'), included: false }
-      ],
-      highlight: true
-    },
-    {
-      title: t('services.plan.agency'),
-      desc: t('services.plan.agency.desc'),
-      price: { monthly: "Custom", quarterly: "Custom" },
-      features: [
-        { name: t('services.feature.video'), included: true },
-        { name: t('services.feature.content'), included: true },
-        { name: t('services.feature.revisions'), included: true },
-        { name: t('services.feature.manager'), included: true },
-        { name: t('services.feature.bot'), included: true },
-        { name: t('services.feature.report'), included: true },
-        { name: t('services.feature.support'), included: true },
-        { name: t('services.feature.consultancy'), included: true }
-      ]
-    }
-  ];
-
   const servicesTitle = language === 'en'
-    ? "CRM Platform Plans & Marketing Agency Services | BasisHK Pricing"
-    : "CRM 平台方案及營銷代理服務 | BasisHK 收費";
+    ? "Marketing Agency Services & AI Property Videos | BasisHK Pricing"
+    : "營銷代理服務及 AI 樓盤影片 | BasisHK 收費";
 
   const servicesDescription = language === 'en'
-    ? "Explore BasisHK's CRM platform plans and marketing agency services. AI lead qualification, WhatsApp CRM, property video production, targeted ad campaigns, and add-on services. Plans from HK$8,000/month."
-    : "探索 BasisHK 的 CRM 平台方案及營銷代理服務。AI 客源篩選、WhatsApp CRM、樓盤影片製作、精準廣告投放及附加服務。方案從每月 HK$8,000 起。";
+    ? "Explore BasisHK's marketing agency services and AI property video production. AI lead qualification, WhatsApp CRM, targeted ad campaigns, and add-on services."
+    : "探索 BasisHK 的營銷代理服務及 AI 樓盤影片製作。AI 客源篩選、WhatsApp CRM、精準廣告投放及附加服務。";
 
   const servicesKeywords = language === 'en'
     ? [
         "real estate CRM pricing Hong Kong",
-        "property CRM platform plans",
         "real estate marketing agency pricing",
         "AI property video production cost",
         "WhatsApp CRM real estate",
@@ -267,7 +136,6 @@ export default function Services() {
       ]
     : [
         "香港CRM地產價格",
-        "CRM平台方案",
         "地產營銷代理收費",
         "AI樓盤影片製作費用",
         "WhatsApp CRM地產",
@@ -278,7 +146,6 @@ export default function Services() {
 
   return (
     <Layout>
-      <PortalPreview isVisible={showPortalPreview} onClose={() => setShowPortalPreview(false)} />
       <SEO 
         title={servicesTitle}
         description={servicesDescription}
@@ -358,16 +225,8 @@ export default function Services() {
             ))}
           </div>
 
-          {/* Pricing Plans - Redesigned & Compact */}
-          <div className="text-center max-w-3xl mx-auto mb-10">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-foreground">
-              {t('services.select')}
-            </h2>
-            <p className="text-base text-muted-foreground mb-8">
-              {t('services.subtitle')}
-            </p>
-
-            {/* Billing Switcher */}
+          {/* Custom AI Videos Package */}
+          <div className="max-w-3xl mx-auto mt-16">
             <div className="flex items-center justify-center gap-4 mb-8">
               <span className={`text-sm font-medium ${billingCycle === "monthly" ? "text-foreground" : "text-muted-foreground"}`}>{t('services.monthly')}</span>
               <button 
@@ -380,86 +239,6 @@ export default function Services() {
                 {t('services.quarterly')} <span className="ml-1 text-xs font-bold text-green-600 bg-green-100 px-2 py-0.5 rounded-full">{t('services.save')}</span>
               </span>
             </div>
-          </div>
-
-          <div className="grid lg:grid-cols-3 gap-6 max-w-5xl mx-auto items-stretch px-2 md:px-0">
-            {plans.map((plan, i) => (
-              <Card key={i} className={`bg-white border-none shadow-md rounded-2xl p-1 flex flex-col h-full hover:scale-[1.02] transition-transform duration-300 ${plan.highlight ? "ring-2 ring-primary shadow-xl scale-100 md:scale-105 z-10 my-4 md:my-0" : ""}`}>
-                {plan.highlight && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-xs font-bold shadow-md">
-                    {t('services.popular')}
-                  </div>
-                )}
-                <div className="p-6 pb-0">
-                  <CardTitle className="text-2xl font-heading font-semibold tracking-tight">{plan.title}</CardTitle>
-                  <CardDescription className="mt-1.5 text-sm text-muted-foreground">{plan.desc}</CardDescription>
-                  <div className="mt-4 mb-4">
-                    {typeof plan.price.monthly === "number" ? (
-                      <div className="flex flex-col items-start">
-                        <div className="flex items-baseline gap-1 flex-wrap">
-                          <span className="text-3xl font-heading font-bold text-foreground tracking-tight">
-                            HK${billingCycle === "quarterly" ? plan.price.quarterly.toLocaleString() : plan.price.monthly.toLocaleString()}
-                          </span>
-                          <span className="text-sm text-muted-foreground whitespace-nowrap font-normal">/{t('services.feature.monthly')}</span>
-                        </div>
-                        {billingCycle === "quarterly" && (
-                          <span className="text-sm text-muted-foreground line-through decoration-destructive/50 decoration-2 mt-1">
-                            HK${plan.price.monthly.toLocaleString()}
-                          </span>
-                        )}
-                      </div>
-                    ) : (
-                      <span className="text-3xl font-heading font-bold text-foreground tracking-tight">{plan.price.monthly}</span>
-                    )}
-                    {billingCycle === "quarterly" && typeof plan.price.monthly === "number" && typeof plan.price.quarterly === "number" && (
-                      <div className="text-xs text-green-600 font-medium mt-1">
-                        {t('services.quarterly')} ({t('services.save')})
-                      </div>
-                    )}
-                  </div>
-                </div>
-                <CardContent className="flex-1 p-6 pt-0">
-                  <ul className="space-y-3">
-                    {plan.features.map((feature, j) => {
-                      const isPortalFeature = feature.name === t('services.feature.basicPortal');
-                      return (
-                        <li key={j} className={`flex items-start gap-2.5 text-sm ${feature.included ? "text-foreground/80" : "text-muted-foreground/50"}`}>
-                          {feature.included ? (
-                            <Check className={`w-4 h-4 ${plan.highlight ? "text-primary" : "text-primary/70"} shrink-0`} />
-                          ) : (
-                            <X className="w-4 h-4 text-muted-foreground/40 shrink-0" />
-                          )}
-                          {isPortalFeature && feature.included ? (
-                            <span 
-                              className="cursor-pointer border-b border-dashed border-primary/50 hover:text-primary hover:border-primary transition-colors inline-flex items-center gap-1 group"
-                              onClick={(e) => { e.preventDefault(); setShowPortalPreview(true); }}
-                            >
-                              {feature.name}
-                              <Eye className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity text-primary" />
-                            </span>
-                          ) : (
-                            <span className={feature.included ? "" : "line-through decoration-muted-foreground/40"}>
-                              {feature.name}
-                            </span>
-                          )}
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </CardContent>
-                <CardFooter className="p-6 pt-0">
-                  <a href="https://calendly.com/business-basis/30min" target="_blank" rel="noopener noreferrer" className="w-full">
-                    <Button className={`w-full rounded-lg h-11 font-heading font-semibold text-sm tracking-wide ${plan.highlight ? "bg-primary text-primary-foreground hover:bg-primary/90" : "bg-secondary text-secondary-foreground hover:bg-secondary/80"}`}>
-                      {plan.price.monthly === "Custom" ? t('about.cta.button') : t('nav.getStarted')}
-                    </Button>
-                  </a>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
-
-          {/* Custom AI Videos Package */}
-          <div className="max-w-3xl mx-auto mt-16">
             <Card className="bg-white border-none shadow-lg rounded-2xl overflow-hidden">
               <div className="bg-gradient-to-r from-purple-600 to-indigo-600 p-6 text-white">
                 <div className="flex items-center justify-between mb-2">
@@ -557,8 +336,8 @@ export default function Services() {
               </h2>
               <p className="text-base text-muted-foreground max-w-2xl mx-auto">
                 {language === 'en'
-                  ? 'Beyond our core packages, we offer a full suite of real estate marketing services.'
-                  : '除核心套餐外，我們提供全方位的地產營銷服務。'}
+                  ? 'We offer a full suite of real estate marketing services tailored to your goals.'
+                  : '我們提供全方位的地產營銷服務，按您的目標度身訂造。'}
               </p>
             </div>
 

@@ -124,7 +124,7 @@ export default function SEO({
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "sales",
-      "telephone": "+852-6755-9118",
+      "telephone": "+852-6288-0198",
       "email": "business@basis.hk",
       "url": "https://calendly.com/business-basis/30min",
       "availableLanguage": ["English", "Chinese", "Cantonese"]
@@ -162,7 +162,7 @@ export default function SEO({
     "description": language === 'en'
       ? "Basis HK (BasisHK) provides an AI-powered real estate CRM platform and full-service marketing agency in Hong Kong. AI lead qualification, WhatsApp integration, property video production, and targeted ad campaigns."
       : "Basis HK (BasisHK) 提供 AI 驅動的地產 CRM 平台及全方位營銷代理服務。AI 客源篩選、WhatsApp 整合、樓盤影片製作及精準廣告投放。",
-    "telephone": "+852-6755-9118",
+    "telephone": "+852-6288-0198",
     "email": "business@basis.hk",
     "address": {
       "@type": "PostalAddress",
@@ -174,7 +174,7 @@ export default function SEO({
       "latitude": "22.3193",
       "longitude": "114.1694"
     },
-    "priceRange": "HK$8,000 - HK$25,000",
+    "priceRange": "From HK$950",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -200,11 +200,13 @@ export default function SEO({
       ? "AI-powered real estate CRM built for Hong Kong agents. Features AI lead qualification with BANT scoring, real WhatsApp integration, AI personalized messaging, property video enhancer, video editor with Cantonese AI voiceover, and bilingual support."
       : "專為香港地產代理打造的 AI 驅動 CRM。功能包括 BANT 評分 AI 客源篩選、真實 WhatsApp 整合、AI 個人化訊息、樓盤影片增強器、內建廣東話 AI 旁白的影片編輯器及雙語支援。",
     "offers": {
-      "@type": "AggregateOffer",
-      "lowPrice": "8000",
-      "highPrice": "25000",
+      "@type": "Offer",
       "priceCurrency": "HKD",
-      "offerCount": "3"
+      "availability": "https://schema.org/InStock",
+      "url": "https://basis.hk/contact",
+      "description": language === 'en'
+        ? "Custom CRM pricing — contact BasisHK for a tailored quote."
+        : "CRM 按需求報價 — 聯絡 BasisHK 獲取度身訂造方案。"
     },
     "featureList": [
       "AI Lead Qualification with BANT Scoring",
@@ -243,30 +245,42 @@ export default function SEO({
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": language === 'en' ? "BasisHK Services & Plans" : "BasisHK 服務及方案",
+      "name": language === 'en' ? "BasisHK Marketing Services" : "BasisHK 營銷服務",
       "itemListElement": [
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": language === 'en' ? "AI Property Video Production" : "AI 樓盤影片製作"
+            "name": language === 'en' ? "Custom AI Property Videos" : "單點 AI 樓盤影片",
+            "description": language === 'en'
+              ? "High-quality AI-generated property videos without a subscription. From HK$950 per video with quarterly billing."
+              : "無需訂閱即可獲得高質素 AI 樓盤影片。季費低至每條 HK$950。"
           },
-          "price": "8000",
-          "priceCurrency": "HKD"
+          "price": "950",
+          "priceCurrency": "HKD",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "950",
+            "priceCurrency": "HKD",
+            "unitText": "video"
+          },
+          "url": "https://basis.hk/services"
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
             "name": language === 'en' ? "Predictive Ad Targeting & Lead Generation" : "精準廣告投放及客源開發"
-          }
+          },
+          "url": "https://basis.hk/agency"
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
             "name": language === 'en' ? "Social Media Content & Management" : "社交媒體內容及管理"
-          }
+          },
+          "url": "https://basis.hk/agency"
         },
         {
           "@type": "Offer",
@@ -274,8 +288,7 @@ export default function SEO({
             "@type": "Service",
             "name": language === 'en' ? "Virtual Staging" : "虛擬佈置"
           },
-          "price": "500",
-          "priceCurrency": "HKD"
+          "url": "https://basis.hk/agency"
         },
         {
           "@type": "Offer",
@@ -283,8 +296,15 @@ export default function SEO({
             "@type": "Service",
             "name": language === 'en' ? "Drone Video Editing" : "航拍影片剪輯"
           },
-          "price": "3000",
-          "priceCurrency": "HKD"
+          "url": "https://basis.hk/agency"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": language === 'en' ? "AI Real Estate CRM Platform" : "AI 地產 CRM 平台"
+          },
+          "url": "https://basis.hk/platform"
         }
       ]
     }

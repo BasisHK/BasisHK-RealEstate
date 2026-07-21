@@ -162,7 +162,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'services.faq.q1': 'What does "Unlimited Revisions" mean?',
     'services.faq.a1': 'We want you to be 100% satisfied with your content. You can request as many changes as needed to the video edits, captions, or ad copy until it perfectly matches your vision.',
     'services.faq.q2': 'Is there a minimum contract period?',
-    'services.faq.a2': 'No, all our plans are month-to-month. You can cancel or upgrade at any time. However, choosing quarterly billing saves you 5%.',
+    'services.faq.a2': 'No long-term contracts. Custom AI property videos can be billed monthly or quarterly (quarterly saves 5%). CRM and agency services are scoped per engagement — contact us for a quote.',
     'services.faq.q3': 'How quickly can I get my first video?',
     'services.faq.a3': 'Once you upload your property photos, our AI generates the initial draft within minutes. After your review, the final polished version is typically ready within 48 hours ready for revisions by our creative team.',
     'services.faq.q4': 'Do you handle the ad spend budget?',
@@ -314,7 +314,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'platform.how.title': 'Get Started in 4 Steps',
     'platform.how.desc': 'From sign-up to your first qualified lead in under 48 hours.',
     'platform.how.1.title': 'Sign Up',
-    'platform.how.1.desc': 'Choose your plan and create your account. No long-term contracts.',
+    'platform.how.1.desc': 'Create your account and get started. No long-term contracts.',
     'platform.how.2.title': 'Upload Listings',
     'platform.how.2.desc': 'Add your property photos — AI enhances, stages, and creates videos automatically.',
     'platform.how.3.title': 'Connect Channels',
@@ -325,7 +325,7 @@ export const translations: Record<Language, Record<string, string>> = {
     // CTA
     'platform.cta.title': 'Ready to Take Control?',
     'platform.cta.desc': 'Start managing your listings and leads with the smartest CRM in Hong Kong real estate.',
-    'platform.cta.button': 'View Plans',
+    'platform.cta.button': 'View Pricing',
     'platform.cta.agency': 'Explore Our Agency',
 
     // Agency Page
@@ -535,7 +535,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'services.faq.q1': '「無限次修改」具體是什麼？',
     'services.faq.a1': '我們希望您對成品完全滿意。您可以無限次要求修改影片剪輯、字幕或廣告文案，直到完全符合您的要求。',
     'services.faq.q2': '有最短合約期限嗎？',
-    'services.faq.a2': '沒有。所有方案均按月收費，可隨時取消或升級。選擇季費可節省 5%。',
+    'services.faq.a2': '無需長期合約。單點 AI 樓盤影片可按月或按季收費（季費可節省 5%）。CRM 及營銷代理服務按項目報價 — 歡迎聯絡我們。',
     'services.faq.q3': '多快可以收到第一條影片？',
     'services.faq.a3': '上傳樓盤照片後，AI 系統數分鐘內即可生成初稿。經您確認後，創意團隊通常在 48 小時內完成最終版本。',
     'services.faq.q4': '廣告預算如何處理？',
@@ -687,7 +687,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'platform.how.title': '4 步輕鬆開始',
     'platform.how.desc': '從註冊到收到第一個合格客源，不到 48 小時。',
     'platform.how.1.title': '註冊帳戶',
-    'platform.how.1.desc': '選擇方案並創建帳戶。無需長期合約。',
+    'platform.how.1.desc': '創建帳戶即可開始。無需長期合約。',
     'platform.how.2.title': '上傳樓盤',
     'platform.how.2.desc': '添加您的樓盤照片 — AI 自動增強、佈置並製作影片。',
     'platform.how.3.title': '連接渠道',
@@ -698,7 +698,7 @@ export const translations: Record<Language, Record<string, string>> = {
     // CTA
     'platform.cta.title': '準備好掌控一切？',
     'platform.cta.desc': '開始使用香港地產界最聰明的 CRM 管理您的樓盤和客源。',
-    'platform.cta.button': '查看方案',
+    'platform.cta.button': '查看收費',
     'platform.cta.agency': '探索營銷代理',
 
     // Agency Page

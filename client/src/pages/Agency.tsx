@@ -94,7 +94,7 @@ export default function Agency() {
             </a>
             <Link href="/services">
               <Button variant="outline" size="lg" className="rounded-full px-10 h-12 text-base font-medium bg-white/50 backdrop-blur-sm hover:bg-white border-primary/10 text-primary">
-                {language === 'en' ? 'View Plans & Pricing' : '查看方案及定價'}
+                {language === 'en' ? 'View Pricing' : '查看收費'}
               </Button>
             </Link>
           </div>

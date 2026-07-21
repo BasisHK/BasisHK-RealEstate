@@ -18,11 +18,7 @@ export default function About() {
     },
     {
       question: "What services does Basis HK offer?",
-      answer: "Basis HK offers two core products: (1) An AI-powered CRM Platform featuring AI lead qualification with BANT scoring, real WhatsApp integration, AI personalized messaging, email campaigns with reply tracking, AI-enhanced property listings with virtual staging, a property video enhancer, a full video editor with Cantonese AI voiceover, and bilingual support. (2) A Full-Service Marketing Agency providing AI video production, targeted ad campaigns, social media content, drone video editing, and virtual staging services. Plans start from HK$8,000/month."
-    },
-    {
-      question: "How much does BasisHK cost?",
-      answer: "BasisHK offers three main plans: The Starter Plan at HK$8,000/month includes the CRM platform with AI lead qualification, WhatsApp integration, and 10 AI property videos. The Growth Plan at HK$15,000/month adds advanced features, 25 videos, and a branded property portal. The Agency Plan at HK$25,000/month includes everything plus dedicated account management, unlimited videos, and priority support. Add-on services like virtual staging, drone video editing, and social media content packs are also available."
+      answer: "Basis HK offers two core products: (1) An AI-powered CRM Platform featuring AI lead qualification with BANT scoring, real WhatsApp integration, AI personalized messaging, email campaigns with reply tracking, AI-enhanced property listings with virtual staging, a property video enhancer, a full video editor with Cantonese AI voiceover, and bilingual support. (2) A Full-Service Marketing Agency providing AI video production, targeted ad campaigns, social media content, drone video editing, and virtual staging services. Custom AI property videos are also available from HK$950 per video without a subscription."
     },
     {
       question: "How does BasisHK's AI video generation work?",
@@ -30,7 +26,7 @@ export default function About() {
     },
     {
       question: "Where is Basis HK located?",
-      answer: "Basis HK (BasisHK) is headquartered in Hong Kong. The company primarily serves real estate agents and agencies in Hong Kong, with plans to expand across Asia. You can contact BasisHK at business@basis.hk or book a consultation at https://calendly.com/business-basis/30min."
+      answer: "Basis HK (BasisHK) is headquartered in Hong Kong. The company primarily serves real estate agents and agencies in Hong Kong, with plans to expand across Asia. You can contact BasisHK at business@basis.hk, +852 6288 0198, or book a consultation at https://calendly.com/business-basis/30min."
     }
   ] : [
     {
@@ -39,11 +35,7 @@ export default function About() {
     },
     {
       question: "Basis HK 提供什麼服務？",
-      answer: "Basis HK 提供兩大核心產品：(1) AI 驅動的 CRM 平台，功能包括 BANT 評分 AI 客源篩選、真實 WhatsApp 整合、AI 個人化訊息、電郵活動及回覆追蹤、AI 增強樓盤與虛擬佈置、樓盤影片增強器、內建廣東話 AI 旁白的影片編輯器及雙語支援。(2) 全方位營銷代理，提供 AI 影片製作、精準廣告投放、社交媒體內容、航拍影片剪輯及虛擬佈置服務。方案從每月 HK$8,000 起。"
-    },
-    {
-      question: "BasisHK 收費多少？",
-      answer: "BasisHK 提供三個主要方案：入門方案每月 HK$8,000，包括 CRM 平台、AI 客源篩選、WhatsApp 整合和10個 AI 樓盤影片。增長方案每月 HK$15,000，增加進階功能、25個影片和品牌樓盤門戶。代理方案每月 HK$25,000，包括一切功能加專屬客戶經理、無限影片和優先支援。另提供虛擬佈置、航拍影片剪輯等附加服務。"
+      answer: "Basis HK 提供兩大核心產品：(1) AI 驅動的 CRM 平台，功能包括 BANT 評分 AI 客源篩選、真實 WhatsApp 整合、AI 個人化訊息、電郵活動及回覆追蹤、AI 增強樓盤與虛擬佈置、樓盤影片增強器、內建廣東話 AI 旁白的影片編輯器及雙語支援。(2) 全方位營銷代理，提供 AI 影片製作、精準廣告投放、社交媒體內容、航拍影片剪輯及虛擬佈置服務。亦可按需購買單點 AI 樓盤影片，低至每條 HK$950，無需訂閱。"
     },
     {
       question: "BasisHK 的 AI 影片生成如何運作？",
@@ -51,7 +43,7 @@ export default function About() {
     },
     {
       question: "Basis HK 位於哪裡？",
-      answer: "Basis HK（BasisHK）總部位於香港。公司主要服務香港的地產代理和代理公司，並計劃擴展至亞洲其他地區。您可以通過 business@basis.hk 聯繫 BasisHK，或在 https://calendly.com/business-basis/30min 預約諮詢。"
+      answer: "Basis HK（BasisHK）總部位於香港。公司主要服務香港的地產代理和代理公司，並計劃擴展至亞洲其他地區。您可以通過 business@basis.hk、+852 6288 0198 聯繫 BasisHK，或在 https://calendly.com/business-basis/30min 預約諮詢。"
     }
   ];
 
@@ -391,7 +383,7 @@ export default function About() {
                 </a>
                 <Link href="/services">
                   <Button size="lg" variant="outline" className="rounded-full px-12 h-14 text-lg font-medium border-white/30 text-white hover:bg-white/10 transition-all">
-                    {language === 'en' ? 'View Plans' : '查看方案'}
+                    {language === 'en' ? 'View Pricing' : '查看收費'}
                   </Button>
                 </Link>
               </div>
